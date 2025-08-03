@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import HydrogenRainbow from "@/components/HydrogenRainbow";
 import OxygenChart from "@/components/OxygenChart";
+import TransportMethods from "@/components/TransportMethods";
 
 type Quadrant = "process" | "transport" | "storage" | "product";
 
@@ -241,10 +242,10 @@ export default function Home() {
                   </div>
                 )}
                 
-                {/* Other quadrants - placeholder content */}
+                {/* Transport Content */}
                 {selectedQuadrant === 'transport' && (
-                  <div className="text-center text-gray-500 py-8">
-                    <p className="text-lg">Transport-related content will appear here</p>
+                  <div>
+                    <TransportMethods />
                   </div>
                 )}
                 {selectedQuadrant === 'storage' && (

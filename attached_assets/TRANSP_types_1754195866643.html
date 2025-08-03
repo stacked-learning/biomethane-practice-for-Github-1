@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydrogen Transportation Methods</title>
+    <!-- Feather Icons CDN -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Updated with dots v2.0 -->
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+            padding: 15px;
+            overflow-x: auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header styles */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* Grid layout */
+        .transportation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+            margin-bottom: 60px;
+        }
+
+        /* Card styles */
+        .transport-card {
+            background: linear-gradient(145deg, #ffffff, #f1f3f4);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 
+                0 6px 8px rgba(0, 0, 0, 0.06),
+                0 12px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #e9ecef;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .transport-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #6c757d, #adb5bd);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .transport-card:hover::before {
+            opacity: 1;
+        }
+
+        .transport-card:hover {
+            box-shadow: 
+                0 10px 20px rgba(0, 0, 0, 0.12),
+                0 25px 50px rgba(0, 0, 0, 0.12);
+            transform: translateY(-6px);
+        }
+
+        /* Card header */
+        .card-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .icon-container {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6c757d, #adb5bd);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 12px rgba(108, 117, 125, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .transport-card:hover .icon-container {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(108, 117, 125, 0.35);
+        }
+
+        .transport-icon {
+            width: 45px;
+            height: 45px;
+            color: white;
+            stroke-width: 2;
+        }
+
+        .card-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        /* Card content */
+        .card-content {
+            flex-grow: 1;
+        }
+
+        .pros-cons-section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .pros-section, .cons-section {
+            flex: 1;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .pros-title {
+            color: #28a745;
+        }
+
+        .cons-title {
+            color: #dc3545;
+        }
+
+        .pros-list, .cons-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pros-list li, .cons-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 18px;
+            color: #495057;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+
+        .pros-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .cons-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #dc3545;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .transport-card:hover .pros-list li,
+        .transport-card:hover .cons-list li {
+            color: #2c3e50;
+        }
+
+        .transport-card:hover .pros-list li::before {
+            color: #218838;
+        }
+
+        .transport-card:hover .cons-list li::before {
+            color: #c82333;
+        }
+
+        /* Factors Section */
+        .factors-section {
+            margin-top: 80px;
+            padding: 60px 0;
+            background: linear-gradient(145deg, #f8f9fa, #ffffff);
+            border-radius: 25px;
+            border: 1px solid #e9ecef;
+        }
+
+        .factors-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .factors-header h2 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            letter-spacing: -0.3px;
+        }
+
+        .factors-subtitle {
+            font-size: 1.3rem;
+            color: #6c757d;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        .factors-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .factor-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            padding: 35px;
+            background: linear-gradient(145deg, #ffffff, #f1f3f4);
+            border-radius: 16px;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .factor-item:hover {
+            box-shadow: 
+                0 6px 12px rgba(0, 0, 0, 0.10),
+                0 15px 25px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .factor-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6c757d, #adb5bd);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 8px rgba(108, 117, 125, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .factor-item:hover .factor-icon {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(108, 117, 125, 0.35);
+        }
+
+        .factor-icon i {
+            width: 28px;
+            height: 28px;
+            color: white;
+            stroke-width: 2;
+        }
+
+        .factor-text h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            letter-spacing: 0.3px;
+        }
+
+        .factor-text p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #495057;
+            margin: 0;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add entrance animation */
+        .transport-card {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .transport-card:nth-child(1) { animation-delay: 0.1s; }
+        .transport-card:nth-child(2) { animation-delay: 0.2s; }
+        .transport-card:nth-child(3) { animation-delay: 0.3s; }
+        .transport-card:nth-child(4) { animation-delay: 0.4s; }
+
+        /* Focus states for accessibility */
+        .transport-card:focus-within {
+            outline: 3px solid #6c757d;
+            outline-offset: 3px;
+        }
+
+        /* Responsive design for iframe */
+        @media (max-width: 1200px) {
+            .transportation-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .transportation-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .transport-card {
+                padding: 35px;
+            }
+            
+            .card-title {
+                font-size: 1.7rem;
+            }
+            
+            .pros-list li, .cons-list li {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+            
+            .section-title {
+                font-size: 1.2rem;
+            }
+            
+            .icon-container {
+                width: 85px;
+                height: 85px;
+            }
+            
+            .transport-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .factors-section {
+                margin-top: 60px;
+                padding: 50px 0;
+            }
+            
+            .factors-header h2 {
+                font-size: 2.3rem;
+            }
+            
+            .factors-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .factors-content {
+                padding: 0 30px;
+                gap: 25px;
+            }
+            
+            .factor-item {
+                padding: 30px;
+                gap: 20px;
+            }
+            
+            .factor-icon {
+                width: 55px;
+                height: 55px;
+            }
+            
+            .factor-icon i {
+                width: 24px;
+                height: 24px;
+            }
+            
+            .factor-text h3 {
+                font-size: 1.3rem;
+            }
+            
+            .factor-text p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            .header {
+                padding: 20px 0;
+                margin-bottom: 30px;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .transport-card {
+                padding: 25px;
+            }
+            
+            .card-header {
+                margin-bottom: 25px;
+            }
+            
+            .icon-container {
+                width: 75px;
+                height: 75px;
+                margin-bottom: 15px;
+            }
+            
+            .transport-icon {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .card-title {
+                font-size: 1.5rem;
+            }
+
+            .pros-list li, .cons-list li {
+                font-size: 0.95rem;
+                margin-bottom: 12px;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+            }
+
+            .factors-section {
+                margin-top: 40px;
+                padding: 40px 0;
+            }
+            
+            .factors-header {
+                margin-bottom: 40px;
+            }
+            
+            .factors-header h2 {
+                font-size: 2rem;
+            }
+            
+            .factors-content {
+                padding: 0 20px;
+                gap: 20px;
+            }
+            
+            .factor-item {
+                padding: 25px;
+                gap: 15px;
+            }
+            
+            .factor-icon {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .factor-icon i {
+                width: 22px;
+                height: 22px;
+            }
+            
+            .factor-text h3 {
+                font-size: 1.2rem;
+            }
+            
+            .factor-text p {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .transport-card {
+                border: 3px solid #000;
+            }
+            
+            .card-title {
+                color: #000;
+            }
+            
+            .pros-list li, .cons-list li {
+                color: #000;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .transport-card {
+                transition: none;
+                animation: none;
+            }
+            
+            .icon-container {
+                transition: none;
+            }
+            
+            .transport-card:hover {
+                transform: none;
+            }
+            
+            .factor-item {
+                transition: none;
+            }
+            
+            .factor-icon {
+                transition: none;
+            }
+            
+            .factor-item:hover {
+                transform: none;
+            }
+        }
+
+        /* iframe specific optimizations */
+        html, body {
+            height: auto;
+            min-height: 100%;
+        }
+
+        body {
+            margin: 0;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Hydrogen Transportation Methods</h1>
+            <p class="subtitle">Explore the different methods used to transport hydrogen efficiently and safely</p>
+        </header>
+
+        <!-- Transportation Methods Grid -->
+        <main class="transportation-grid">
+            <!-- Pipeline Transportation -->
+            <div class="transport-card">
+                <div class="card-header">
+                    <div class="icon-container">
+                        <i data-feather="layers" class="transport-icon"></i>
+                    </div>
+                    <h2 class="card-title">Pipeline</h2>
+                </div>
+                <div class="card-content">
+                    <div class="pros-cons-section">
+                        <div class="pros-section">
+                            <h4 class="section-title pros-title">Pros</h4>
+                            <ul class="pros-list">
+                                <li>Most cost-effective method for large-scale, continuous hydrogen transportation over medium to long distances</li>
+                                <li>Dedicated pipeline infrastructure ensures high purity and minimal contamination risks</li>
+                                <li>Hydrogen pipelines typically operate between 20-100 bars of pressure</li>
+                                <li>Ideal for connecting production facilities to industrial clusters and refueling stations</li>
+                            </ul>
+                        </div>
+                        <div class="cons-section">
+                            <h4 class="section-title cons-title">Cons</h4>
+                            <ul class="cons-list">
+                                <li>Requires significant upfront capital investment for infrastructure development</li>
+                                <li>Limited flexibility once pipeline routes are established</li>
+                                <li>Long development timelines for new pipeline projects</li>
+                                <li>Potential for hydrogen embrittlement in pipelines over time</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Road Transportation -->
+            <div class="transport-card">
+                <div class="card-header">
+                    <div class="icon-container">
+                        <i data-feather="truck" class="transport-icon"></i>
+                    </div>
+                    <h2 class="card-title">Road</h2>
+                </div>
+                <div class="card-content">
+                    <div class="pros-cons-section">
+                        <div class="pros-section">
+                            <h4 class="section-title pros-title">Pros</h4>
+                            <ul class="pros-list">
+                                <li>Flexible and versatile transportation using high-pressure tube trailers or liquid hydrogen trucks</li>
+                                <li>Compressed hydrogen trailers operate at 200-500 bar pressure with typical capacity of 300-1000 kg</li>
+                                <li>Liquid hydrogen trucks offer higher capacity but require cryogenic storage at around -253°C or below</li>
+                                <li>Excellent for last-mile delivery and reaching remote or distributed locations</li>
+                            </ul>
+                        </div>
+                        <div class="cons-section">
+                            <h4 class="section-title cons-title">Cons</h4>
+                            <ul class="cons-list">
+                                <li>Higher per-unit costs compared to pipeline transportation</li>
+                                <li>Limited capacity per trip, further reduced by safety regulations </li>
+                                <li>Increased safety considerations for high-pressure transport on public roads</li>
+                                <li>Weather and traffic conditions can impact delivery schedules and costs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tanker Transportation -->
+            <div class="transport-card">
+                <div class="card-header">
+                    <div class="icon-container">
+                        <i data-feather="anchor" class="transport-icon"></i>
+                    </div>
+                    <h2 class="card-title">Tankers</h2>
+                </div>
+                <div class="card-content">
+                    <div class="pros-cons-section">
+                        <div class="pros-section">
+                            <h4 class="section-title pros-title">Pros</h4>
+                            <ul class="pros-list">
+                                <li>Maritime transportation using specialized liquid hydrogen carriers for international trade</li>
+                                <li>More cost-effective than pipelines for long-distance shipping (over 5,000km) </li>
+                                <li>Advanced vacuum-insulated storage systems maintain cryogenic temperatures during transit</li>
+                                <li>Essential for global hydrogen supply chains and intercontinental energy trade</li>
+                            </ul>
+                        </div>
+                        <div class="cons-section">
+                            <h4 class="section-title cons-title">Cons</h4>
+                            <ul class="cons-list">
+                                <li>Emerging technology with limited commercial deployment and operational experience</li>
+                                <li>High energy losses due to hydrogen boil-off during long ocean voyages</li>
+                                <li>Requires specialized port infrastructure for loading and unloading operations</li>
+                                <li>Weather conditions and sea states can impact delivery schedules</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Transportation Methods -->
+        
+            <div class="transport-card">
+                <div class="card-header">
+                    <div class="icon-container">
+                        <i data-feather="zap" class="transport-icon"></i>
+                    </div>
+                    <h2 class="card-title">Other</h2>
+                </div>
+                <div class="card-content">
+                    <div class="pros-cons-section">
+                        <div class="pros-section">
+                            <h4 class="section-title pros-title">Pros</h4>
+                            <ul class="pros-list">
+                                <li>Railway and inland waterways allow different options for transport.</li>
+                                <li>Some methods (e.g. LOHCs, ammonia) leverage existing fuel or chemical infrastructure, removing many challenges associated with hydrogen alone. </li>
+                                <li>Solid-state (metal hydrides) and LOHCs are safer to store/handle than compressed or cryogenic H₂</li>
+                                <li>Underground hydrogen storage in salt caverns or depleted gas fields for seasonal storage</li>
+                            </ul>
+                        </div>
+                        <div class="cons-section">
+                            <h4 class="section-title cons-title">Cons</h4>
+                            <ul class="cons-list">
+                                <li>Many of these methods require energy-intensive processes (e.g. hydrogenation, cracking ammonia).</li>
+                                <li>High Capital or Operating Costs due to railcars, barges, cryogenic tanks, and hydride systems need special equipment and infrastructure.</li>
+                                <li>Multiple energy steps result in efficiency losses compared to direct hydrogen transport.</li>
+                                <li>Some technologies (e.g. drones, LOHCs) are still emerging or niche, not yet viable for mass deployment.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Factors Section -->
+        <section class="factors-section">
+            <div class="factors-header">
+                <h2>Key Factors in Transportation Method Selection</h2>
+                <p class="factors-subtitle">When choosing the optimal hydrogen transportation method, several critical factors must be evaluated</p>
+            </div>
+            
+            <div class="factors-content">
+                <div class="factor-item">
+                    <div class="factor-icon">
+                        <i data-feather="dollar-sign"></i>
+                    </div>
+                    <div class="factor-text">
+                        <h3>Economic Considerations</h3>
+                        <p>Capital investment requirements, operational costs, infrastructure development expenses, and long-term financial viability across different transportation distances and volumes.</p>
+                    </div>
+                </div>
+
+                <div class="factor-item">
+                    <div class="factor-icon">
+                        <i data-feather="map-pin"></i>
+                    </div>
+                    <div class="factor-text">
+                        <h3>Distance & Geography</h3>
+                        <p>Transportation distance, terrain challenges, existing infrastructure availability, and geographical constraints that influence method selection and feasibility.</p>
+                    </div>
+                </div>
+
+                <div class="factor-item">
+                    <div class="factor-icon">
+                        <i data-feather="trending-up"></i>
+                    </div>
+                    <div class="factor-text">
+                        <h3>Volume & Scale</h3>
+                        <p>Required hydrogen quantities, delivery frequency, scalability potential, and capacity utilization rates that determine the most efficient transportation approach.</p>
+                    </div>
+                </div>
+
+                <div class="factor-item">
+                    <div class="factor-icon">
+                        <i data-feather="shield"></i>
+                    </div>
+                    <div class="factor-text">
+                        <h3>Safety & Reliability</h3>
+                        <p>Safety protocols, risk assessment, regulatory compliance, environmental impact, and system reliability requirements for secure hydrogen transportation.</p>
+                    </div>
+                </div>
+
+                <div class="factor-item">
+                    <div class="factor-icon">
+                        <i data-feather="clock"></i>
+                    </div>
+                    <div class="factor-text">
+                        <h3>Time Sensitivity</h3>
+                        <p>Delivery schedule requirements, supply chain timing, storage capabilities, and the urgency of hydrogen supply for end-use applications.</p>
+                    </div>
+                </div>
+
+                <div class="factor-item">
+                    <div class="factor-icon">
+                        <i data-feather="settings"></i>
+                    </div>
+                    <div class="factor-text">
+                        <h3>Technical Requirements</h3>
+                        <p>Hydrogen purity specifications, pressure and temperature requirements, compatibility with existing infrastructure, and technological maturity of available solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Initialize Feather icons
+        feather.replace();
+        
+        // Add smooth hover animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.transport-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-6px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Optimize for iframe embedding
+            if (window.parent !== window) {
+                // Running in iframe - adjust styles if needed
+                document.body.style.background = 'transparent';
+            }
+        });
+    </script>
+</body>
+</html>
