@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Hydrogen theme colors */
+  --hydrogen-50: hsl(166, 76%, 97%);
+  --hydrogen-100: hsl(167, 85%, 89%);
+  --hydrogen-200: hsl(168, 84%, 78%);
+  --hydrogen-300: hsl(171, 77%, 64%);
+  --hydrogen-400: hsl(172, 66%, 50%);
+  --hydrogen-500: hsl(173, 80%, 40%);
+  --hydrogen-600: hsl(175, 84%, 32%);
+  --hydrogen-700: hsl(175, 77%, 26%);
+  --hydrogen-800: hsl(176, 69%, 22%);
+  --hydrogen-900: hsl(176, 61%, 19%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Hydrogen theme utilities */
+  .bg-hydrogen-50 { background-color: var(--hydrogen-50); }
+  .bg-hydrogen-100 { background-color: var(--hydrogen-100); }
+  .bg-hydrogen-200 { background-color: var(--hydrogen-200); }
+  .bg-hydrogen-300 { background-color: var(--hydrogen-300); }
+  .bg-hydrogen-400 { background-color: var(--hydrogen-400); }
+  .bg-hydrogen-500 { background-color: var(--hydrogen-500); }
+  .bg-hydrogen-600 { background-color: var(--hydrogen-600); }
+  .bg-hydrogen-700 { background-color: var(--hydrogen-700); }
+  .bg-hydrogen-800 { background-color: var(--hydrogen-800); }
+  .bg-hydrogen-900 { background-color: var(--hydrogen-900); }
+  
+  .text-hydrogen-50 { color: var(--hydrogen-50); }
+  .text-hydrogen-100 { color: var(--hydrogen-100); }
+  .text-hydrogen-200 { color: var(--hydrogen-200); }
+  .text-hydrogen-300 { color: var(--hydrogen-300); }
+  .text-hydrogen-400 { color: var(--hydrogen-400); }
+  .text-hydrogen-500 { color: var(--hydrogen-500); }
+  .text-hydrogen-600 { color: var(--hydrogen-600); }
+  .text-hydrogen-700 { color: var(--hydrogen-700); }
+  .text-hydrogen-800 { color: var(--hydrogen-800); }
+  .text-hydrogen-900 { color: var(--hydrogen-900); }
+  
+  .border-hydrogen-50 { border-color: var(--hydrogen-50); }
+  .border-hydrogen-100 { border-color: var(--hydrogen-100); }
+  .border-hydrogen-200 { border-color: var(--hydrogen-200); }
+  .border-hydrogen-300 { border-color: var(--hydrogen-300); }
+  .border-hydrogen-400 { border-color: var(--hydrogen-400); }
+  .border-hydrogen-500 { border-color: var(--hydrogen-500); }
+  .border-hydrogen-600 { border-color: var(--hydrogen-600); }
+  .border-hydrogen-700 { border-color: var(--hydrogen-700); }
+  .border-hydrogen-800 { border-color: var(--hydrogen-800); }
+  .border-hydrogen-900 { border-color: var(--hydrogen-900); }
+  
+  .ring-hydrogen-50 { --tw-ring-color: var(--hydrogen-50); }
+  .ring-hydrogen-100 { --tw-ring-color: var(--hydrogen-100); }
+  .ring-hydrogen-200 { --tw-ring-color: var(--hydrogen-200); }
+  .ring-hydrogen-300 { --tw-ring-color: var(--hydrogen-300); }
+  .ring-hydrogen-400 { --tw-ring-color: var(--hydrogen-400); }
+  .ring-hydrogen-500 { --tw-ring-color: var(--hydrogen-500); }
+  .ring-hydrogen-600 { --tw-ring-color: var(--hydrogen-600); }
+  .ring-hydrogen-700 { --tw-ring-color: var(--hydrogen-700); }
+  .ring-hydrogen-800 { --tw-ring-color: var(--hydrogen-800); }
+  .ring-hydrogen-900 { --tw-ring-color: var(--hydrogen-900); }
+
+  /* Hover variants */
+  .hover\:bg-hydrogen-50:hover { background-color: var(--hydrogen-50); }
+  .hover\:bg-hydrogen-100:hover { background-color: var(--hydrogen-100); }
+  .hover\:bg-hydrogen-200:hover { background-color: var(--hydrogen-200); }
+  .hover\:bg-hydrogen-300:hover { background-color: var(--hydrogen-300); }
+  .hover\:bg-hydrogen-400:hover { background-color: var(--hydrogen-400); }
+  .hover\:bg-hydrogen-500:hover { background-color: var(--hydrogen-500); }
+  .hover\:bg-hydrogen-600:hover { background-color: var(--hydrogen-600); }
+  .hover\:bg-hydrogen-700:hover { background-color: var(--hydrogen-700); }
+  .hover\:bg-hydrogen-800:hover { background-color: var(--hydrogen-800); }
+  .hover\:bg-hydrogen-900:hover { background-color: var(--hydrogen-900); }
+
+  /* Custom animations */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .animate-slide-down {
+    animation: slideDown 0.5s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* iFrame optimization */
+@media (max-width: 768px) {
+  .grid-mode button {
+    min-height: 120px !important;
+    font-size: 1.5rem !important;
+  }
+  
+  .nav-mode button {
+    min-height: 50px !important;
+    font-size: 1rem !important;
+    padding: 0.75rem 1.5rem !important;
+  }
+}
+
+/* Enhanced readability for iFrame embedding */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
