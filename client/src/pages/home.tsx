@@ -5,6 +5,7 @@ import OxygenChart from "@/components/OxygenChart";
 import TransportMethods from "@/components/TransportMethods";
 import PPESafety from "@/components/PPESafety";
 import HydrogenLegislation from "@/components/HydrogenLegislation";
+import ProcessSafety from "@/components/ProcessSafety";
 
 type Quadrant = "process" | "transport" | "storage" | "product";
 
@@ -222,25 +223,8 @@ export default function Home() {
               <div id={`${selectedQuadrant}-content`} className="animate-slide-up">
                 {/* Process Content */}
                 {selectedQuadrant === 'process' && (
-                  <div className="space-y-12">
-                    {/* Hydrogen Rainbow at the top */}
-                    <div>
-                      <HydrogenRainbow />
-                    </div>
-                    
-                    {/* Vertical spacing divider */}
-                    <div className="flex items-center justify-center py-4">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                      <div className="px-4">
-                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                    </div>
-                    
-                    {/* Oxygen Chart at the bottom */}
-                    <div>
-                      <OxygenChart />
-                    </div>
+                  <div>
+                    <ProcessSafety />
                   </div>
                 )}
                 
@@ -273,9 +257,27 @@ export default function Home() {
                     </div>
                   </div>
                 )}
+                {/* Product Content */}
                 {selectedQuadrant === 'product' && (
-                  <div className="text-center text-gray-500 py-8">
-                    <p className="text-lg">Product-related content will appear here</p>
+                  <div className="space-y-12">
+                    {/* Hydrogen Rainbow at the top */}
+                    <div>
+                      <HydrogenRainbow />
+                    </div>
+                    
+                    {/* Vertical spacing divider */}
+                    <div className="flex items-center justify-center py-4">
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
+                      <div className="px-4">
+                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
+                      </div>
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
+                    </div>
+                    
+                    {/* Oxygen Chart at the bottom */}
+                    <div>
+                      <OxygenChart />
+                    </div>
                   </div>
                 )}
               </div>
