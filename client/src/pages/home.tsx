@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
+import HydrogenRainbow from "@/components/HydrogenRainbow";
+import OxygenChart from "@/components/OxygenChart";
 
 type Quadrant = "process" | "transport" | "storage" | "product";
 
@@ -213,14 +215,33 @@ export default function Home() {
             </div>
             
             {/* External Content Area */}
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div id={`${selectedQuadrant}-content`} className="animate-slide-up">
-                {/* External HTML content for the selected quadrant will be injected here */}
+                {/* Process Content */}
                 {selectedQuadrant === 'process' && (
-                  <div className="text-center text-gray-500 py-8">
-                    <p className="text-lg">Process-related content will appear here</p>
+                  <div className="space-y-12">
+                    {/* Hydrogen Rainbow at the top */}
+                    <div>
+                      <HydrogenRainbow />
+                    </div>
+                    
+                    {/* Vertical spacing divider */}
+                    <div className="flex items-center justify-center py-4">
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
+                      <div className="px-4">
+                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
+                      </div>
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
+                    </div>
+                    
+                    {/* Oxygen Chart at the bottom */}
+                    <div>
+                      <OxygenChart />
+                    </div>
                   </div>
                 )}
+                
+                {/* Other quadrants - placeholder content */}
                 {selectedQuadrant === 'transport' && (
                   <div className="text-center text-gray-500 py-8">
                     <p className="text-lg">Transport-related content will appear here</p>

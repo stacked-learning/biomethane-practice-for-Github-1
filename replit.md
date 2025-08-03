@@ -1,6 +1,6 @@
 # Overview
 
-This is a full-stack web application built with React and Express.js that appears to be focused on hydrogen energy information and education. The application features a modern tech stack with TypeScript, Tailwind CSS, and shadcn/ui components for a polished user interface. The backend uses Express.js with Drizzle ORM configured for PostgreSQL, though currently implements in-memory storage for development purposes.
+This is an interactive hydrogen education tool built with React and Express.js featuring an animated quadrant navigation system optimized for iFrame embedding. The application presents hydrogen education content through four main quadrants (Process, Transport, Storage, Product) with smooth animations and detailed content sections. It includes integrated interactive components like the Hydrogen Rainbow visualization and Oxygen Level Chart for comprehensive educational experiences.
 
 # User Preferences
 
@@ -9,13 +9,15 @@ Preferred communication style: Simple, everyday language.
 # System Architecture
 
 ## Frontend Architecture
-The client-side is built with React 18 using Vite as the build tool and development server. The application uses a component-based architecture with:
+The client-side is built with React 18 using Vite as the build tool and development server. The application features an interactive quadrant-based design optimized for educational content:
 
+- **Main Interface**: Four-quadrant grid layout (Process, Transport, Storage, Product) with animated transitions
+- **Interactive Components**: Custom React components for Hydrogen Rainbow and Oxygen Level Chart
 - **UI Framework**: shadcn/ui components built on Radix UI primitives for accessibility and customization
-- **Styling**: Tailwind CSS with CSS variables for theming and responsive design
+- **Styling**: Tailwind CSS with custom hydrogen-themed color variables and animations
 - **Routing**: Wouter for lightweight client-side routing
-- **State Management**: TanStack Query (React Query) for server state management and caching
-- **Form Handling**: React Hook Form with Zod validation for type-safe form schemas
+- **State Management**: Local React state for quadrant selection and content display
+- **iFrame Optimization**: Large fonts and responsive design optimized for embedding
 - **TypeScript**: Full TypeScript implementation with strict type checking
 
 ## Backend Architecture
@@ -50,13 +52,25 @@ The application uses modern build tooling optimized for both development and pro
 - **Type Safety**: TypeScript compilation with strict checking across client, server, and shared code
 - **Code Quality**: ESM modules throughout with proper import/export patterns
 
+# Recent Changes (January 2025)
+
+## Hydrogen Quadrant Education Tool Implementation
+- **Interactive Quadrant System**: Four-quadrant layout with animated transitions between grid and detail views
+- **Process Section Content**: Integrated Hydrogen Rainbow and Oxygen Level Chart components
+- **Hydrogen Rainbow**: Interactive visualization of 12 different hydrogen production methods with color-coded pills
+- **Oxygen Chart**: Interactive oxygen level visualization showing health effects at different concentrations
+- **Design Optimization**: iFrame-optimized layout with large, readable text and responsive design
+- **Animation System**: Smooth transitions, hover effects, and content reveal animations
+- **Vertical Dividers**: Elegant content separation using gradient dividers instead of boxes
+
 # External Dependencies
 
 ## Frontend Dependencies
 - **React Ecosystem**: React 18, React DOM, React Router (Wouter)
 - **UI Components**: Radix UI primitives, Lucide React icons, shadcn/ui
-- **State Management**: TanStack Query for server state, React Hook Form for forms
-- **Styling**: Tailwind CSS, class-variance-authority, clsx for conditional classes
+- **Interactive Components**: Custom HydrogenRainbow and OxygenChart components
+- **Styling**: Tailwind CSS with custom hydrogen theme, class-variance-authority, clsx
+- **Animations**: Custom CSS animations for smooth quadrant transitions
 - **Utilities**: date-fns for date manipulation, Zod for validation
 
 ## Backend Dependencies

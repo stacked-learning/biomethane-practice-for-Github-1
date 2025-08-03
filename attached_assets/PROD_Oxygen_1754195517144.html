@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Oxygen Level Chart</title>
+    <meta name="description" content="Interactive visualization showing the relationship between atmospheric oxygen levels and their corresponding health impacts. Learn about safe oxygen ranges and health effects.">
+    
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="Interactive Oxygen Level Chart">
+    <meta property="og:description" content="Interactive visualization showing the relationship between atmospheric oxygen levels and their corresponding health impacts.">
+    <meta property="og:type" content="website">
+    
+    <!-- Import Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f9fafb;
+            color: #111827;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            /* Iframe optimization */
+            min-width: 320px;
+            overflow-x: auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1152px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+            color: #6b7280;
+            max-width: 512px;
+            margin: 0 auto;
+        }
+
+        /* Chart Card */
+        .chart-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 1px solid #e5e7eb;
+        }
+
+        /* Icons Row */
+        .icons-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .icon-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .icon-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            font-size: 1.25rem;
+        }
+
+        .icon-circle.death {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .icon-circle.unconscious {
+            background-color: #7c3aed;
+            color: white;
+        }
+
+        .icon-circle.drowsy {
+            background-color: #a855f7;
+            color: white;
+        }
+
+        .icon-circle.safe {
+            background-color: #10b981;
+            color: white;
+        }
+
+        .icon-circle.fire {
+            background-color: #ef4444;
+            color: white;
+        }
+
+        .icon-circle.brain {
+            background-color: #b91c1c;
+            color: white;
+        }
+
+        .icon-label {
+            font-size: clamp(0.75rem, 2vw, 0.875rem);
+            font-weight: 600;
+            color: #374151;
+        }
+
+        /* Strip Container */
+        .strip-container {
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        /* Oxygen Strip */
+        .oxygen-strip {
+            height: 1rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            display: flex;
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+            border: 1px solid #d1d5db;
+        }
+
+        .zone {
+            flex: 1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .zone::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0);
+            transition: background-color 0.3s ease;
+        }
+
+        .zone:hover::after {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .zone:hover {
+            filter: brightness(1.1);
+        }
+
+        .zone.death {
+            background-color: #3b82f6;
+        }
+
+        .zone.unconscious {
+            background-color: #7c3aed;
+        }
+
+        .zone.drowsy {
+            background-color: #a855f7;
+        }
+
+        .zone.safe {
+            background-color: #10b981;
+        }
+
+        .zone.fire {
+            background-color: #ef4444;
+        }
+
+        .zone.brain {
+            background-color: #b91c1c;
+        }
+
+
+
+        /* Percentage Labels */
+        .percentage-labels {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .percentage-label {
+            flex: 1;
+            text-align: center;
+            font-size: clamp(0.75rem, 2vw, 0.875rem);
+            font-weight: 600;
+            color: #6b7280;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: fixed;
+            z-index: 50;
+            background-color: #1f2937;
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            max-width: 24rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .tooltip.visible {
+            opacity: 1;
+        }
+
+        .tooltip-title {
+            font-weight: 700;
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            margin-bottom: 0.5rem;
+        }
+
+        .tooltip-content {
+            font-size: clamp(0.8rem, 2vw, 0.875rem);
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .tooltip-range {
+            font-size: clamp(0.7rem, 1.8vw, 0.75rem);
+            color: #d1d5db;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Information Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #f3f4f6;
+        }
+
+        .info-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .info-icon {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .info-icon.safe {
+            background-color: #10b981;
+        }
+
+        .info-icon.warning {
+            background-color: #f59e0b;
+        }
+
+        .info-icon.emergency {
+            background-color: #ef4444;
+        }
+
+        .info-card h3 {
+            font-weight: 600;
+            color: #111827;
+            margin: 0;
+            font-size: clamp(0.875rem, 2.2vw, 1rem);
+        }
+
+        .info-card p {
+            color: #6b7280;
+            font-size: clamp(0.8rem, 2vw, 0.875rem);
+            margin: 0;
+        }
+
+        /* Iframe optimization */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            
+            .chart-card {
+                padding: 1.5rem;
+            }
+            
+            .icons-row {
+                flex-wrap: wrap;
+                gap: 0.75rem;
+                justify-content: center;
+            }
+            
+            .icon-item {
+                flex: 0 0 calc(33.333% - 0.75rem);
+                min-width: 0;
+            }
+            
+            .safe-indicator {
+                padding: 0.375rem 0.75rem;
+            }
+            
+            .info-cards {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .oxygen-strip {
+                height: 0.75rem;
+            }
+            
+            .icon-circle {
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1rem;
+            }
+            
+            .tooltip {
+                max-width: calc(100vw - 2rem);
+                padding: 0.75rem;
+            }
+            
+            .icons-row {
+                gap: 0.5rem;
+            }
+            
+            .icon-item {
+                flex: 0 0 calc(50% - 0.5rem);
+            }
+        }
+
+        /* Additional iframe optimizations */
+        @media (max-width: 400px) {
+            body {
+                padding: 0.75rem 0.25rem;
+            }
+            
+            .chart-card {
+                padding: 1rem;
+            }
+            
+            .header {
+                margin-bottom: 1.5rem;
+            }
+            
+            .strip-container {
+                margin: 1.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Oxygen Percentage & Health Effects</h1>
+            <p>Interactive visualization showing the relationship between atmospheric oxygen levels and their corresponding health impacts. Hover over each zone to learn more.</p>
+        </div>
+
+        <!-- Main Chart Container -->
+        <div class="chart-card">
+            <!-- Icons Row -->
+            <div class="icons-row">
+                <div class="icon-item" data-zone="death">
+                    <div class="icon-circle death">💀</div>
+                    <div class="icon-label">Death</div>
+                </div>
+                <div class="icon-item" data-zone="unconsciousness">
+                    <div class="icon-circle unconscious">💼</div>
+                    <div class="icon-label">Unconsciousness</div>
+                </div>
+                <div class="icon-item" data-zone="drowsiness">
+                    <div class="icon-circle drowsy">🛏️</div>
+                    <div class="icon-label">Drowsiness</div>
+                </div>
+                <div class="icon-item" data-zone="safe">
+                    <div class="icon-circle safe">✅</div>
+                    <div class="icon-label">Normal Levels</div>
+                </div>
+                <div class="icon-item" data-zone="fire">
+                    <div class="icon-circle fire">🔥</div>
+                    <div class="icon-label">Increased Fire Risk</div>
+                </div>
+                <div class="icon-item" data-zone="brain">
+                    <div class="icon-circle brain">🧠</div>
+                    <div class="icon-label">Brain Damage</div>
+                </div>
+            </div>
+
+            <!-- Interactive Strip -->
+            <div class="strip-container">
+                <!-- Background strip -->
+                <div class="oxygen-strip">
+                    <div class="zone death" data-zone="death"></div>
+                    <div class="zone unconscious" data-zone="unconsciousness"></div>
+                    <div class="zone drowsy" data-zone="drowsiness"></div>
+                    <div class="zone safe" data-zone="safe"></div>
+                    <div class="zone fire" data-zone="fire"></div>
+                    <div class="zone brain" data-zone="brain"></div>
+                </div>
+
+
+            </div>
+
+            <!-- Percentage Labels -->
+            <div class="percentage-labels">
+                <div class="percentage-label">6%</div>
+                <div class="percentage-label">12%</div>
+                <div class="percentage-label">16%</div>
+                <div class="percentage-label">19-23%</div>
+                <div class="percentage-label">25%</div>
+                <div class="percentage-label">100%</div>
+            </div>
+        </div>
+
+        <!-- Tooltip -->
+        <div id="tooltip" class="tooltip">
+            <div class="tooltip-title"></div>
+            <div class="tooltip-content"></div>
+            <div class="tooltip-range"></div>
+        </div>
+
+        <!-- Information Cards -->
+        <div class="info-cards">
+            <div class="info-card">
+                <div class="info-header">
+                    <div class="info-icon safe">ℹ️</div>
+                    <h3>Normal Air</h3>
+                </div>
+                <p>Earth's atmosphere contains approximately 21% oxygen, which is optimal for human health and normal bodily functions.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-header">
+                    <div class="info-icon warning">⚠️</div>
+                    <h3>Warning Zones</h3>
+                </div>
+                <p>Oxygen levels below 16% or above 25% can cause serious health effects and require immediate attention.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-header">
+                    <div class="info-icon emergency">❤️</div>
+                    <h3>Emergency</h3>
+                </div>
+                <p>Extreme oxygen levels can be life-threatening. Always ensure proper ventilation and oxygen monitoring in enclosed spaces.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Oxygen zone data with health effects
+        const oxygenZones = {
+            death: {
+                title: "Death",
+                content: "Oxygen levels this low are immediately life-threatening. Loss of consciousness occurs within seconds, followed by cardiac arrest and death within minutes. Immediate rescue and medical attention required.",
+                range: "0-6%"
+            },
+            unconsciousness: {
+                title: "Unconsciousness", 
+                content: "Severe oxygen deficiency causing immediate loss of consciousness. Victims cannot help themselves and require immediate rescue. Prolonged exposure leads to permanent brain damage or death.",
+                range: "6-12%"
+            },
+            drowsiness: {
+                title: "Drowsiness", 
+                content: "Noticeable impairment of mental functions, coordination, and judgment. Increased breathing rate, fatigue, and drowsiness occur. Evacuation to fresh air is necessary.",
+                range: "12-16%"
+            },
+            safe: {
+                title: "Normal Oxygen Levels",
+                content: "Optimal oxygen concentration for human health. Normal breathing, clear thinking, and proper bodily functions. This is the safe range found in Earth's natural atmosphere.",
+                range: "19-23%"
+            },
+            fire: {
+                title: "Increased Fire Risk",
+                content: "Elevated oxygen levels significantly increase fire and explosion risks. Materials that normally don't burn easily become highly flammable. Smoking and ignition sources must be avoided.",
+                range: "23-25%"
+            },
+            brain: {
+                title: "Brain Damage",
+                content: "Oxygen toxicity occurs at very high concentrations, particularly under pressure. Can cause seizures, lung damage, and central nervous system effects. Medical supervision required.",
+                range: "25-100%"
+            }
+        };
+
+        // Tooltip management
+        class TooltipManager {
+            constructor() {
+                this.tooltip = document.getElementById('tooltip');
+                this.titleElement = this.tooltip.querySelector('.tooltip-title');
+                this.contentElement = this.tooltip.querySelector('.tooltip-content');
+                this.rangeElement = this.tooltip.querySelector('.tooltip-range');
+                this.isVisible = false;
+            }
+
+            show(zone, x, y) {
+                const zoneData = oxygenZones[zone];
+                if (!zoneData) return;
+
+                this.titleElement.textContent = zoneData.title;
+                this.contentElement.textContent = zoneData.content;
+                this.rangeElement.textContent = `Oxygen Range: ${zoneData.range}`;
+
+                this.positionTooltip(x, y);
+                this.tooltip.classList.add('visible');
+                this.isVisible = true;
+            }
+
+            hide() {
+                this.tooltip.classList.remove('visible');
+                this.isVisible = false;
+            }
+
+            move(x, y) {
+                if (this.isVisible) {
+                    this.positionTooltip(x, y);
+                }
+            }
+
+            positionTooltip(x, y) {
+                const tooltipWidth = 384; // max-width: 24rem = 384px
+                const tooltipHeight = 200; // approximate height
+                
+                let left = x - tooltipWidth / 2;
+                let top = y - tooltipHeight - 15;
+                
+                // Keep tooltip on screen horizontally
+                if (left < 10) left = 10;
+                if (left + tooltipWidth > window.innerWidth - 10) {
+                    left = window.innerWidth - tooltipWidth - 10;
+                }
+                
+                // Keep tooltip on screen vertically
+                if (top < 10) {
+                    top = y + 15;
+                }
+                
+                this.tooltip.style.left = `${left}px`;
+                this.tooltip.style.top = `${top}px`;
+            }
+        }
+
+        // Initialize the application
+        function initializeApp() {
+            const tooltipManager = new TooltipManager();
+            const zones = document.querySelectorAll('.zone');
+
+            zones.forEach(zone => {
+                const zoneType = zone.getAttribute('data-zone');
+
+                zone.addEventListener('mouseenter', (e) => {
+                    tooltipManager.show(zoneType, e.clientX, e.clientY);
+                });
+
+                zone.addEventListener('mousemove', (e) => {
+                    tooltipManager.move(e.clientX, e.clientY);
+                });
+
+                zone.addEventListener('mouseleave', () => {
+                    tooltipManager.hide();
+                });
+            });
+
+            // Add keyboard accessibility
+            zones.forEach(zone => {
+                zone.setAttribute('tabindex', '0');
+                zone.setAttribute('role', 'button');
+                
+                const zoneType = zone.getAttribute('data-zone');
+                const zoneData = oxygenZones[zoneType];
+                zone.setAttribute('aria-label', `${zoneData.title}: ${zoneData.content}`);
+
+                zone.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        const rect = zone.getBoundingClientRect();
+                        const centerX = rect.left + rect.width / 2;
+                        const centerY = rect.top + rect.height / 2;
+                        tooltipManager.show(zoneType, centerX, centerY);
+                        
+                        // Hide tooltip after 5 seconds for keyboard users
+                        setTimeout(() => {
+                            tooltipManager.hide();
+                        }, 5000);
+                    }
+                });
+            });
+
+            // Hide tooltip when clicking outside or pressing Escape
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.zone') && !e.target.closest('#tooltip')) {
+                    tooltipManager.hide();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    tooltipManager.hide();
+                }
+            });
+
+            // Add smooth scrolling for better UX
+            document.documentElement.style.scrollBehavior = 'smooth';
+        }
+
+        // Wait for DOM to be fully loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeApp);
+        } else {
+            initializeApp();
+        }
+
+        // Add resize handler to reposition tooltip if needed
+        window.addEventListener('resize', () => {
+            const tooltip = document.getElementById('tooltip');
+            if (tooltip.classList.contains('visible')) {
+                tooltip.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>
