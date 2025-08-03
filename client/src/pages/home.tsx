@@ -200,16 +200,46 @@ export default function Home() {
           </Card>
         )}
 
-        {/* Integration Zone for External HTML Content */}
-        <Card className="bg-white rounded-2xl shadow-lg p-8 border-2 border-dashed border-gray-300">
-          <div className="text-center text-gray-500">
-            <h3 className="text-xl font-semibold mb-2">External Content Integration Area</h3>
-            <p className="text-base">Additional HTML pages will be displayed here when loaded</p>
+        {/* External Content Integration with Vertical Divider */}
+        {isDetailView && selectedQuadrant && (
+          <div className="mt-8">
+            {/* Vertical Divider */}
+            <div className="flex items-center justify-center mb-8">
+              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-300 to-transparent"></div>
+              <div className="px-4">
+                <div className="w-3 h-3 bg-hydrogen-500 rounded-full"></div>
+              </div>
+              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-300 to-transparent"></div>
+            </div>
+            
+            {/* External Content Area */}
+            <div className="space-y-6">
+              <div id={`${selectedQuadrant}-content`} className="animate-slide-up">
+                {/* External HTML content for the selected quadrant will be injected here */}
+                {selectedQuadrant === 'process' && (
+                  <div className="text-center text-gray-500 py-8">
+                    <p className="text-lg">Process-related content will appear here</p>
+                  </div>
+                )}
+                {selectedQuadrant === 'transport' && (
+                  <div className="text-center text-gray-500 py-8">
+                    <p className="text-lg">Transport-related content will appear here</p>
+                  </div>
+                )}
+                {selectedQuadrant === 'storage' && (
+                  <div className="text-center text-gray-500 py-8">
+                    <p className="text-lg">Storage-related content will appear here</p>
+                  </div>
+                )}
+                {selectedQuadrant === 'product' && (
+                  <div className="text-center text-gray-500 py-8">
+                    <p className="text-lg">Product-related content will appear here</p>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
-          <div id="externalContent" className="mt-4">
-            {/* External HTML content will be injected here */}
-          </div>
-        </Card>
+        )}
       </div>
     </div>
   );
