@@ -29,12 +29,11 @@ const quadrantData: Record<Quadrant, QuadrantContent> = {
   },
   transport: {
     title: "Transport",
-    subtitle: "Transport quadrant illustration - Distribution & Logistics",
-    description: "Comprehensive hydrogen transportation and distribution systems",
+    subtitle: "Safety Precautions",
+    description: "Essential safety protocols for hydrogen transport operations",
     points: [
-      "Pipeline Distribution: High-pressure gas pipelines for long-distance hydrogen transport, requiring specialized materials and infrastructure.",
-      "Compressed Gas Delivery: Tube trailers and mobile storage systems for flexible point-to-point distribution networks.",
-      "Liquid Hydrogen Transport: Cryogenic tanker systems for high-volume transportation at -253°C, enabling efficient long-distance shipping."
+      "Transport Inspection: Before transport, the entire assembly must be inspected for damage.",
+      "Connection Verification: Ensure all panel connections remain secured (marked with white paint before dispatch)."
     ]
   },
   storage: {
