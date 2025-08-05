@@ -75,6 +75,13 @@ export default function HydrogenLegislation() {
 
   return (
     <div className="w-full max-w-2xl mx-auto p-4">
+      {/* Description */}
+      <div className="mb-6 text-center">
+        <p className="text-lg lg:text-xl leading-relaxed text-gray-700 max-w-4xl mx-auto">
+          Comprehensive overview of hydrogen legislation across Australia, including both Commonwealth and State-level regulatory frameworks governing hydrogen production, storage, transportation, and safety standards.
+        </p>
+      </div>
+      
       <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden">
         {/* Header Button */}
         <button
