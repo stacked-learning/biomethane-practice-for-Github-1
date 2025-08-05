@@ -19,12 +19,13 @@ interface QuadrantContent {
 const quadrantData: Record<Quadrant, QuadrantContent> = {
   process: {
     title: "Process",
-    subtitle: "Process quadrant illustration - Production & Manufacturing",
-    description: "Advanced hydrogen production methods and manufacturing processes",
+    subtitle: "Technical Considerations",
+    description: "Critical hydrogen processing factors and system interactions",
     points: [
-      "Electrolysis: The most common method for hydrogen production, splitting water molecules using electrical energy from renewable sources.",
-      "Steam Reforming: Industrial process that extracts hydrogen from natural gas, currently the most cost-effective production method.",
-      "Pyrolysis: Advanced thermal decomposition process that produces hydrogen while capturing carbon as a solid byproduct."
+      "Joule-Thompson Effect: Unlike most gases, hydrogen heats up when it expands rather than cooling.",
+      "Pipeline Considerations: Mixing hydrogen into natural gas pipelines can affect system stability.",
+      "Wobbe Index Impact: The Wobbe number of hydrogen is lower than most gases, affecting combustion efficiency.",
+      "Combustion Factors: Hydrogen's flame speed, adiabatic flame temperature, and stability must be considered when using it in fuel systems."
     ]
   },
   transport: {
@@ -38,12 +39,13 @@ const quadrantData: Record<Quadrant, QuadrantContent> = {
   },
   storage: {
     title: "Storage",
-    subtitle: "Storage quadrant illustration - Containment & Preservation",
-    description: "Advanced hydrogen storage solutions and containment technologies",
+    subtitle: "Infrastructure Systems",
+    description: "Hydrogen storage and distribution infrastructure components",
     points: [
-      "Compressed Gas Storage: High-pressure vessels (350-700 bar) for gaseous hydrogen storage with rapid filling capabilities.",
-      "Liquid Hydrogen Tanks: Cryogenic storage systems maintaining ultra-low temperatures for maximum density storage solutions.",
-      "Underground Storage: Salt caverns and depleted gas fields for large-scale, long-term hydrogen storage infrastructure."
+      "Design: A buried pipeline with integrated control interlocks and leak monitoring.",
+      "Distribution: Hydrogen from storage is routed through Gas Panel package for power generation.",
+      "Compression Station: Hydrogen compression station for transport/export.",
+      "Network Integration: Secondary main network injection panel to be blended into natural gas pipelines."
     ]
   },
   product: {
