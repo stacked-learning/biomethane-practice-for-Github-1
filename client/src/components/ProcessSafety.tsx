@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Wind, Search, Flame } from "lucide-react";
+import flameDetectionImg from "@assets/flamedet_1754391283690.png";
+import gasDetectionImg from "@assets/gasdet_1754391283693.png";
+import ventilationImg from "@assets/ventilation_1754391283693.png";
 
 interface SafetySection {
   id: string;
@@ -14,7 +17,7 @@ const safetySections: SafetySection[] = [
     id: "ventilation",
     title: "Ventilation",
     icon: Wind,
-    imageUrl: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800",
+    imageUrl: ventilationImg,
     points: [
       "Ventilation is important for maintaining safe hydrogen levels",
       "Keep oxygen concentration between safe operational limits",
@@ -25,7 +28,7 @@ const safetySections: SafetySection[] = [
     id: "leak-detection",
     title: "Leak Detection",
     icon: Search,
-    imageUrl: "https://images.unsplash.com/photo-1559028006-448665bd7c7f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800",
+    imageUrl: gasDetectionImg,
     points: [
       "Detecting leaks is vital for preventing accidents",
       "Install hydrogen-specific detection sensors",
@@ -36,7 +39,7 @@ const safetySections: SafetySection[] = [
     id: "flame-detection",
     title: "Flame Detection",
     icon: Flame,
-    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800",
+    imageUrl: flameDetectionImg,
     points: [
       "Early flame detection prevents catastrophic events",
       "UV and IR sensors provide rapid response",
