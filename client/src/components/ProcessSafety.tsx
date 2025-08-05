@@ -116,7 +116,10 @@ export default function ProcessSafety() {
         <h1 className="text-4xl lg:text-6xl font-semibold text-hydrogen-600 mb-6 tracking-tight">
           Safe Hydrogen Practices
         </h1>
-        <div className="w-20 lg:w-32 h-1 bg-gray-500 mx-auto rounded"></div>
+        <div className="w-20 lg:w-32 h-1 bg-gray-500 mx-auto rounded mb-8"></div>
+        <p className="text-lg lg:text-xl xl:text-2xl leading-relaxed text-gray-700 max-w-4xl mx-auto">
+          Hydrogen safety practices are critical for preventing accidents and ensuring the safe handling of this highly flammable gas in industrial environments. Proper implementation of safety protocols, detection systems, and emergency procedures can prevent catastrophic incidents and protect both personnel and facilities.
+        </p>
       </div>
 
       {/* Safety Sections */}
