@@ -6,6 +6,10 @@ import TransportMethods from "@/components/TransportMethods";
 import PPESafety from "@/components/PPESafety";
 import HydrogenLegislation from "@/components/HydrogenLegislation";
 import ProcessSafety from "@/components/ProcessSafety";
+import processImg from "@assets/process_img_1754391971848.jpg";
+import productImg from "@assets/product_img_1754391991610.jpg";
+import storageImg from "@assets/storage_img_1754392017212.jpg";
+import transportImg from "@assets/transport_img_1754392022435.jpg";
 
 type Quadrant = "process" | "transport" | "storage" | "product";
 
@@ -15,6 +19,13 @@ interface QuadrantContent {
   description: string;
   points: string[];
 }
+
+const quadrantImages: Record<Quadrant, string> = {
+  process: processImg,
+  transport: transportImg,
+  storage: storageImg,
+  product: productImg
+};
 
 const quadrantData: Record<Quadrant, QuadrantContent> = {
   process: {
@@ -174,6 +185,15 @@ export default function Home() {
         {/* Content Area */}
         {isDetailView && selectedQuadrant && (
           <Card className="bg-white rounded-2xl shadow-lg p-8 mb-8 animate-slide-up">
+            {/* Image */}
+            <div className="mb-6">
+              <img 
+                src={quadrantImages[selectedQuadrant]} 
+                alt={`${quadrantData[selectedQuadrant].title} illustration`}
+                className="w-full h-64 object-cover rounded-lg shadow-md"
+              />
+            </div>
+            
             <div className="border-b border-gray-200 pb-4 mb-6">
               <h2 className="text-3xl font-bold text-gray-800 mb-2">
                 {quadrantData[selectedQuadrant].title}
