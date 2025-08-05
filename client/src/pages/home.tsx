@@ -117,10 +117,10 @@ export default function Home() {
           {!isDetailView && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-8 animate-fade-in">
               <button
-                onClick={() => handleQuadrantClick("process")}
-                className={getButtonClasses("process")}
+                onClick={() => handleQuadrantClick("product")}
+                className={getButtonClasses("product")}
               >
-                Process
+                Product
               </button>
               <button
                 onClick={() => handleQuadrantClick("transport")}
@@ -135,10 +135,10 @@ export default function Home() {
                 Storage
               </button>
               <button
-                onClick={() => handleQuadrantClick("product")}
-                className={getButtonClasses("product")}
+                onClick={() => handleQuadrantClick("process")}
+                className={getButtonClasses("process")}
               >
-                Product
+                Process
               </button>
             </div>
           )}
@@ -147,10 +147,10 @@ export default function Home() {
           {isDetailView && (
             <div className="flex flex-wrap justify-center gap-4 mb-8 animate-slide-down">
               <button
-                onClick={() => handleQuadrantClick("process")}
-                className={getButtonClasses("process", true)}
+                onClick={() => handleQuadrantClick("product")}
+                className={getButtonClasses("product", true)}
               >
-                Process
+                Product
               </button>
               <button
                 onClick={() => handleQuadrantClick("transport")}
@@ -165,10 +165,10 @@ export default function Home() {
                 Storage
               </button>
               <button
-                onClick={() => handleQuadrantClick("product")}
-                className={getButtonClasses("product", true)}
+                onClick={() => handleQuadrantClick("process")}
+                className={getButtonClasses("process", true)}
               >
-                Product
+                Process
               </button>
             </div>
           )}
