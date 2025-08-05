@@ -185,15 +185,7 @@ export default function Home() {
         {/* Content Area */}
         {isDetailView && selectedQuadrant && (
           <Card className="bg-white rounded-2xl shadow-lg p-8 mb-8 animate-slide-up">
-            {/* Image */}
-            <div className="mb-6 flex justify-center">
-              <img 
-                src={quadrantImages[selectedQuadrant]} 
-                alt={`${quadrantData[selectedQuadrant].title} illustration`}
-                className="w-full max-w-2xl aspect-square object-cover rounded-lg shadow-md"
-              />
-            </div>
-            
+
             <div className="border-b border-gray-200 pb-4 mb-6">
               <h2 className="text-3xl font-bold text-gray-800 mb-2">
                 {quadrantData[selectedQuadrant].title}
