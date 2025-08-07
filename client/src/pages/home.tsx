@@ -61,7 +61,7 @@ const quadrantData: Record<Quadrant, QuadrantContent> = {
   },
   product: {
     title: "Product",
-    subtitle: "Product quadrant illustration - Manufacturing & Development",
+    subtitle: "Hydrogen ",
     description: "Safety considerations and product development in hydrogen applications",
     points: [
       "Ignition Risk: Hydrogen has an extremely low minimum Ignition Energy (MIE), making it highly flammable.",
