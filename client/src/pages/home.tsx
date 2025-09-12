@@ -41,11 +41,12 @@ const quadrantData: Record<Quadrant, QuadrantContent> = {
   },
   transport: {
     title: "Transport",
-    subtitle: "Safety Precautions",
-    description: "Essential safety protocols for hydrogen transport operations",
+    subtitle: "Storage Methods",
+    description: "Hydrogen can be stored in several different ways because no single method works for every situation. Compressed gas storage is the most common, using high-pressure tanks to store hydrogen at up to 700 bar. This method is relatively simple and well understood, making it a practical choice for vehicles, small-scale systems, and applications where quick refuelling or dispensing is needed.",
     points: [
-      "Transport Inspection: Before transport, the entire assembly must be inspected for damage.",
-      "Connection Verification: Ensure all panel connections remain secured (marked with white paint before dispatch)."
+      "Liquid Hydrogen Storage: For larger energy needs or long-distance transport, liquid hydrogen storage is preferred despite the extra energy required to cool it to –253 °C. Liquefaction dramatically increases hydrogen's energy density, allowing more fuel to be stored in the same space — essential for shipping, aerospace, and other applications where weight and volume matter.",
+      "Chemical Storage Methods: Some approaches store hydrogen in a chemically bound form, like metal hydrides, ammonia, or liquid organic hydrogen carriers (LOHCs). These methods can be safer and easier to handle, especially for seasonal or remote storage, but require additional energy to release the hydrogen when needed.",
+      "Method Selection: Choosing the right storage method depends on the scale, cost, safety requirements, and the end-use application."
     ]
   },
   storage: {
