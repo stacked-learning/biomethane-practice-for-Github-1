@@ -30,13 +30,12 @@ const quadrantImages: Record<Quadrant, string> = {
 const quadrantData: Record<Quadrant, QuadrantContent> = {
   process: {
     title: "Process",
-    subtitle: "Technical Considerations",
-    description: "Critical hydrogen processing factors and system interactions",
+    subtitle: "Hydrogen Production",
+    description: "Hydrogen production is the first step in making hydrogen a usable energy carrier, turning feedstocks like natural gas, water, or biomass into pure hydrogen gas. This process is essential because hydrogen doesn't exist naturally in large quantities — it must be separated from other elements. Production enables hydrogen to power fuel cells, supply industries like ammonia and methanol manufacturing, and store renewable energy for later use.",
     points: [
-      "Joule-Thompson Effect: Unlike most gases, hydrogen heats up when it expands rather than cooling.",
-      "Pipeline Considerations: Mixing hydrogen into natural gas pipelines can affect system stability.",
-      "Wobbe Index Impact: The Wobbe number of hydrogen is lower than most gases, affecting combustion efficiency.",
-      "Combustion Factors: Hydrogen's flame speed, adiabatic flame temperature, and stability must be considered when using it in fuel systems."
+      "Production Methods: Different feedstocks and methods are used depending on cost, scale, and carbon footprint. Steam methane reforming (SMR) from natural gas is the most common, but it produces CO₂ unless paired with carbon capture. Water electrolysis splits water into hydrogen and oxygen using electricity and is crucial for \"green hydrogen\" when powered by renewables.",
+      "Alternative Pathways: Biomass gasification and emerging processes like methane pyrolysis or photoelectrochemical splitting offer alternative, lower-carbon pathways.",
+      "Safety Requirements: Safe production of hydrogen requires strict control of temperature, pressure, and reaction conditions. Hydrogen leaks must be prevented because of its wide flammability range and low ignition energy. Facilities rely on robust ventilation, leak detection, emergency shutdown systems, and separation of hydrogen and oxygen streams."
     ]
   },
   transport: {
