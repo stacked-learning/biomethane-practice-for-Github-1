@@ -62,11 +62,11 @@ const quadrantData: Record<Quadrant, QuadrantContent> = {
   product: {
     title: "Product",
     subtitle: "Hydrogen ",
-    description: "Safety considerations and product development in hydrogen applications",
+    description: "Hydrogen is the simplest and lightest element, made up of just one proton and one electron. In its pure form (H₂), it is a colourless, odourless gas that is extremely flammable. It is widely produced and sold as a clean energy carrier and industrial feedstock, often stored as a compressed gas or liquid.",
     points: [
-      "Ignition Risk: Hydrogen has an extremely low minimum Ignition Energy (MIE), making it highly flammable.",
-      "Static Electricity Hazard: Sudden discharge from static build-up can cause ignition or explosion.",
-      "Gas Classification: Hydrogen falls under Gas Group IIC, the highest hazard classification."
+      "Energy Applications: It is used as a fuel for power generation, transport (through hydrogen fuel cells), and as a feedstock for chemical processes like ammonia production, methanol synthesis, and petroleum refining.",
+      "Clean Energy Role: Because it can be generated from renewable energy, hydrogen is seen as a key player in decarbonising hard-to-electrify sectors.",
+      "Safety Considerations: Hydrogen is not toxic, but it poses unique safety challenges. It disperses quickly, burns with an almost invisible flame, and forms explosive mixtures with air. Safe use relies on good ventilation, leak detection, and strict ignition control to prevent accidents and ensure safe handling."
     ]
   }
 };
