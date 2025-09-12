@@ -51,13 +51,12 @@ const quadrantData: Record<Quadrant, QuadrantContent> = {
   },
   storage: {
     title: "Storage",
-    subtitle: "Infrastructure Systems",
-    description: "Hydrogen storage and distribution infrastructure components",
+    subtitle: "Critical Energy Infrastructure",
+    description: "Hydrogen storage is critical for turning hydrogen into a practical energy carrier, allowing it to be held safely and used on demand. Without storage, hydrogen production would need to perfectly match demand, which is unrealistic for industries, power grids, and transport. Storage enables energy balancing, backup supply, and a reliable hydrogen economy.",
     points: [
-      "Design: A buried pipeline with integrated control interlocks and leak monitoring.",
-      "Distribution: Hydrogen from storage is routed through Gas Panel package for power generation.",
-      "Compression Station: Hydrogen compression station for transport/export.",
-      "Network Integration: Secondary main network injection panel to be blended into natural gas pipelines."
+      "Storage Method Diversity: Different storage methods exist because hydrogen has a very low natural density, making it challenging to store efficiently. Compressed gas is simple and widely used, liquid hydrogen offers high density for space-critical applications, and geological storage in salt caverns supports massive seasonal energy reserves.",
+      "Advanced Storage Solutions: Materials-based options like metal hydrides or ammonia are being developed for safer handling and easier transport, even if they require extra processing.",
+      "Safety and Scalability: Safety is central to hydrogen storage. High pressures, cryogenic temperatures, and chemical reactions must be carefully controlled to avoid leaks or ignition. Salt caverns are seen as a safe, scalable option for bulk storage due to their natural sealing properties, while composite tanks and insulated vessels keep compressed or liquid hydrogen secure. These methods work together to make hydrogen a practical, flexible part of future clean energy systems."
     ]
   },
   product: {
