@@ -4,7 +4,6 @@ import HydrogenRainbow from "@/components/HydrogenRainbow";
 import OxygenChart from "@/components/OxygenChart";
 import TransportMethods from "@/components/TransportMethods";
 import PPESafety from "@/components/PPESafety";
-import HydrogenLegislation from "@/components/HydrogenLegislation";
 import ProcessSafety from "@/components/ProcessSafety";
 import processImg from "@assets/process_img_1754391971848.jpg";
 import productImg from "@assets/product_img_1754391991610.jpg";
@@ -248,25 +247,8 @@ export default function Home() {
                 )}
                 {/* Storage Content */}
                 {selectedQuadrant === 'storage' && (
-                  <div className="space-y-12">
-                    {/* PPE Safety at the top */}
-                    <div>
-                      <PPESafety />
-                    </div>
-                    
-                    {/* Vertical spacing divider */}
-                    <div className="flex items-center justify-center py-4">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                      <div className="px-4">
-                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                    </div>
-                    
-                    {/* Legislation at the bottom */}
-                    <div>
-                      <HydrogenLegislation />
-                    </div>
+                  <div>
+                    <PPESafety />
                   </div>
                 )}
                 {/* Product Content */}
