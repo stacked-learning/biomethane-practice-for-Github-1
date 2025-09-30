@@ -437,19 +437,6 @@ export default function Home() {
                       <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
                     </div>
                     
-                    {/* Hydrogen Rainbow */}
-                    <div>
-                      <HydrogenRainbow />
-                    </div>
-                    
-                    <div className="flex items-center justify-center py-4">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                      <div className="px-4">
-                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                    </div>
-                    
                     <div>
                       <QuadrantSafetySection 
                         generalText={quadrantData.product.description}
