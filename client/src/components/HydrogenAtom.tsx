@@ -9,7 +9,6 @@ export default function HydrogenAtom() {
   const [containerFadeUp, setContainerFadeUp] = useState(false);
   const [descriptionVisible, setDescriptionVisible] = useState(false);
   const [isInView, setIsInView] = useState(false);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const componentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -32,71 +31,64 @@ export default function HydrogenAtom() {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (!scrollContainerRef.current || !isInView) return;
-      
-      const scrollTop = scrollContainerRef.current.scrollTop;
-      const firstTrigger = 50;
-      const secondTrigger = 500;
-      const thirdTrigger = 600;
-      const fourthTrigger = 800;
+    if (!isInView) return;
 
-      if (scrollTop > firstTrigger && scrollTop < secondTrigger) {
+    const handleScroll = () => {
+      if (!componentRef.current) return;
+      
+      const rect = componentRef.current.getBoundingClientRect();
+      const scrollProgress = -rect.top;
+      
+      const firstTrigger = 100;
+      const secondTrigger = 600;
+      const thirdTrigger = 800;
+      const fourthTrigger = 1000;
+
+      if (scrollProgress > firstTrigger && scrollProgress < secondTrigger) {
         setHydroActive(true);
         setGenActive(true);
         setHydroCenter(false);
         setGenCenter(false);
-      } else if (scrollTop >= secondTrigger && scrollTop < thirdTrigger) {
+      } else if (scrollProgress >= secondTrigger && scrollProgress < thirdTrigger) {
         setHydroCenter(true);
         setGenCenter(true);
-      } else if (scrollTop < firstTrigger) {
+      } else if (scrollProgress < firstTrigger) {
         setHydroActive(false);
         setGenActive(false);
         setHydroCenter(false);
         setGenCenter(false);
       }
 
-      if (scrollTop > thirdTrigger && scrollTop < fourthTrigger) {
+      if (scrollProgress > thirdTrigger && scrollProgress < fourthTrigger) {
         setHydrogenVisible(true);
-      } else if (scrollTop < thirdTrigger) {
+      } else if (scrollProgress < thirdTrigger) {
         setHydrogenVisible(false);
       }
 
-      if (scrollTop > fourthTrigger) {
+      if (scrollProgress > fourthTrigger) {
         setContainerFadeUp(true);
         setHydrogenVisible(false);
         setDescriptionVisible(false);
       } else {
         setContainerFadeUp(false);
-        setDescriptionVisible(false);
       }
     };
 
-    const container = scrollContainerRef.current;
-    if (container) {
-      container.addEventListener('scroll', handleScroll);
-      handleScroll();
-    }
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
 
     return () => {
-      if (container) {
-        container.removeEventListener('scroll', handleScroll);
-      }
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isInView]);
 
   return (
     <div 
       ref={componentRef}
       className="relative w-full bg-white"
     >
-      <div 
-        ref={scrollContainerRef}
-        className="relative w-full bg-white overflow-y-auto"
-        style={{ height: '100vh' }}
-      >
       {/* Scroll content container */}
-      <div style={{ height: '320vh', position: 'relative' }}>
+      <div style={{ minHeight: '320vh', position: 'relative' }}>
         
         {/* Fixed container for atom and text */}
         {isInView && (
@@ -280,7 +272,6 @@ export default function HydrogenAtom() {
           }
         }
       `}</style>
-    </div>
     </div>
   );
 }
