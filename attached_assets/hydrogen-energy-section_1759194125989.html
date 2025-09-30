@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volumetric Density versus Energy Density</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #fafafa;
+            color: #2b3544;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 56rem;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .title {
+            font-size: 2.25rem;
+            font-weight: 500;
+            color: #2b3544;
+            margin-bottom: 1rem;
+        }
+
+        .description {
+            font-size: 1.25rem;
+            color: rgba(43, 53, 68, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(37, 99, 235, 0.3);
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            .description {
+                font-size: 1.375rem;
+            }
+            .columns {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 2rem;
+        }
+
+        .column-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .column-title.blue {
+            color: #2563eb;
+        }
+
+        .column-title.green {
+            color: #059669;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+        }
+
+        .icon.blue {
+            color: #2563eb;
+        }
+
+        .icon.green {
+            color: #059669;
+        }
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .text-medium {
+            font-weight: 500;
+        }
+
+        .text-medium.blue {
+            color: rgba(37, 99, 235, 0.8);
+        }
+
+        .text-medium.green {
+            color: #059669;
+        }
+
+        .text-small {
+            font-size: 0.875rem;
+        }
+
+        .text-small.blue {
+            color: rgba(37, 99, 235, 0.6);
+        }
+
+        .text-small.green {
+            color: rgba(5, 150, 105, 0.6);
+        }
+
+        .footer-description {
+            text-align: center;
+            max-width: 48rem;
+            margin: 0 auto;
+            font-size: 1rem;
+            color: rgba(43, 53, 68, 0.7);
+            line-height: 1.75;
+        }
+
+        @media (min-width: 768px) {
+            .footer-description {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title">Volumetric Density versus Energy Density</h1>
+            <p class="description">There are two main forms of assessing hydrogens energy content</p>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Two Columns -->
+        <div class="columns">
+            <!-- Left Column - Volumetric Efficiency -->
+            <div class="column">
+                <h2 class="column-title blue">Volumetric Efficiency</h2>
+                
+                <div class="icon-container">
+                    <svg class="icon blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                    </svg>
+                </div>
+                
+                <div class="text-content">
+                    <p class="text-medium blue">Energy per kilogram</p>
+                    <p class="text-small blue">[kJ/kg]</p>
+                </div>
+            </div>
+
+            <!-- Right Column - Energy Density -->
+            <div class="column">
+                <h2 class="column-title green">Energy Density</h2>
+                
+                <div class="icon-container">
+                    <svg class="icon green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
+                    </svg>
+                </div>
+                
+                <div class="text-content">
+                    <p class="text-medium green">Volumetric Density: Energy per</p>
+                    <p class="text-medium green">unit volume</p>
+                    <p class="text-small green">[kJ/L] or [kJ/m³]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Description -->
+        <div class="footer-description">
+            <p>Hydrogen has the highest energy density by mass of any fuel owing to its lightweight. However, its volumetric energy density is lower than most other fuels and energy carriers.</p>
+        </div>
+    </div>
+</body>
+</html>
