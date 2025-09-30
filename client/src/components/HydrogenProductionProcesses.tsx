@@ -28,7 +28,7 @@ export default function HydrogenProductionProcesses() {
                     <img 
                       src={smrImage1} 
                       alt="Steam methane reforming reaction diagram"
-                      className="w-full max-w-2xl mx-auto rounded-lg shadow-md bg-gray-900 p-4"
+                      className="w-full max-w-2xl mx-auto rounded-lg shadow-md bg-gray-50 p-4"
                     />
                     <p className="text-sm text-gray-600 text-center mt-2 italic">
                       Combining methane with water under high temperatures results in carbon monoxide and hydrogen gas being produced.
@@ -39,7 +39,7 @@ export default function HydrogenProductionProcesses() {
                     <img 
                       src={smrImage2} 
                       alt="Water-shift reaction diagram"
-                      className="w-full max-w-2xl mx-auto rounded-lg shadow-md bg-gray-900 p-4"
+                      className="w-full max-w-2xl mx-auto rounded-lg shadow-md bg-gray-50 p-4"
                     />
                     <p className="text-sm text-gray-600 text-center mt-2 italic">
                       Carbon monoxide is a byproduct of steam methane reforming. It can further be converted to hydrogen through a water-shift reaction.
