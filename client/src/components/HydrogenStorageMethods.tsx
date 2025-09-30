@@ -1,3 +1,9 @@
+import geologicalImg from "@assets/stock_images/underground_salt_cav_e18d797a.jpg";
+import compressedImg from "@assets/stock_images/high_pressure_gas_cy_ca0b6dc0.jpg";
+import liquifiedImg from "@assets/stock_images/cryogenic_liquid_sto_c002e660.jpg";
+import solidStateImg from "@assets/stock_images/advanced_materials_t_1c6b41f7.jpg";
+import chemicalImg from "@assets/stock_images/chemical_process_ind_2ba0812d.jpg";
+
 interface StorageMethod {
   id: string;
   title: string;
@@ -11,7 +17,7 @@ const storageMethods: StorageMethod[] = [
     id: "geological",
     title: "Geological",
     description: "Salt caverns are one of the most promising options for large-scale hydrogen storage because rock salt is impermeable and self-sealing, which minimises leakage and contamination. They allow rapid injection and withdrawal, making them ideal for balancing fluctuating renewable generation and seasonal demand. On the downside, caverns are only possible where thick salt formations exist, and their creation requires costly solution mining and brine disposal. Despite these limitations, their safety, flexibility, and ability to store pure hydrogen make them a leading candidate for future energy systems.",
-    imageUrl: "",
+    imageUrl: geologicalImg,
     costPoints: [
       "Uses salt caverns, depleted gas reservoirs, or aquifers.",
       "Moderate to high capital cost depending on geology and site preparation.",
@@ -22,7 +28,7 @@ const storageMethods: StorageMethod[] = [
     id: "compressed",
     title: "Compressed Hydrogen Storage",
     description: "Hydrogen is stored as a high-pressure to reduce its large natural volume. Compression allows practical storage for transport and energy use, though it remains less dense than liquid hydrogen or hydrocarbons. Tanks must be specially designed with advanced materials (carbon-fibre composites) to withstand pressure and avoid leakage. While safer than cryogenic systems and widely used in vehicles and refuelling stations, the downsides are high compression energy costs, lower energy density, and challenges in scaling up for bulk storage.",
-    imageUrl: "",
+    imageUrl: compressedImg,
     costPoints: [
       "Stored in high-pressure cylinders or tanks.",
       "Lower initial capital cost compared with solid-state or chemical storage.",
@@ -33,7 +39,7 @@ const storageMethods: StorageMethod[] = [
     id: "liquified",
     title: "Liquified Hydrogen",
     description: "Hydrogen can be stored as a cryogenic liquid at around –253 °C, achieving much higher density than compressed gas. This makes it attractive for applications where volume is critical, such as space launch systems and specialised industries like semiconductors. However, liquefaction is energy-intensive (consuming up to 30–40% of hydrogen's energy content) and requires complex insulated tanks to minimise boil-off losses. The extreme temperatures and costs limit its widespread use, but it remains essential where compact, high-density hydrogen is needed.",
-    imageUrl: "",
+    imageUrl: liquifiedImg,
     costPoints: [
       "Stored at cryogenic temperatures.",
       "Capital-intensive infrastructure for insulation and liquefaction.",
@@ -44,7 +50,7 @@ const storageMethods: StorageMethod[] = [
     id: "solid-state",
     title: "Solid-State Hydrogen Storage",
     description: "Solid-state hydrogen storage is a promising approach for safer, more efficient energy storage, using advanced materials such as metal–organic frameworks (MOFs), carbon nanostructures, and metal hydrides (e.g., magnesium, aluminium alloys, or palladium) to adsorb or absorb hydrogen. By exploiting nanometre-scale pores and crystal lattices, these systems can store significant amounts of hydrogen at far lower pressures than conventional cylinders, improving safety and lowering the risk of leaks or explosions. This reduction in pressure also saves the energy otherwise spent on extreme compression or cryogenic cooling, making the entire storage and transport process more economical and practical for future hydrogen energy systems.",
-    imageUrl: "",
+    imageUrl: solidStateImg,
     costPoints: [
       "High upfront costs due to advanced materials and precision engineering.",
       "Long-term savings possible through lower compression or cooling energy requirements and enhanced safety."
@@ -54,7 +60,7 @@ const storageMethods: StorageMethod[] = [
     id: "chemical",
     title: "Chemical Based Storage",
     description: "Hydrogen can be stored by binding it into solids or liquids that chemically absorb or react with it, such as alkaline carriers like sodium borohydride or ammonia borane, which can release large amounts of hydrogen through hydrolysis, offering high storage density. However, they are costly and require efficient recycling processes. Ammonia (NH₃) is also a leading hydrogen carrier, with nearly double the volumetric energy density of liquefied hydrogen and easier transport, though current cracking technologies are energy-intensive and still developing.",
-    imageUrl: "",
+    imageUrl: chemicalImg,
     costPoints: [
       "High material and processing costs.",
       "Hydrolysis or cracking processes require energy and efficient recycling, increasing total cost per kilogram of hydrogen delivered."
