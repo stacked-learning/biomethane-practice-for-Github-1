@@ -117,6 +117,9 @@ export default function OxygenChart() {
     <div ref={containerRef} className="w-full max-w-5xl mx-auto p-4">
       {/* Header */}
       <div className="text-center mb-8">
+        <p className="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto mb-6" data-testid="text-oxygen-description">
+          During maintainence procedures in confined areas, the displacement of oxygen by hydrogen can significantly reduce the breathable air, creating an asphyxiation risk. Such environments, where ventilation is limited, increase the danger of hydrogen accumulation, making it critical to monitor gas levels closely to prevent oxygen deprivation, and ensure safety of work members.
+        </p>
         <h1 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
           Oxygen Percentage & Health Effects
         </h1>
