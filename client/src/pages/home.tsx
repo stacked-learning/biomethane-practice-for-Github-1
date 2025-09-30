@@ -16,6 +16,7 @@ import HydrogenProductionFeedstock from "@/components/HydrogenProductionFeedstoc
 import HydrogenBlending from "@/components/HydrogenBlending";
 import ProductionMethodSafetyCards from "@/components/ProductionMethodSafetyCards";
 import TransportationSafetyCards from "@/components/TransportationSafetyCards";
+import EnergyEducation from "@/components/EnergyEducation";
 import processImg from "@assets/process_img_1754391971848.jpg";
 import productImg from "@assets/product_img_1754391991610.jpg";
 import storageImg from "@assets/storage_img_1754392017212.jpg";
@@ -427,6 +428,18 @@ export default function Home() {
                     {/* Hydrogen Atom */}
                     <div>
                       <HydrogenAtom />
+                    </div>
+                    
+                    <div className="flex items-center justify-center py-4">
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
+                      <div className="px-4">
+                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
+                      </div>
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
+                    </div>
+                    
+                    <div>
+                      <EnergyEducation />
                     </div>
                     
                     <div className="flex items-center justify-center py-4">
