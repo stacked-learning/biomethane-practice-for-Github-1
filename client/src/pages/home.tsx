@@ -407,6 +407,18 @@ export default function Home() {
                     <div>
                       <PPESafety />
                     </div>
+                    
+                    <div className="flex items-center justify-center py-4">
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
+                      <div className="px-4">
+                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
+                      </div>
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
+                    </div>
+                    
+                    <div>
+                      <OxygenChart />
+                    </div>
                   </div>
                 )}
                 {/* Product Content */}
@@ -428,20 +440,6 @@ export default function Home() {
                     {/* Hydrogen Rainbow */}
                     <div>
                       <HydrogenRainbow />
-                    </div>
-                    
-                    {/* Vertical spacing divider */}
-                    <div className="flex items-center justify-center py-4">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                      <div className="px-4">
-                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                    </div>
-                    
-                    {/* Oxygen Chart */}
-                    <div>
-                      <OxygenChart />
                     </div>
                     
                     <div className="flex items-center justify-center py-4">
