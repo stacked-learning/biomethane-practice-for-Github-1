@@ -41,12 +41,12 @@ export default function TransportationCosts() {
       </div>
 
       {/* Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
         {methods.map((method) => (
           <button
             key={method.id}
             onClick={() => setSelectedMethod(selectedMethod === method.id ? null : method.id)}
-            className={`px-6 py-3 rounded-lg font-semibold text-white transition-all duration-200 ${
+            className={`px-12 py-5 rounded-lg text-xl font-semibold text-white transition-all duration-200 ${
               selectedMethod === method.id
                 ? 'bg-blue-700 shadow-lg scale-105'
                 : 'bg-blue-500 hover:bg-blue-600 shadow-md'
@@ -61,9 +61,12 @@ export default function TransportationCosts() {
       {/* Description */}
       {selectedMethod && (
         <div 
-          className="bg-gray-50 border border-gray-200 rounded-lg p-6 animate-fade-in"
+          className="bg-gray-50 border border-gray-200 rounded-lg p-6 animate-fade-in max-w-4xl mx-auto"
           data-testid={`description-${selectedMethod}`}
         >
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">
+            {methods.find(m => m.id === selectedMethod)?.title}
+          </h3>
           <p className="text-lg text-gray-700 leading-relaxed">
             {methods.find(m => m.id === selectedMethod)?.description}
           </p>
