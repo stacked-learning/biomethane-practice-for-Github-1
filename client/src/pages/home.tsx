@@ -194,7 +194,7 @@ export default function Home() {
         </div>
 
         {/* Content Area */}
-        {isDetailView && selectedQuadrant && (
+        {isDetailView && selectedQuadrant && selectedQuadrant !== 'product' && (
           <Card className="bg-white rounded-2xl shadow-lg p-8 mb-8 animate-slide-up">
 
             <div className="border-b border-gray-200 pb-4 mb-6">
@@ -226,6 +226,26 @@ export default function Home() {
                   Click the <strong>{quadrantData[selectedQuadrant].title}</strong> button again to return to the grid view
                 </p>
               </div>
+            </div>
+          </Card>
+        )}
+        
+        {/* Product Intro Text - Plain Format */}
+        {isDetailView && selectedQuadrant === 'product' && (
+          <Card className="bg-white rounded-2xl shadow-lg p-8 mb-8 animate-slide-up">
+            <div className="border-b border-gray-200 pb-4 mb-6">
+              <h2 className="text-3xl font-bold text-gray-800 mb-2">
+                Product
+              </h2>
+              <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
+            </div>
+            <div className="text-gray-700 text-lg leading-relaxed">
+              <p className="mb-4 font-medium">
+                Hydrogen
+              </p>
+              <p className="whitespace-pre-line">
+                {quadrantData.product.description}
+              </p>
             </div>
           </Card>
         )}
@@ -453,26 +473,6 @@ export default function Home() {
                     
                     <div>
                       <HydrogenGasTurbines />
-                    </div>
-                    
-                    <div className="flex items-center justify-center py-4">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                      <div className="px-4">
-                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                    </div>
-                    
-                    <div className="w-full max-w-5xl mx-auto p-4">
-                      <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-hydrogen-600 mb-6 text-center">
-                          Hydrogen
-                        </h2>
-                        <div className="w-20 h-1 bg-hydrogen-500 mx-auto rounded-full mb-8"></div>
-                        <div className="text-lg text-gray-700 leading-relaxed whitespace-pre-line" data-testid="text-hydrogen-description">
-                          {quadrantData.product.description}
-                        </div>
-                      </div>
                     </div>
                     
                     <div className="flex items-center justify-center py-4">
