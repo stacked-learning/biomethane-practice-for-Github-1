@@ -20,7 +20,7 @@ export default function HydrogenProductionFeedstock() {
             <img 
               src={feedstockImage} 
               alt="Hydrogen production feedstock options"
-              className="w-full max-w-4xl mx-auto rounded-lg shadow-md bg-gray-50 p-6"
+              className="w-full max-w-4xl mx-auto rounded-lg shadow-md bg-gray-100 p-6"
             />
           </div>
         </div>
