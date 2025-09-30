@@ -42,33 +42,21 @@ const quadrantImages: Record<Quadrant, string> = {
 const quadrantData: Record<Quadrant, QuadrantContent> = {
   process: {
     title: "Process",
-    subtitle: "Hydrogen Production",
-    description: "Hydrogen production is the first step in making hydrogen a usable energy carrier, turning feedstocks like natural gas, water, or biomass into pure hydrogen gas. This process is essential because hydrogen doesn't exist naturally in large quantities — it must be separated from other elements. Production enables hydrogen to power fuel cells, supply industries like ammonia and methanol manufacturing, and store renewable energy for later use.",
-    points: [
-      "Production Methods: Different feedstocks and methods are used depending on cost, scale, and carbon footprint. Steam methane reforming (SMR) from natural gas is the most common, but it produces CO₂ unless paired with carbon capture. Water electrolysis splits water into hydrogen and oxygen using electricity and is crucial for \"green hydrogen\" when powered by renewables.",
-      "Alternative Pathways: Biomass gasification and emerging processes like methane pyrolysis or photoelectrochemical splitting offer alternative, lower-carbon pathways.",
-      "Safety Requirements: Safe production of hydrogen requires strict control of temperature, pressure, and reaction conditions. Hydrogen leaks must be prevented because of its wide flammability range and low ignition energy. Facilities rely on robust ventilation, leak detection, emergency shutdown systems, and separation of hydrogen and oxygen streams."
-    ]
+    subtitle: "",
+    description: "There are several methods for producing hydrogen, collectively represented by the hydrogen \"rainbow.\" Hydrogen generated using renewable energy and electrolysis is referred to as green hydrogen. The most common production method remains steam methane reforming, though alternative approaches such as coal and biomass gasification are also employed. The choice of feedstock largely depends on the local availability of resources and the technologies in place.\nScroll down to learn more about the various ways in which hydrogen is produced.",
+    points: []
   },
   transport: {
     title: "Transport",
-    subtitle: "Storage Methods",
-    description: "Hydrogen can be stored in several different ways because no single method works for every situation. Compressed gas storage is the most common, using high-pressure tanks to store hydrogen at up to 700 bar. This method is relatively simple and well understood, making it a practical choice for vehicles, small-scale systems, and applications where quick refuelling or dispensing is needed.",
-    points: [
-      "Liquid Hydrogen Storage: For larger energy needs or long-distance transport, liquid hydrogen storage is preferred despite the extra energy required to cool it to –253 °C. Liquefaction dramatically increases hydrogen's energy density, allowing more fuel to be stored in the same space — essential for shipping, aerospace, and other applications where weight and volume matter.",
-      "Chemical Storage Methods: Some approaches store hydrogen in a chemically bound form, like metal hydrides, ammonia, or liquid organic hydrogen carriers (LOHCs). These methods can be safer and easier to handle, especially for seasonal or remote storage, but require additional energy to release the hydrogen when needed.",
-      "Method Selection: Choosing the right storage method depends on the scale, cost, safety requirements, and the end-use application."
-    ]
+    subtitle: "",
+    description: "Safe and efficient transportation is a critical component of the hydrogen supply chain, ensuring that hydrogen can move reliably from production sites to end users. Current transport options include pipelines, road transport, and tankers, with ongoing development to improve efficiency and safety. Each method presents unique challenges, such as hydrogen embrittlement in pipelines or managing complex systems during road and marine transport. Strict safety procedures and protocols are essential to protect both the workforce and the public, while maintaining the integrity of the hydrogen being transported.\n\nScroll down to learn more about the various hydrogen transportation methods",
+    points: []
   },
   storage: {
     title: "Storage",
-    subtitle: "Critical Energy Infrastructure",
-    description: "Hydrogen storage is critical for turning hydrogen into a practical energy carrier, allowing it to be held safely and used on demand. Without storage, hydrogen production would need to perfectly match demand, which is unrealistic for industries, power grids, and transport. Storage enables energy balancing, backup supply, and a reliable hydrogen economy.",
-    points: [
-      "Storage Method Diversity: Different storage methods exist because hydrogen has a very low natural density, making it challenging to store efficiently. Compressed gas is simple and widely used, liquid hydrogen offers high density for space-critical applications, and geological storage in salt caverns supports massive seasonal energy reserves.",
-      "Advanced Storage Solutions: Materials-based options like metal hydrides or ammonia are being developed for safer handling and easier transport, even if they require extra processing.",
-      "Safety and Scalability: Safety is central to hydrogen storage. High pressures, cryogenic temperatures, and chemical reactions must be carefully controlled to avoid leaks or ignition. Salt caverns are seen as a safe, scalable option for bulk storage due to their natural sealing properties, while composite tanks and insulated vessels keep compressed or liquid hydrogen secure. These methods work together to make hydrogen a practical, flexible part of future clean energy systems."
-    ]
+    subtitle: "",
+    description: "An important consideration in the hydrogen supply chain is how it is stored. There are several storage options available, ranging from traditional compressed gas storage to more advanced systems involving cryogenic liquefaction and micro-structured technologies. Each method comes with its own set of challenges, including cost, efficiency, and safety concerns. Given the inherent dangers of hydrogen, including its flammability and potential for leakage, those involved in hydrogen storage must be fully aware of the specific risks and safety protocols associated with each storage method.\n\nScroll down to discover the different hydrogen storage methods and their associated risks.",
+    points: []
   },
   product: {
     title: "Product",
@@ -193,10 +181,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Content Area */}
-        {isDetailView && selectedQuadrant && selectedQuadrant !== 'product' && (
+        {/* Content Area - Unified Format for All Quadrants */}
+        {isDetailView && selectedQuadrant && (
           <Card className="bg-white rounded-2xl shadow-lg p-8 mb-8 animate-slide-up">
-
             <div className="border-b border-gray-200 pb-4 mb-6">
               <h2 className="text-3xl font-bold text-gray-800 mb-2">
                 {quadrantData[selectedQuadrant].title}
@@ -204,44 +191,8 @@ export default function Home() {
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
             <div className="text-gray-700 text-lg leading-relaxed">
-              <p className="mb-4 font-medium">
-                {quadrantData[selectedQuadrant].subtitle}
-              </p>
-              <ul className="space-y-4">
-                {quadrantData[selectedQuadrant].points.map((point, index) => {
-                  const [title, ...descriptionParts] = point.split(': ');
-                  const description = descriptionParts.join(': ');
-                  return (
-                    <li key={index} className="flex">
-                      <span className="font-semibold text-hydrogen-700 mr-2">•</span>
-                      <div>
-                        <strong className="text-gray-800">{title}:</strong> {description}
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-              <div className="mt-6 p-4 bg-hydrogen-50 rounded-lg border border-hydrogen-200">
-                <p className="text-sm text-gray-600">
-                  Click the <strong>{quadrantData[selectedQuadrant].title}</strong> button again to return to the grid view
-                </p>
-              </div>
-            </div>
-          </Card>
-        )}
-        
-        {/* Product Intro Text - Plain Format */}
-        {isDetailView && selectedQuadrant === 'product' && (
-          <Card className="bg-white rounded-2xl shadow-lg p-8 mb-8 animate-slide-up">
-            <div className="border-b border-gray-200 pb-4 mb-6">
-              <h2 className="text-3xl font-bold text-gray-800 mb-2">
-                Product
-              </h2>
-              <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
-            </div>
-            <div className="text-gray-700 text-lg leading-relaxed">
               {(() => {
-                const lines = quadrantData.product.description.split('\n');
+                const lines = quadrantData[selectedQuadrant].description.split('\n');
                 const mainText = lines.slice(0, -1).join('\n');
                 const scrollText = lines[lines.length - 1];
                 return (
