@@ -8,11 +8,32 @@ export default function HydrogenAtom() {
   const [hydrogenVisible, setHydrogenVisible] = useState(false);
   const [containerFadeUp, setContainerFadeUp] = useState(false);
   const [descriptionVisible, setDescriptionVisible] = useState(false);
+  const [isInView, setIsInView] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const componentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (componentRef.current) {
+      observer.observe(componentRef.current);
+    }
+
+    return () => {
+      if (componentRef.current) {
+        observer.unobserve(componentRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!scrollContainerRef.current) return;
+      if (!scrollContainerRef.current || !isInView) return;
       
       const scrollTop = scrollContainerRef.current.scrollTop;
       const firstTrigger = 50;
@@ -66,19 +87,24 @@ export default function HydrogenAtom() {
 
   return (
     <div 
-      ref={scrollContainerRef}
-      className="relative w-full bg-white overflow-y-auto"
-      style={{ height: '100vh' }}
+      ref={componentRef}
+      className="relative w-full bg-white"
     >
+      <div 
+        ref={scrollContainerRef}
+        className="relative w-full bg-white overflow-y-auto"
+        style={{ height: '100vh' }}
+      >
       {/* Scroll content container */}
       <div style={{ height: '320vh', position: 'relative' }}>
         
         {/* Fixed container for atom and text */}
-        <div 
-          className={`fixed top-0 left-0 w-full h-screen flex items-center justify-center pointer-events-none transition-all duration-800 ${
-            containerFadeUp ? 'opacity-0 -translate-y-1/2' : ''
-          }`}
-        >
+        {isInView && (
+          <div 
+            className={`fixed top-0 left-0 w-full h-screen flex items-center justify-center pointer-events-none transition-all duration-800 ${
+              containerFadeUp ? 'opacity-0 -translate-y-1/2' : ''
+            }`}
+          >
           {/* Hydro text - left */}
           <div 
             className={`fixed left-[15%] top-1/2 -translate-y-1/2 text-6xl font-bold select-none z-10 transition-all duration-800 ${
@@ -144,6 +170,7 @@ export default function HydrogenAtom() {
             <span className="font-bold" style={{ color: '#7ed321' }}>-gen</span> meaning "producer," reflecting its role in forming water when burned.
           </div>
         </div>
+        )}
 
         {/* First scrollable section */}
         <div 
@@ -237,7 +264,7 @@ export default function HydrogenAtom() {
           </div>
         </div>
       </div>
-
+      
       <style>{`
         .electron {
           animation: orbit 3s linear infinite;
@@ -253,6 +280,7 @@ export default function HydrogenAtom() {
           }
         }
       `}</style>
+    </div>
     </div>
   );
 }
