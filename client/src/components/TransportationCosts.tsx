@@ -30,6 +30,11 @@ export default function TransportationCosts() {
 
   return (
     <div className="w-full max-w-6xl mx-auto p-4">
+      {/* Title */}
+      <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 text-center mb-8" data-testid="heading-transport-costs">
+        Cost of Hydrogen Transportation Options
+      </h2>
+
       {/* Image */}
       <div className="mb-8 flex justify-center">
         <img 
