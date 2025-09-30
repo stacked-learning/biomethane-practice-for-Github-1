@@ -4,7 +4,6 @@ import coalImage from "@assets/image_1759205299825.png";
 import siCycleImage from "@assets/image_1759205433166.png";
 import biomassImage from "@assets/image_1759205922340.png";
 import photolyticImage from "@assets/image_1759206231104.png";
-import hydrogenBlendingImage from "@assets/stock_images/hydrogen_blending_in_c2eb3df2.jpg";
 
 export default function HydrogenProductionProcesses() {
   return (
@@ -141,23 +140,6 @@ export default function HydrogenProductionProcesses() {
                 Generic flow sheet for hydrogen, methanol, or FT diesel production via biomass gasification.
               </p>
             </div>
-          </div>
-
-          {/* Hydrogen Blending */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-gray-800">Hydrogen Blending</h3>
-            
-            <div className="mt-6 mb-6">
-              <img 
-                src={hydrogenBlendingImage} 
-                alt="Hydrogen blending industrial facility with natural gas pipelines"
-                className="w-full max-w-3xl mx-auto rounded-lg shadow-md"
-              />
-            </div>
-            
-            <p className="text-base text-gray-600 leading-relaxed">
-              Hydrogen blending helps achieve short-term emissions reductions without the need for significant overhauls or changes to existing infrastructure. Hydrogen is introduced into natural gas pipelines or gas-powered plants, with a proportion of up to 20-25% by volume, allowing for a smooth integration. At this hydrogen concentration, the gas mixture can perform effectively with the existing combustion equipment, minimising the need for additional modifications. The resulting blend has a lower density and specific gravity than natural gas, which affects its overall characteristics and energy content. This reduction in density and specific gravity leads to a decrease in energy delivery capacity of the pipeline, especially when operating at the same pressure.
-            </p>
           </div>
         </div>
       </div>
