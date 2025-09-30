@@ -11,6 +11,7 @@ import HydrogenSafetyCards from "@/components/HydrogenSafetyCards";
 import HydrogenAtom from "@/components/HydrogenAtom";
 import VolumetricDensity from "@/components/VolumetricDensity";
 import HydrogenCompression from "@/components/HydrogenCompression";
+import TransportationCosts from "@/components/TransportationCosts";
 import HydrogenProductionProcesses from "@/components/HydrogenProductionProcesses";
 import HydrogenProductionFeedstock from "@/components/HydrogenProductionFeedstock";
 import HydrogenBlending from "@/components/HydrogenBlending";
@@ -299,6 +300,18 @@ export default function Home() {
                   <div className="space-y-12">
                     <div>
                       <TransportMethods />
+                    </div>
+                    
+                    <div className="flex items-center justify-center py-4">
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
+                      <div className="px-4">
+                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
+                      </div>
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
+                    </div>
+                    
+                    <div>
+                      <TransportationCosts />
                     </div>
                     
                     <div className="flex items-center justify-center py-4">
