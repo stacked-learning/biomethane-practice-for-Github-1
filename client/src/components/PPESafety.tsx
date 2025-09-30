@@ -144,10 +144,13 @@ export default function PPESafety() {
     <div className="w-full max-w-6xl mx-auto p-4">
       {/* Header */}
       <div className="text-center mb-8">
-        <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-2 flex items-center justify-center gap-4">
+        <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-4">
           <Shield className="w-10 h-10 text-orange-500" />
           PPE Safety Selection Tool
         </h1>
+        <p className="text-base lg:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-4">
+          It is essential to wear appropriate personal protective equipment (PPE) when working with hydrogen to minimise the risks associated with its flammability and potential for explosive reactions. PPE such as flame-resistant clothing, face shields, and safety gloves helps protect against potential hazards in environments where hydrogen is present.
+        </p>
         <p className="text-lg text-gray-600">
           Select environmental conditions to determine required Personal Protective Equipment
         </p>
