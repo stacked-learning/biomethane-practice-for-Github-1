@@ -72,25 +72,26 @@ export default function ProductionMethodSafetyCards() {
         {productionMethods.map((method) => (
           <div
             key={method.title}
-            className="cursor-pointer"
+            className="cursor-pointer perspective-1000"
             onClick={() => toggleCard(method.title)}
             data-testid={`card-production-safety-${method.title.toLowerCase().replace(/\s+/g, '-')}`}
           >
             <div
-              className="relative w-full transition-transform duration-600"
+              className="relative w-full"
               style={{
                 transformStyle: 'preserve-3d',
                 transition: 'transform 0.6s',
-                transform: flippedCards.has(method.title) ? 'rotateY(180deg)' : 'rotateY(0deg)',
-                minHeight: flippedCards.has(method.title) ? `${180 + method.risks.length * 60}px` : '80px'
+                transform: flippedCards.has(method.title) ? 'rotateY(180deg)' : 'rotateY(0deg)'
               }}
             >
               {/* Front */}
               <div
-                className="absolute w-full bg-red-50 border border-red-200 rounded-lg p-6"
+                className="w-full bg-red-50 border border-red-200 rounded-lg p-6"
                 style={{
                   backfaceVisibility: 'hidden',
-                  WebkitBackfaceVisibility: 'hidden'
+                  WebkitBackfaceVisibility: 'hidden',
+                  opacity: flippedCards.has(method.title) ? 0 : 1,
+                  position: flippedCards.has(method.title) ? 'absolute' : 'relative'
                 }}
               >
                 <div className="flex items-center justify-center gap-3">
@@ -103,11 +104,14 @@ export default function ProductionMethodSafetyCards() {
 
               {/* Back */}
               <div
-                className="absolute w-full bg-red-50 border border-red-200 rounded-lg p-6"
+                className="w-full bg-red-50 border border-red-200 rounded-lg p-6"
                 style={{
                   backfaceVisibility: 'hidden',
                   WebkitBackfaceVisibility: 'hidden',
-                  transform: 'rotateY(180deg)'
+                  transform: 'rotateY(180deg)',
+                  opacity: flippedCards.has(method.title) ? 1 : 0,
+                  position: flippedCards.has(method.title) ? 'relative' : 'absolute',
+                  top: flippedCards.has(method.title) ? 'auto' : 0
                 }}
               >
                 <div className="flex items-start gap-3 mb-4">
