@@ -256,7 +256,7 @@ export default function Home() {
                     </div>
                     
                     <div>
-                      <HydrogenProductionProcesses />
+                      <HydrogenProductionFeedstock />
                     </div>
                     
                     <div className="flex items-center justify-center py-4">
@@ -268,7 +268,7 @@ export default function Home() {
                     </div>
                     
                     <div>
-                      <HydrogenProductionFeedstock />
+                      <HydrogenProductionProcesses />
                     </div>
                     
                     <div className="flex items-center justify-center py-4">
