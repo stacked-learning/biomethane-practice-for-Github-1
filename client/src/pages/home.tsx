@@ -10,6 +10,7 @@ import QuadrantSafetySection from "@/components/QuadrantSafetySection";
 import HydrogenSafetyCards from "@/components/HydrogenSafetyCards";
 import HydrogenAtom from "@/components/HydrogenAtom";
 import VolumetricDensity from "@/components/VolumetricDensity";
+import HydrogenCompression from "@/components/HydrogenCompression";
 import processImg from "@assets/process_img_1754391971848.jpg";
 import productImg from "@assets/product_img_1754391991610.jpg";
 import storageImg from "@assets/storage_img_1754392017212.jpg";
@@ -266,6 +267,18 @@ export default function Home() {
                   <div className="space-y-12">
                     <div>
                       <TransportMethods />
+                    </div>
+                    
+                    <div className="flex items-center justify-center py-4">
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
+                      <div className="px-4">
+                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
+                      </div>
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
+                    </div>
+                    
+                    <div>
+                      <HydrogenCompression />
                     </div>
                     
                     <div className="flex items-center justify-center py-4">
