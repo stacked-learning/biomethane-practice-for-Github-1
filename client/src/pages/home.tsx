@@ -463,11 +463,16 @@ export default function Home() {
                       <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
                     </div>
                     
-                    <div>
-                      <QuadrantSafetySection 
-                        generalText={quadrantData.product.description}
-                        safetyPoints={quadrantData.product.points}
-                      />
+                    <div className="w-full max-w-5xl mx-auto p-4">
+                      <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+                        <h2 className="text-3xl lg:text-4xl font-bold text-hydrogen-600 mb-6 text-center">
+                          Hydrogen
+                        </h2>
+                        <div className="w-20 h-1 bg-hydrogen-500 mx-auto rounded-full mb-8"></div>
+                        <div className="text-lg text-gray-700 leading-relaxed whitespace-pre-line" data-testid="text-hydrogen-description">
+                          {quadrantData.product.description}
+                        </div>
+                      </div>
                     </div>
                     
                     <div className="flex items-center justify-center py-4">
