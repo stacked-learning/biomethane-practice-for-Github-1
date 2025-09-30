@@ -1,5 +1,6 @@
 import smrImage1 from "@assets/image_1759204576499.png";
 import smrImage2 from "@assets/image_1759204635699.png";
+import coalImage from "@assets/image_1759205299825.png";
 
 export default function HydrogenProductionProcesses() {
   return (
@@ -47,7 +48,23 @@ export default function HydrogenProductionProcesses() {
                   </div>
                 </div>
               </div>
-              <h4 className="text-xl font-semibold text-gray-700">Coal</h4>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-700 mb-2">Coal</h4>
+                <p className="text-base text-gray-600 leading-relaxed mb-4">
+                  Hydrogen is produced from coal through a variety of gasification processes including: fixed bed, fluidised bed or entrained flow processes.
+                </p>
+                
+                <div className="mt-6">
+                  <img 
+                    src={coalImage} 
+                    alt="Coal gasification reaction diagram"
+                    className="w-full max-w-2xl mx-auto rounded-lg shadow-md bg-gray-50 p-4"
+                  />
+                  <p className="text-sm text-gray-600 text-center mt-2 italic">
+                    The reaction of coal with water under high temperatures produces carbon monoxide and water.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
