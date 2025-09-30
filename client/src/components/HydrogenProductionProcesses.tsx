@@ -13,38 +13,26 @@ export default function HydrogenProductionProcesses() {
           {/* Fossil Fuel Production */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-800">Fossil Fuel Production</h3>
-            <ul className="ml-6 space-y-2">
-              <li className="flex items-start">
-                <span className="inline-block w-2 h-2 rounded-full bg-blue-600 mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-lg text-gray-700">Steam Methane Reforming</span>
-              </li>
-              <li className="flex items-start">
-                <span className="inline-block w-2 h-2 rounded-full bg-blue-600 mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-lg text-gray-700">Coal</span>
-              </li>
-            </ul>
+            <div className="ml-6 space-y-3">
+              <h4 className="text-xl font-semibold text-gray-700">Steam Methane Reforming</h4>
+              <h4 className="text-xl font-semibold text-gray-700">Coal</h4>
+            </div>
           </div>
 
           {/* Electrolysis */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-800">Electrolysis</h3>
-            <ul className="ml-6 space-y-2">
-              <li className="flex items-start">
-                <span className="inline-block w-2 h-2 rounded-full bg-blue-600 mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-lg text-gray-700">Photolytic</span>
-              </li>
-            </ul>
+            <div className="ml-6 space-y-3">
+              <h4 className="text-xl font-semibold text-gray-700">Photolytic</h4>
+            </div>
           </div>
 
           {/* Thermochemical */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-800">Thermochemical</h3>
-            <ul className="ml-6 space-y-2">
-              <li className="flex items-start">
-                <span className="inline-block w-2 h-2 rounded-full bg-blue-600 mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-lg text-gray-700">Sulphur-Iodine (S-I) Cycle</span>
-              </li>
-            </ul>
+            <div className="ml-6 space-y-3">
+              <h4 className="text-xl font-semibold text-gray-700">Sulphur-Iodine (S-I) Cycle</h4>
+            </div>
           </div>
 
           {/* Biomass */}
