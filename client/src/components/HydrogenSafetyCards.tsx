@@ -51,9 +51,13 @@ export default function HydrogenSafetyCards() {
 
   return (
     <div className="w-full max-w-5xl mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-12 text-gray-900" data-testid="text-safety-cards-title">
+      <h1 className="text-3xl font-bold text-center mb-6 text-gray-900" data-testid="text-safety-cards-title">
         Hydrogen Safety Considerations
       </h1>
+
+      <p className="text-base lg:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-12 text-center" data-testid="text-safety-description">
+        Hydrogen, though non-toxic, presents several safety challenges due to its unique properties. It is highly flammable, can cause hydrogen embrittlement in metals, and burns with nearly invisible flames, making it particularly dangerous to handle. In the context of gas turbine engines, hydrogen is emerging as a promising alternative to conventional fuels, supporting the transition to a carbon-free energy system. This shift is crucial for achieving global decarbonisation goals. However, it requires addressing significant technical challenges related to hydrogen's storage, transportation, and combustion characteristics. Scroll down to explore more about hydrogen and its associated safety considerations.
+      </p>
 
       <div className="flex flex-col gap-8">
         {/* Top Row - 3 cards */}
