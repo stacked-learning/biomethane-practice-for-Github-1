@@ -13,8 +13,13 @@ export default function HydrogenProductionProcesses() {
           {/* Fossil Fuel Production */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-800">Fossil Fuel Production</h3>
-            <div className="ml-6 space-y-3">
-              <h4 className="text-xl font-semibold text-gray-700">Steam Methane Reforming</h4>
+            <div className="ml-6 space-y-4">
+              <div>
+                <h4 className="text-xl font-semibold text-gray-700 mb-2">Steam Methane Reforming</h4>
+                <p className="text-base text-gray-600 leading-relaxed">
+                  Steam Methane Reforming (SMR) is the dominant method of hydrogen production worldwide, operating at very high temperatures. The process generates significant amounts of carbon dioxide as a by-product, though carbon capture can be applied to reduce emissions. Most facilities use natural gas as the feedstock, while some also process and utilise landfill gas as an alternative source.
+                </p>
+              </div>
               <h4 className="text-xl font-semibold text-gray-700">Coal</h4>
             </div>
           </div>
@@ -22,6 +27,9 @@ export default function HydrogenProductionProcesses() {
           {/* Electrolysis */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-800">Electrolysis</h3>
+            <p className="text-base text-gray-600 leading-relaxed">
+              Electrolysis splits water into hydrogen and oxygen with no by-products other than those two gases. When powered by renewable electricity, this process produces green hydrogen, offering a truly carbon-free fuel. If the electricity source is fossil-based, however, the hydrogen cannot be considered green, as its production indirectly carries the carbon footprint of the power grid.
+            </p>
             <div className="ml-6 space-y-3">
               <h4 className="text-xl font-semibold text-gray-700">Photolytic</h4>
             </div>
@@ -30,6 +38,9 @@ export default function HydrogenProductionProcesses() {
           {/* Thermochemical */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-800">Thermochemical</h3>
+            <p className="text-base text-gray-600 leading-relaxed">
+              Also known as the Thermochemical Water Splitting Cycle (TWSC), these use heat, alongside chemical reactions to produce hydrogen and oxygen. This method is being considered due to its lack of carbon emissions, and potential to use heat generated from other processes.
+            </p>
             <div className="ml-6 space-y-3">
               <h4 className="text-xl font-semibold text-gray-700">Sulphur-Iodine (S-I) Cycle</h4>
             </div>
@@ -38,6 +49,9 @@ export default function HydrogenProductionProcesses() {
           {/* Biomass */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-800">Biomass</h3>
+            <p className="text-base text-gray-600 leading-relaxed">
+              Biomass Gasification is another pathway for producing hydrogen, where organic feedstocks are converted into synthesis gas that can be processed to release hydrogen. However, biomass sources often suffer from inconsistency and variable quality control, which makes scaling up this method more difficult compared to natural gas reforming or electrolysis.
+            </p>
           </div>
         </div>
       </div>
