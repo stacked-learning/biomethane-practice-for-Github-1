@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hydrogen Safety Considerations</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #fafafa;
+      color: #171717;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.875rem;
+      font-weight: bold;
+      margin-bottom: 3rem;
+      color: #171717;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card-row {
+      display: grid;
+      gap: 1.5rem;
+      justify-items: center;
+    }
+
+    .card-row-3 {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card-row-2 {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .flip-card {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      height: 192px;
+      cursor: pointer;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .flip-card-front {
+      background: linear-gradient(to bottom right, #fb923c, #ea580c);
+      color: white;
+    }
+
+    .flip-card-front:hover {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .flip-card-back {
+      background: linear-gradient(to bottom right, #f97316, #c2410c);
+      color: white;
+      transform: rotateY(180deg);
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    .flip-card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 1.25;
+    }
+
+    .flip-card-back-content h4 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 0.75rem;
+      color: #fed7aa;
+    }
+
+    .flip-card-back-content p {
+      font-size: 0.75rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .instruction-text {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.875rem;
+      color: #737373;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem 0.5rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .card-row-3,
+      .card-row-2 {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+      }
+
+      .flip-card {
+        max-width: 100%;
+      }
+    }
+
+    /* iframe optimization */
+    @media (max-width: 640px) {
+      .card-grid {
+        gap: 1rem;
+      }
+
+      .card-row {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hydrogen Safety Considerations</h1>
+    
+    <div class="card-grid">
+      <!-- Top Row - 3 cards -->
+      <div class="card-row card-row-3">
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3 class="flip-card-title">Molecular Size</h3>
+            </div>
+            <div class="flip-card-back">
+              <div class="flip-card-back-content">
+                <h4>Molecular Size</h4>
+                <p>Hydrogen molecules are extremely small and light, making them prone to leaks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3 class="flip-card-title">Flammable</h3>
+            </div>
+            <div class="flip-card-back">
+              <div class="flip-card-back-content">
+                <h4>Flammable</h4>
+                <p>Hydrogen is highly flammable, with a wide explosive range (4-75% in air). It ignites easily with a low Minimum Ignition Energy (MIE) of just 0.02 millijoules, making it highly susceptible to sparks, heat, or even static electricity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3 class="flip-card-title">Buoyant</h3>
+            </div>
+            <div class="flip-card-back">
+              <div class="flip-card-back-content">
+                <h4>Buoyant</h4>
+                <p>As the lightest gas, hydrogen rises rapidly, meaning it can accumulate in high spaces or confined areas, creating an explosion risk if not properly ventilated.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row - 2 cards -->
+      <div class="card-row card-row-2">
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3 class="flip-card-title">Hydrogen Embrittlement</h3>
+            </div>
+            <div class="flip-card-back">
+              <div class="flip-card-back-content">
+                <h4>Hydrogen Embrittlement</h4>
+                <p>Hydrogen can cause metal embrittlement, making materials like steel more brittle and prone to cracking or failure - that can result in catastrophic leaks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3 class="flip-card-title">Flame Visibility</h3>
+            </div>
+            <div class="flip-card-back">
+              <div class="flip-card-back-content">
+                <h4>Flame Visibility</h4>
+                <p>Hydrogen flames are invisible in daylight, making it extremely difficult for personnel to detect a hydrogen fire or ignition. This, combined with low IR radiation, increases the risk of undetected fires or explosions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="instruction-text">Click any card to reveal detailed safety information</p>
+  </div>
+</body>
+</html>
