@@ -4,6 +4,10 @@ export default function HydrogenCompression() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-8">
       <article className="flex flex-col gap-8">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight text-center" data-testid="heading-compression">
+          Hydrogen Compression
+        </h1>
+
         <div className="overflow-hidden rounded-lg shadow-lg">
           <img
             src={compressorImg}
@@ -14,9 +18,6 @@ export default function HydrogenCompression() {
         </div>
 
         <div className="flex flex-col gap-6 max-w-prose mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight" data-testid="heading-compression">
-            Hydrogen Compression
-          </h1>
 
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
             Hydrogen is typically produced at lower pressures (20-30 bar) than what is required for efficient storage or transportation. Compression densifies the hydrogen gas, reducing its volume, making it easier to handle. Additionally, compressors are integral to ensuring hydrogen can be supplied to the end-user in adequate condition such as high pressure applications.
