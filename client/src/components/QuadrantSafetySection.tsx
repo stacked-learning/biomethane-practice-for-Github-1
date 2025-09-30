@@ -6,13 +6,6 @@ interface QuadrantSafetySectionProps {
 export default function QuadrantSafetySection({ generalText, safetyPoints }: QuadrantSafetySectionProps) {
   return (
     <div className="w-full max-w-4xl mx-auto p-6">
-      {/* General Section - No Title */}
-      <div className="mb-8">
-        <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
-          {generalText}
-        </p>
-      </div>
-
       {/* SAFETY Divider */}
       <div className="flex items-center justify-center my-8">
         <div className="flex-1 h-px bg-gray-300"></div>
@@ -22,6 +15,13 @@ export default function QuadrantSafetySection({ generalText, safetyPoints }: Qua
           </h2>
         </div>
         <div className="flex-1 h-px bg-gray-300"></div>
+      </div>
+
+      {/* General Section - Below Title */}
+      <div className="mb-8">
+        <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
+          {generalText}
+        </p>
       </div>
 
       {/* Safety Points */}
