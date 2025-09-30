@@ -3,6 +3,7 @@ import smrImage2 from "@assets/image_1759204635699.png";
 import coalImage from "@assets/image_1759205299825.png";
 import siCycleImage from "@assets/image_1759205433166.png";
 import biomassImage from "@assets/image_1759205922340.png";
+import photolyticImage from "@assets/image_1759206231104.png";
 
 export default function HydrogenProductionProcesses() {
   return (
@@ -77,7 +78,21 @@ export default function HydrogenProductionProcesses() {
               Electrolysis splits water into hydrogen and oxygen with no by-products other than those two gases. When powered by renewable electricity, this process produces green hydrogen, offering a truly carbon-free fuel. If the electricity source is fossil-based, however, the hydrogen cannot be considered green, as its production indirectly carries the carbon footprint of the power grid.
             </p>
             <div className="ml-6 space-y-3">
-              <h4 className="text-xl font-semibold text-gray-700">Photolytic</h4>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-700 mb-4">Photolytic</h4>
+                
+                <div className="mb-4">
+                  <img 
+                    src={photolyticImage} 
+                    alt="Photolytic hydrogen production setup"
+                    className="w-full max-w-md mx-auto rounded-lg shadow-md bg-gray-50 p-4"
+                  />
+                </div>
+                
+                <p className="text-base text-gray-600 leading-relaxed">
+                  Photolytic (Photocatalytic) Hydrogen Production uses a simple setup that requires only water, a suitable photocatalyst, and a light source. It is a clean method, producing only hydrogen and oxygen as by-products.
+                </p>
+              </div>
             </div>
           </div>
 
