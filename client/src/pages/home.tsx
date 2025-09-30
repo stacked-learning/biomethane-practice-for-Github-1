@@ -250,7 +250,7 @@ export default function Home() {
                 {selectedQuadrant === 'storage' && (
                   <div className="space-y-12">
                     <div>
-                      <PPESafety />
+                      <HydrogenStorageMethods />
                     </div>
                     
                     <div className="flex items-center justify-center py-4">
@@ -262,7 +262,7 @@ export default function Home() {
                     </div>
                     
                     <div>
-                      <HydrogenStorageMethods />
+                      <PPESafety />
                     </div>
                   </div>
                 )}
