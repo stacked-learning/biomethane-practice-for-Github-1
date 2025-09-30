@@ -1,6 +1,7 @@
 import smrImage1 from "@assets/image_1759204576499.png";
 import smrImage2 from "@assets/image_1759204635699.png";
 import coalImage from "@assets/image_1759205299825.png";
+import siCycleImage from "@assets/image_1759205433166.png";
 
 export default function HydrogenProductionProcesses() {
   return (
@@ -86,7 +87,23 @@ export default function HydrogenProductionProcesses() {
               Also known as the Thermochemical Water Splitting Cycle (TWSC), these use heat, alongside chemical reactions to produce hydrogen and oxygen. This method is being considered due to its lack of carbon emissions, and potential to use heat generated from other processes.
             </p>
             <div className="ml-6 space-y-3">
-              <h4 className="text-xl font-semibold text-gray-700">Sulphur-Iodine (S-I) Cycle</h4>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-700 mb-2">Sulphur-Iodine (S-I) Cycle</h4>
+                <p className="text-base text-gray-600 leading-relaxed mb-4">
+                  The Sulfur–Iodine (S–I) cycle is a type of thermochemical water-splitting process that undergoes three main reactions. Water enters the cycle as the main feed, while hydrogen and oxygen are produced as the final outputs. The iodine and sulphur dioxide act as recyclable agents, driving the reactions without being consumed.
+                </p>
+                
+                <div className="mt-6">
+                  <img 
+                    src={siCycleImage} 
+                    alt="Sulphur-Iodine cycle process diagram"
+                    className="w-full max-w-2xl mx-auto rounded-lg shadow-md bg-gray-50 p-4"
+                  />
+                  <p className="text-sm text-gray-600 text-center mt-2 italic">
+                    Illustration of the Sulphur-Iodine cycle thermochemical process.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
