@@ -2,6 +2,7 @@ import smrImage1 from "@assets/image_1759204576499.png";
 import smrImage2 from "@assets/image_1759204635699.png";
 import coalImage from "@assets/image_1759205299825.png";
 import siCycleImage from "@assets/image_1759205433166.png";
+import biomassImage from "@assets/image_1759205922340.png";
 
 export default function HydrogenProductionProcesses() {
   return (
@@ -113,6 +114,17 @@ export default function HydrogenProductionProcesses() {
             <p className="text-base text-gray-600 leading-relaxed">
               Biomass Gasification is another pathway for producing hydrogen, where organic feedstocks are converted into synthesis gas that can be processed to release hydrogen. However, biomass sources often suffer from inconsistency and variable quality control, which makes scaling up this method more difficult compared to natural gas reforming or electrolysis.
             </p>
+            
+            <div className="mt-6">
+              <img 
+                src={biomassImage} 
+                alt="Biomass gasification process flowsheet"
+                className="w-full max-w-3xl mx-auto rounded-lg shadow-md bg-gray-50 p-4"
+              />
+              <p className="text-sm text-gray-600 text-center mt-2 italic">
+                Generic flow sheet for hydrogen, methanol, or FT diesel production via biomass gasification.
+              </p>
+            </div>
           </div>
         </div>
       </div>
