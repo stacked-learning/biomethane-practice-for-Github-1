@@ -61,7 +61,7 @@ export default function EnergyEducation() {
           </div>
         </div>
         <p className="text-lg leading-relaxed text-gray-700">
-          On earth, hydrogen is an <strong>energy carrier</strong>, rather than an energy source - as naturally hydrogen is founded in very limited amounts. It can store tremendous amounts of energy obtained through renewable sources, including wind, solar, and hydro power, and other non-renewable processes.
+          On earth, hydrogen is an <strong>energy carrier</strong>, rather than an energy source - as natural hydrogen is founded in very limited amounts. It can store tremendous amounts of energy obtained through renewable sources, including wind, solar, and hydro power, and other non-renewable processes.
         </p>
       </div>
     </div>
