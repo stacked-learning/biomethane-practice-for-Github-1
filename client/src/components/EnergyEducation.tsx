@@ -61,9 +61,7 @@ export default function EnergyEducation() {
           </div>
         </div>
         <p className="text-lg leading-relaxed text-gray-700">
-          On earth, hydrogen is an <strong>energy carrier</strong>, rather than an energy source. 
-          It can store tremendous amounts of energy, and only produces water when burnt. 
-          However, the means of creating this hydrogen determines whether it is carbon neutral.
+          On earth, hydrogen is an <strong>energy carrier</strong>, rather than an energy source - as naturally hydrogen is founded in very limited amounts. It can store tremendous amounts of energy obtained through renewable sources, including wind, solar, and hydro power, and other non-renewable processes.
         </p>
       </div>
     </div>
