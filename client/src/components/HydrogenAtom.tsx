@@ -87,6 +87,22 @@ export default function HydrogenAtom() {
       ref={componentRef}
       className="relative w-full bg-white"
     >
+      {/* Scroll Down Indicator */}
+      <div className="flex flex-col items-center justify-center py-16 bg-white">
+        <div className="text-2xl font-semibold text-gray-700 mb-4">Scroll Down</div>
+        <svg 
+          className="w-8 h-8 text-gray-500 animate-bounce" 
+          fill="none" 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+          strokeWidth="2" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor"
+        >
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </div>
+
       {/* Scroll content container */}
       <div style={{ minHeight: '320vh', position: 'relative' }}>
         
