@@ -1,4 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import protiumImg from "@assets/image_1759208062795.png";
+import deuteriumImg from "@assets/image_1759208068240.png";
+import tritiumImg from "@assets/image_1759208100068.png";
 
 export default function HydrogenAtom() {
   const [hydroActive, setHydroActive] = useState(false);
@@ -231,9 +234,11 @@ export default function HydrogenAtom() {
                 </div>
               </div>
               <div className="flex-shrink-0 w-32 h-32 flex items-center justify-center">
-                <div className="relative w-24 h-24">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-red-500 rounded-full"></div>
-                </div>
+                <img 
+                  src={protiumImg} 
+                  alt="Protium atom structure"
+                  className="w-24 h-24 object-contain"
+                />
               </div>
             </div>
 
@@ -246,10 +251,11 @@ export default function HydrogenAtom() {
                 </div>
               </div>
               <div className="flex-shrink-0 w-32 h-32 flex items-center justify-center">
-                <div className="relative w-24 h-24">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-red-500 rounded-full"></div>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 translate-x-2 w-6 h-6 bg-gray-500 rounded-full"></div>
-                </div>
+                <img 
+                  src={deuteriumImg} 
+                  alt="Deuterium atom structure"
+                  className="w-24 h-24 object-contain"
+                />
               </div>
             </div>
 
@@ -262,11 +268,11 @@ export default function HydrogenAtom() {
                 </div>
               </div>
               <div className="flex-shrink-0 w-32 h-32 flex items-center justify-center">
-                <div className="relative w-24 h-24">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-red-500 rounded-full"></div>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 translate-x-1 translate-y-2 w-6 h-6 bg-gray-500 rounded-full"></div>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 translate-x-3 w-6 h-6 bg-gray-500 rounded-full"></div>
-                </div>
+                <img 
+                  src={tritiumImg} 
+                  alt="Tritium atom structure"
+                  className="w-24 h-24 object-contain"
+                />
               </div>
             </div>
           </div>
