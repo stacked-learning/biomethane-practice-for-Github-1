@@ -240,12 +240,17 @@ export default function Home() {
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
             <div className="text-gray-700 text-lg leading-relaxed">
-              <p className="mb-4 font-medium">
-                Hydrogen
-              </p>
-              <p className="whitespace-pre-line">
-                {quadrantData.product.description}
-              </p>
+              {(() => {
+                const lines = quadrantData.product.description.split('\n');
+                const mainText = lines.slice(0, -1).join('\n');
+                const scrollText = lines[lines.length - 1];
+                return (
+                  <>
+                    <p className="mb-6">{mainText}</p>
+                    <p className="font-bold italic text-gray-800">{scrollText}</p>
+                  </>
+                );
+              })()}
             </div>
           </Card>
         )}
