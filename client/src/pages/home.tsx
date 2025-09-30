@@ -467,10 +467,7 @@ export default function Home() {
                     </div>
                     
                     <div>
-                      <QuadrantSafetySection 
-                        generalText={quadrantData.product.description}
-                        safetyPoints={quadrantData.product.points}
-                      />
+                      <HydrogenSafetyCards />
                     </div>
                   </div>
                 )}
