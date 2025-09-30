@@ -91,7 +91,7 @@ export default function HydrogenAtom() {
       className="relative w-full bg-white"
     >
       {/* Scroll Down Indicator */}
-      <div className="flex flex-col items-center justify-center py-16 bg-white">
+      <div className="flex flex-col items-center justify-center pt-32 pb-16 bg-white">
         <div className="text-2xl font-semibold text-gray-700 mb-4">Scroll Down</div>
         <svg 
           className="w-8 h-8 text-gray-500 animate-bounce" 
