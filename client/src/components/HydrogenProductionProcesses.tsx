@@ -1,3 +1,6 @@
+import smrImage1 from "@assets/image_1759204576499.png";
+import smrImage2 from "@assets/image_1759204635699.png";
+
 export default function HydrogenProductionProcesses() {
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
@@ -16,9 +19,33 @@ export default function HydrogenProductionProcesses() {
             <div className="ml-6 space-y-4">
               <div>
                 <h4 className="text-xl font-semibold text-gray-700 mb-2">Steam Methane Reforming</h4>
-                <p className="text-base text-gray-600 leading-relaxed">
+                <p className="text-base text-gray-600 leading-relaxed mb-4">
                   Steam Methane Reforming (SMR) is the dominant method of hydrogen production worldwide, operating at very high temperatures. The process generates significant amounts of carbon dioxide as a by-product, though carbon capture can be applied to reduce emissions. Most facilities use natural gas as the feedstock, while some also process and utilise landfill gas as an alternative source.
                 </p>
+                
+                <div className="space-y-6 mt-6">
+                  <div>
+                    <img 
+                      src={smrImage1} 
+                      alt="Steam methane reforming reaction diagram"
+                      className="w-full max-w-2xl mx-auto rounded-lg shadow-md bg-gray-900 p-4"
+                    />
+                    <p className="text-sm text-gray-600 text-center mt-2 italic">
+                      Combining methane with water under high temperatures results in carbon monoxide and hydrogen gas being produced.
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <img 
+                      src={smrImage2} 
+                      alt="Water-shift reaction diagram"
+                      className="w-full max-w-2xl mx-auto rounded-lg shadow-md bg-gray-900 p-4"
+                    />
+                    <p className="text-sm text-gray-600 text-center mt-2 italic">
+                      Carbon monoxide is a byproduct of steam methane reforming. It can further be converted to hydrogen through a water-shift reaction.
+                    </p>
+                  </div>
+                </div>
               </div>
               <h4 className="text-xl font-semibold text-gray-700">Coal</h4>
             </div>
