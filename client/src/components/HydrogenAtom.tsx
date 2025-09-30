@@ -214,7 +214,7 @@ export default function HydrogenAtom() {
         {/* Third section - Isotopes */}
         <div 
           className="absolute left-1/2 -translate-x-1/2 w-11/12 max-w-4xl text-left select-none z-10 p-12"
-          style={{ top: '250vh' }}
+          style={{ top: '220vh' }}
         >
           <h2 className="text-4xl font-bold mb-4 text-center text-gray-900">Hydrogen Isotopes</h2>
           <p className="text-lg leading-relaxed text-gray-700 text-center max-w-3xl mx-auto mb-12">
