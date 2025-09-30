@@ -73,7 +73,7 @@ const quadrantData: Record<Quadrant, QuadrantContent> = {
   product: {
     title: "Product",
     subtitle: "Hydrogen ",
-    description: "Hydrogen is the simplest and lightest element, made up of just one proton and one electron. In its pure form (H₂), it is a colourless, odourless gas that is extremely flammable. It is widely produced and sold as a clean energy carrier and industrial feedstock, often stored as a compressed gas or liquid.",
+    description: "Hydrogen is emerging as a key fuel in the global decarbonisation efforts, offering a cleaner alternative to traditional fossil fuels. As the lightest element in the universe, hydrogen is not naturally found on Earth, but its unique properties make it a valuable energy carrier. While non-toxic, hydrogen's characteristics pose challenges: it is highly flammable, can cause hydrogen embrittlement in metals, and burns with nearly invisible flames, making it particularly hazardous to handle. In the context of gas turbine engines, hydrogen is increasingly seen as a replacement for conventional fuels, driving forward the transition to a carbon-free energy network. This shift is vital for achieving decarbonisation goals, but it requires overcoming technical challenges related to its storage, transportation, and combustion characteristics.\nScroll down to learn more about the hydrogen.",
     points: [
       "Energy Applications: It is used as a fuel for power generation, transport (through hydrogen fuel cells), and as a feedstock for chemical processes like ammonia production, methanol synthesis, and petroleum refining.",
       "Clean Energy Role: Because it can be generated from renewable energy, hydrogen is seen as a key player in decarbonising hard-to-electrify sectors.",
