@@ -8,8 +8,7 @@ export default function EnergyEducation() {
           Understanding Energy Systems
         </h2>
         <p className="text-gray-600 text-xl max-w-4xl mx-auto leading-relaxed">
-          Explore the fundamental concepts of energy sources and energy carriers, 
-          with a focus on hydrogen and renewable energy technologies.
+          Understanding the difference between energy source and carriers is crucial to understanding the role of hydrogen in decarbonisation.
         </p>
       </div>
 
