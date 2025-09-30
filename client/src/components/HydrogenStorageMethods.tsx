@@ -1,8 +1,8 @@
-import geologicalImg from "@assets/stock_images/underground_salt_cav_e18d797a.jpg";
-import compressedImg from "@assets/stock_images/high_pressure_gas_cy_ca0b6dc0.jpg";
-import liquifiedImg from "@assets/stock_images/cryogenic_liquid_sto_c002e660.jpg";
-import solidStateImg from "@assets/stock_images/advanced_materials_t_1c6b41f7.jpg";
-import chemicalImg from "@assets/stock_images/chemical_process_ind_2ba0812d.jpg";
+import geologicalImg from "@assets/AdobeStock_213344901_1759276478059.jpeg";
+import compressedImg from "@assets/AdobeStock_52399211_1759276481425.jpeg";
+import liquifiedImg from "@assets/AdobeStock_1138075747_1759276483759.jpeg";
+import solidStateImg from "@assets/AdobeStock_241630821_1759276486644.jpeg";
+import chemicalImg from "@assets/AdobeStock_151458203_1759276488644.jpeg";
 
 interface StorageMethod {
   id: string;
