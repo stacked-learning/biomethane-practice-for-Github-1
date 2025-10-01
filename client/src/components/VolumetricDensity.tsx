@@ -80,7 +80,7 @@ export default function VolumetricDensity() {
 
       <div className="text-center max-w-3xl mx-auto">
         <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-          Hydrogen has the highest energy density by mass of any fuel owing to its lightweight. However, its volumetric energy density is lower than most other fuels and energy carriers.
+          Hydrogen has the highest energy density by mass of any fuel owing to its lightweight. However, its volumetric energy density is lower than most other fuels and energy carriers. For this reason, hydrogen is compressed to increase the energy stored per unit volume.
         </p>
       </div>
     </div>
