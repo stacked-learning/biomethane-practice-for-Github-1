@@ -156,7 +156,7 @@ export default function Home() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden md:block">
                 <div className="relative">
                   <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3">
-                    <div className="bg-orange-400 px-6 py-2 rounded-lg">
+                    <div className="bg-orange-400 px-12 py-2 rounded-lg">
                       <span className="text-white font-semibold text-lg">Safety Quadrant</span>
                     </div>
                   </div>
