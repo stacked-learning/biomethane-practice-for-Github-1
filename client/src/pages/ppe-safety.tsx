@@ -24,8 +24,8 @@ export default function PPESafetyPage() {
             Transport
           </button>
           <button
-            onClick={() => setLocation("/safety/ppe")}
-            className="px-8 py-4 rounded-full font-medium text-lg bg-orange-400 hover:bg-orange-300 text-white transition-all duration-300"
+            onClick={() => setLocation("/")}
+            className="px-10 py-5 rounded-full font-semibold text-xl bg-orange-500 hover:bg-orange-400 text-white transition-all duration-300 shadow-lg"
             data-testid="button-nav-storage"
           >
             Storage

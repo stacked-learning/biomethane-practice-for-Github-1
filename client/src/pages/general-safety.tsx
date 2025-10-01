@@ -10,8 +10,8 @@ export default function GeneralSafety() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           <button
-            onClick={() => setLocation("/safety/general")}
-            className="px-8 py-4 rounded-full font-medium text-lg bg-orange-400 hover:bg-orange-300 text-white transition-all duration-300"
+            onClick={() => setLocation("/")}
+            className="px-10 py-5 rounded-full font-semibold text-xl bg-orange-500 hover:bg-orange-400 text-white transition-all duration-300 shadow-lg"
             data-testid="button-nav-product"
           >
             Product
