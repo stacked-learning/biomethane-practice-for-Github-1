@@ -23,7 +23,7 @@ const productionMethods: ProductionMethod[] = [
     ]
   },
   {
-    title: "Electrolyser",
+    title: "Electrolysis",
     risks: [
       "Flammable mixtures – During startup, shutdown, or ageing, hydrogen and oxygen can mix in dangerous concentrations, risking explosions if carried downstream.",
       "Residual charge – After shutdown, electrolysis cells can retain electrical charge for hours due to trapped gases, creating hazards for service personnel.",
