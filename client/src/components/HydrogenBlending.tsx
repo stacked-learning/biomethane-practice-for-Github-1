@@ -21,7 +21,7 @@ export default function HydrogenBlending() {
           </div>
           
           <p className="text-lg text-gray-600 leading-relaxed">
-            Hydrogen blending helps achieve short-term emissions reductions without the need for significant overhauls or changes to existing infrastructure. Hydrogen is introduced into natural gas pipelines or gas-powered plants, with a proportion of up to 20-25% by volume, allowing for a smooth integration. At this hydrogen concentration, the gas mixture can perform effectively with the existing combustion equipment, minimising the need for additional modifications. The resulting blend has a lower density and specific gravity than natural gas, which affects its overall characteristics and energy content. This reduction in density and specific gravity leads to a decrease in energy delivery capacity of the pipeline, especially when operating at the same pressure.
+            Hydrogen blending helps achieve short-term emissions reductions without the need for significant overhauls or changes to existing infrastructure. Hydrogen is introduced into natural gas pipelines or gas-powered plants, with a proportion of up to 20-25% by volume, allowing for a smooth integration. At this hydrogen concentration, the gas mixture can perform effectively with existing combustion equipment, minimising the need for additional modifications. The resulting blend has a lower density and specific gravity than natural gas, which affects its overall characteristics and energy content. This reduction in density and specific gravity leads to a decrease in energy delivery capacity of the pipeline operating at the same pressure.
           </p>
         </div>
       </div>
