@@ -42,10 +42,10 @@ export default function HydrogenAtom() {
       const rect = componentRef.current.getBoundingClientRect();
       const scrollProgress = -rect.top;
       
-      const firstTrigger = 200;
-      const secondTrigger = 500;
-      const thirdTrigger = 700;
-      const fourthTrigger = 900;
+      const firstTrigger = 500;
+      const secondTrigger = 800;
+      const thirdTrigger = 1000;
+      const fourthTrigger = 1200;
 
       if (scrollProgress > firstTrigger && scrollProgress < secondTrigger) {
         setHydroActive(true);
