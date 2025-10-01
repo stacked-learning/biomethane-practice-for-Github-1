@@ -239,7 +239,7 @@ export default function PPESafety() {
 
                   {/* Back Side */}
                   <div 
-                    className="absolute inset-0 bg-orange-500 text-white rounded-xl border-2 border-orange-600 p-6 flex flex-col items-center justify-center text-center"
+                    className="absolute inset-0 bg-red-500 text-white rounded-xl border-2 border-red-600 p-6 flex flex-col items-center justify-center text-center"
                     style={{ 
                       backfaceVisibility: 'hidden',
                       transform: 'rotateY(180deg)'
