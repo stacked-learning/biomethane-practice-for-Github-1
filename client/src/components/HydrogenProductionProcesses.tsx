@@ -80,6 +80,9 @@ export default function HydrogenProductionProcesses() {
             <div className="ml-6 space-y-3">
               <div>
                 <h4 className="text-xl font-semibold text-gray-700 mb-4">Photolytic</h4>
+                <p className="text-base text-gray-600 leading-relaxed mb-4">
+                  Photoelectrolysis uses light to directly split water into hydrogen and oxygen, offering significant potential for reducing the cost of electrolytic hydrogen.
+                </p>
                 
                 <div className="mb-4">
                   <img 
@@ -90,7 +93,7 @@ export default function HydrogenProductionProcesses() {
                 </div>
                 
                 <p className="text-base text-gray-600 leading-relaxed">
-                  Photolytic (Photocatalytic) Hydrogen Production uses a simple setup that requires only water, a suitable photocatalyst, and a light source. It is a clean method, producing only hydrogen and oxygen as by-products.
+                  Photolytic Hydrogen Production uses a simple setup that requires only water, a suitable photocatalyst, and a light source. It is a clean method, producing only hydrogen and oxygen as by-products.
                 </p>
               </div>
             </div>
