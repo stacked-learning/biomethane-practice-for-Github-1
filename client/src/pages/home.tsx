@@ -157,25 +157,21 @@ export default function Home() {
                     className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
                     data-testid="button-center-1"
                   >
-                    Button 1
                   </button>
                   <button
                     className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
                     data-testid="button-center-2"
                   >
-                    Button 2
                   </button>
                   <button
                     className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
                     data-testid="button-center-3"
                   >
-                    Button 3
                   </button>
                   <button
                     className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
                     data-testid="button-center-4"
                   >
-                    Button 4
                   </button>
                 </div>
               </div>
