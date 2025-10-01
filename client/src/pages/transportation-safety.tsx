@@ -19,7 +19,7 @@ export default function TransportationSafety() {
 
         <div className="text-center mb-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-            Transportation Safety
+            Critical safety considerations for Hydrogen Transportation Methods.
           </h1>
           <div className="w-24 h-1 bg-hydrogen-500 mx-auto rounded-full"></div>
           <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
