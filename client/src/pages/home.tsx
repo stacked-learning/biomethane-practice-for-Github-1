@@ -305,33 +305,6 @@ export default function Home() {
                     <div>
                       <HydrogenBlending />
                     </div>
-                    
-                    <div className="flex items-center justify-center py-4">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                      <div className="px-4">
-                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                    </div>
-                    
-                    <div>
-                      <QuadrantSafetySection 
-                        generalText={quadrantData.process.safetyDescription || quadrantData.process.description}
-                        safetyPoints={quadrantData.process.points}
-                      />
-                    </div>
-                    
-                    <div className="flex items-center justify-center py-4">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                      <div className="px-4">
-                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                    </div>
-                    
-                    <div>
-                      <ProductionMethodSafetyCards />
-                    </div>
                   </div>
                 )}
                 
@@ -365,33 +338,6 @@ export default function Home() {
                     <div>
                       <HydrogenCompression />
                     </div>
-                    
-                    <div className="flex items-center justify-center py-4">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                      <div className="px-4">
-                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                    </div>
-                    
-                    <div>
-                      <QuadrantSafetySection 
-                        generalText={quadrantData.transport.safetyDescription || quadrantData.transport.description}
-                        safetyPoints={quadrantData.transport.points}
-                      />
-                    </div>
-                    
-                    <div className="flex items-center justify-center py-4">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                      <div className="px-4">
-                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                    </div>
-                    
-                    <div>
-                      <TransportationSafetyCards />
-                    </div>
                   </div>
                 )}
                 {/* Storage Content */}
@@ -411,33 +357,6 @@ export default function Home() {
                     
                     <div>
                       <VolumetricDensity />
-                    </div>
-                    
-                    <div className="flex items-center justify-center py-4">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                      <div className="px-4">
-                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                    </div>
-                    
-                    <div>
-                      <QuadrantSafetySection 
-                        generalText={quadrantData.storage.safetyDescription || quadrantData.storage.description}
-                        safetyPoints={quadrantData.storage.points}
-                      />
-                    </div>
-                    
-                    <div className="flex items-center justify-center py-4">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                      <div className="px-4">
-                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                    </div>
-                    
-                    <div>
-                      <PPESafety />
                     </div>
                     
                     <div className="flex items-center justify-center py-4">
@@ -496,18 +415,6 @@ export default function Home() {
                     
                     <div>
                       <HydrogenGasTurbines />
-                    </div>
-                    
-                    <div className="flex items-center justify-center py-4">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                      <div className="px-4">
-                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                    </div>
-                    
-                    <div>
-                      <HydrogenSafetyCards />
                     </div>
                   </div>
                 )}
