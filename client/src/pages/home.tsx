@@ -118,31 +118,67 @@ export default function Home() {
         <div className={`transition-all duration-500 ease-out ${isDetailView ? 'nav-mode' : 'grid-mode'}`}>
           {/* Grid View */}
           {!isDetailView && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-8 animate-fade-in">
-              <button
-                onClick={() => handleQuadrantClick("product")}
-                className={getButtonClasses("product")}
-              >
-                Product
-              </button>
-              <button
-                onClick={() => handleQuadrantClick("transport")}
-                className={getButtonClasses("transport")}
-              >
-                Transport
-              </button>
-              <button
-                onClick={() => handleQuadrantClick("storage")}
-                className={getButtonClasses("storage")}
-              >
-                Storage
-              </button>
-              <button
-                onClick={() => handleQuadrantClick("process")}
-                className={getButtonClasses("process")}
-              >
-                Process
-              </button>
+            <div className="relative mb-8 animate-fade-in">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <button
+                  onClick={() => handleQuadrantClick("product")}
+                  className={getButtonClasses("product")}
+                  data-testid="button-product-quadrant"
+                >
+                  Product
+                </button>
+                <button
+                  onClick={() => handleQuadrantClick("transport")}
+                  className={getButtonClasses("transport")}
+                  data-testid="button-transport-quadrant"
+                >
+                  Transport
+                </button>
+                <button
+                  onClick={() => handleQuadrantClick("storage")}
+                  className={getButtonClasses("storage")}
+                  data-testid="button-storage-quadrant"
+                >
+                  Storage
+                </button>
+                <button
+                  onClick={() => handleQuadrantClick("process")}
+                  className={getButtonClasses("process")}
+                  data-testid="button-process-quadrant"
+                >
+                  Process
+                </button>
+              </div>
+              
+              {/* Center Buttons */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden md:block">
+                <div className="grid grid-cols-2 gap-3 bg-orange-500 rounded-2xl p-4 shadow-2xl">
+                  <button
+                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                    data-testid="button-center-1"
+                  >
+                    Button 1
+                  </button>
+                  <button
+                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                    data-testid="button-center-2"
+                  >
+                    Button 2
+                  </button>
+                  <button
+                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                    data-testid="button-center-3"
+                  >
+                    Button 3
+                  </button>
+                  <button
+                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                    data-testid="button-center-4"
+                  >
+                    Button 4
+                  </button>
+                </div>
+              </div>
             </div>
           )}
 
