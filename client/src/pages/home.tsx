@@ -152,7 +152,7 @@ export default function Home() {
               
               {/* Center Buttons */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden md:block">
-                <div className="grid grid-cols-2 gap-3 bg-orange-500 rounded-2xl p-4 shadow-2xl">
+                <div className="grid grid-cols-2 gap-3">
                   <button
                     className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
                     data-testid="button-center-1"
