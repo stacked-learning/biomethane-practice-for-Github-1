@@ -45,6 +45,10 @@ export default function HydrogenGasTurbines() {
               <span>Additionally, hydrogen's higher burning temperature can shorten component lifespan, requiring significant changes to cooling systems and coatings.</span>
             </li>
           </ul>
+          
+          <p className="text-lg leading-relaxed">
+            Several gas turbine models are capable of operating with hydrogen blends, offering flexibility in fuel sources. The NovaL™T5 is designed to run on up to 30% hydrogen blends by volume, while the NovaL™T12 and NovaL™T16 can run off just hydrogen. Additionally, GE's 7HA and 9HA turbines can operate with hydrogen blends of up to 50%, making them suitable for more extensive hydrogen utilisation in power generation.
+          </p>
         </div>
       </div>
     </div>
