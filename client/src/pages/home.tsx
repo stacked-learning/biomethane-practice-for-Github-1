@@ -119,7 +119,7 @@ export default function Home() {
           {/* Grid View */}
           {!isDetailView && (
             <div className="relative mb-8 animate-fade-in">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                 <button
                   onClick={() => handleQuadrantClick("product")}
                   className={getButtonClasses("product")}
