@@ -109,7 +109,7 @@ export default function Home() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-            Hydrogen Quadrant
+            Stacked Learning Hydrogen Quadrant
           </h1>
           <div className="w-24 h-1 bg-hydrogen-500 mx-auto rounded-full"></div>
         </div>
