@@ -3,7 +3,7 @@ export default function VolumetricDensity() {
     <div className="max-w-4xl mx-auto px-6 py-12">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-medium text-gray-800 mb-4">
-          Volumetric Density versus Energy Density
+          Volumetric versus Energy Density
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 mb-6">
           There are two main forms of assessing hydrogens energy content
@@ -14,7 +14,7 @@ export default function VolumetricDensity() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-12">
         <div className="flex flex-col items-center text-center gap-8">
           <h2 className="text-xl font-medium text-blue-600">
-            Volumetric Efficiency
+            Volumetric Density
           </h2>
           
           <div className="flex justify-center items-center">
