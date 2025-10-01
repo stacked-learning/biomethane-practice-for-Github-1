@@ -8,6 +8,37 @@ export default function ProductionSafety() {
   return (
     <div className="min-h-screen bg-gray-50 p-4 lg:p-8">
       <div className="max-w-6xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <button
+            onClick={() => setLocation("/")}
+            className="px-8 py-4 rounded-full font-medium text-lg bg-hydrogen-500 hover:bg-hydrogen-600 text-white transition-all duration-300"
+            data-testid="button-nav-product"
+          >
+            Product
+          </button>
+          <button
+            onClick={() => setLocation("/")}
+            className="px-8 py-4 rounded-full font-medium text-lg bg-hydrogen-500 hover:bg-hydrogen-600 text-white transition-all duration-300"
+            data-testid="button-nav-transport"
+          >
+            Transport
+          </button>
+          <button
+            onClick={() => setLocation("/")}
+            className="px-8 py-4 rounded-full font-medium text-lg bg-hydrogen-500 hover:bg-hydrogen-600 text-white transition-all duration-300"
+            data-testid="button-nav-storage"
+          >
+            Storage
+          </button>
+          <button
+            onClick={() => setLocation("/")}
+            className="px-8 py-4 rounded-full font-medium text-lg bg-hydrogen-500 hover:bg-hydrogen-600 text-white transition-all duration-300"
+            data-testid="button-nav-process"
+          >
+            Process
+          </button>
+        </div>
+
         <button
           onClick={() => setLocation("/")}
           className="flex items-center gap-2 text-hydrogen-600 hover:text-hydrogen-700 font-medium mb-6 transition-colors"
