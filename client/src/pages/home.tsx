@@ -154,35 +154,36 @@ export default function Home() {
               
               {/* Center Buttons */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden md:block">
-                <div className="grid grid-cols-2 gap-3">
-                  <button
-                    onClick={() => setLocation("/safety/general")}
-                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-4xl text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
-                    data-testid="button-center-general-safety"
-                  >
-                    1
-                  </button>
-                  <button
-                    onClick={() => setLocation("/safety/transportation")}
-                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-4xl text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
-                    data-testid="button-center-transportation-safety"
-                  >
-                    2
-                  </button>
-                  <button
-                    onClick={() => setLocation("/safety/ppe")}
-                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-4xl text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
-                    data-testid="button-center-ppe-safety"
-                  >
-                    3
-                  </button>
-                  <button
-                    onClick={() => setLocation("/safety/production")}
-                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-4xl text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
-                    data-testid="button-center-production-safety"
-                  >
-                    4
-                  </button>
+                <div className="flex flex-col items-center gap-3">
+                  <div className="bg-orange-400 px-6 py-2 rounded-lg">
+                    <span className="text-white font-semibold text-lg">Safety Quadrant</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    <button
+                      onClick={() => setLocation("/safety/general")}
+                      className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                      data-testid="button-center-general-safety"
+                    >
+                    </button>
+                    <button
+                      onClick={() => setLocation("/safety/transportation")}
+                      className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                      data-testid="button-center-transportation-safety"
+                    >
+                    </button>
+                    <button
+                      onClick={() => setLocation("/safety/ppe")}
+                      className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                      data-testid="button-center-ppe-safety"
+                    >
+                    </button>
+                    <button
+                      onClick={() => setLocation("/safety/production")}
+                      className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                      data-testid="button-center-production-safety"
+                    >
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
