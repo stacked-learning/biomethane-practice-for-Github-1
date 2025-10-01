@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useLocation } from "wouter";
 import { Card } from "@/components/ui/card";
 import HydrogenRainbow from "@/components/HydrogenRainbow";
-import OxygenChart from "@/components/OxygenChart";
 import TransportMethods from "@/components/TransportMethods";
 import PPESafety from "@/components/PPESafety";
 import ProcessSafety from "@/components/ProcessSafety";
@@ -364,18 +363,6 @@ export default function Home() {
                     
                     <div>
                       <VolumetricDensity />
-                    </div>
-                    
-                    <div className="flex items-center justify-center py-4">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                      <div className="px-4">
-                        <div className="w-2 h-2 bg-hydrogen-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-hydrogen-200 to-transparent"></div>
-                    </div>
-                    
-                    <div>
-                      <OxygenChart />
                     </div>
                   </div>
                 )}

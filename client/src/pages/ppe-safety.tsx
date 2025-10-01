@@ -1,6 +1,7 @@
 import { useLocation } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import PPESafety from "@/components/PPESafety";
+import OxygenChart from "@/components/OxygenChart";
 
 export default function PPESafetyPage() {
   const [, setLocation] = useLocation();
@@ -51,6 +52,10 @@ export default function PPESafetyPage() {
 
         <div className="mt-12">
           <PPESafety />
+        </div>
+
+        <div className="mt-12">
+          <OxygenChart />
         </div>
       </div>
     </div>
