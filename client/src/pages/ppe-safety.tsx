@@ -23,7 +23,7 @@ export default function PPESafetyPage() {
           </h1>
           <div className="w-24 h-1 bg-hydrogen-500 mx-auto rounded-full"></div>
           <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
-            Essential PPE requirements for various environmental conditions
+            Each hydrogen production method presents unique safety risks. Green hydrogen, made through electrolysis, involves electrical hazards and pressurised gases. Steam methane reforming carries risks of leaks, explosions, and hazardous gases like carbon monoxide. Coal and biomass gasification introduce additional dangers, such as toxic by-products and explosion hazards. Safety measures must be tailored to each method's specific risks.
           </p>
         </div>
 
