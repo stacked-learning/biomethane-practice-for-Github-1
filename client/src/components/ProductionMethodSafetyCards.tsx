@@ -17,9 +17,9 @@ const productionMethods: ProductionMethod[] = [
   {
     title: "Thermochemical",
     risks: [
-      "Requires high temperatures.",
-      "Corrosive chemicals and toxic byproducts can be produced.",
-      "Hydrogen produced as end-product."
+      "Requires high temperatures: Thermochemical processes operate at extreme temperatures (close to or above 1000°C), increasing the risk of burns, equipment failure, and explosions.",
+      "Corrosive chemicals and toxic byproducts: High heat and chemical reactions can produce harmful byproducts like CO, sulfur compounds, and nitrogen oxides, which are dangerous to health and the environment.",
+      "Hydrogen produced as end-product: While hydrogen is the desired product, the process can also generate hazardous gases or require dangerous feedstocks, complicating safe production."
     ]
   },
   {
