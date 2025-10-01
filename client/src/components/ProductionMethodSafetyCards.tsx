@@ -64,6 +64,9 @@ export default function ProductionMethodSafetyCards() {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4">
+      <h2 className="text-2xl font-semibold text-gray-800 text-center mb-4">
+        Hydrogen Production Method Risks
+      </h2>
       <p className="text-center mb-8 text-gray-600 text-lg max-w-3xl mx-auto" data-testid="text-description">
         Comprehensive safety risks and considerations for different hydrogen production methods. Each process presents unique challenges and safety requirements.
       </p>
