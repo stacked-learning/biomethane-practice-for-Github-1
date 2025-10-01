@@ -31,6 +31,7 @@ interface QuadrantContent {
   title: string;
   subtitle: string;
   description: string;
+  safetyDescription?: string;
   points: string[];
 }
 
@@ -46,6 +47,7 @@ const quadrantData: Record<Quadrant, QuadrantContent> = {
     title: "Process",
     subtitle: "",
     description: "There are several methods for producing hydrogen, collectively represented by the hydrogen \"rainbow.\" Hydrogen generated using renewable energy and electrolysis is referred to as green hydrogen. The most common production method remains steam methane reforming, though alternative approaches such as coal and biomass gasification are also employed. The choice of feedstock largely depends on the local availability of resources and the technologies in place.\nScroll down to learn more about the various ways in which hydrogen is produced.",
+    safetyDescription: "Each hydrogen production method presents unique safety risks. Green hydrogen, made through electrolysis, involves electrical hazards and pressurised gases. Steam methane reforming carries risks of leaks, explosions, and hazardous gases like carbon monoxide. Coal and biomass gasification introduce additional dangers, such as toxic by-products and explosion hazards. Safety measures must be tailored to each method's specific risks.",
     points: []
   },
   transport: {
@@ -276,7 +278,7 @@ export default function Home() {
                     
                     <div>
                       <QuadrantSafetySection 
-                        generalText={quadrantData.process.description}
+                        generalText={quadrantData.process.safetyDescription || quadrantData.process.description}
                         safetyPoints={quadrantData.process.points}
                       />
                     </div>
@@ -336,7 +338,7 @@ export default function Home() {
                     
                     <div>
                       <QuadrantSafetySection 
-                        generalText={quadrantData.transport.description}
+                        generalText={quadrantData.transport.safetyDescription || quadrantData.transport.description}
                         safetyPoints={quadrantData.transport.points}
                       />
                     </div>
@@ -383,7 +385,7 @@ export default function Home() {
                     
                     <div>
                       <QuadrantSafetySection 
-                        generalText={quadrantData.storage.description}
+                        generalText={quadrantData.storage.safetyDescription || quadrantData.storage.description}
                         safetyPoints={quadrantData.storage.points}
                       />
                     </div>
