@@ -157,27 +157,31 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     onClick={() => setLocation("/safety/general")}
-                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-4xl text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
                     data-testid="button-center-general-safety"
                   >
+                    1
                   </button>
                   <button
                     onClick={() => setLocation("/safety/production")}
-                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-4xl text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
                     data-testid="button-center-production-safety"
                   >
+                    2
                   </button>
                   <button
                     onClick={() => setLocation("/safety/transportation")}
-                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-4xl text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
                     data-testid="button-center-transportation-safety"
                   >
+                    3
                   </button>
                   <button
                     onClick={() => setLocation("/safety/ppe")}
-                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                    className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-4xl text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
                     data-testid="button-center-ppe-safety"
                   >
+                    4
                   </button>
                 </div>
               </div>
