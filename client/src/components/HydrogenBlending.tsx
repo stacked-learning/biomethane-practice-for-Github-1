@@ -1,4 +1,4 @@
-import hydrogenBlendingImage from "@assets/stock_images/hydrogen_blending_in_c2eb3df2.jpg";
+import hydrogenBlendingImage from "@assets/image_1759277435065.png";
 
 export default function HydrogenBlending() {
   return (
