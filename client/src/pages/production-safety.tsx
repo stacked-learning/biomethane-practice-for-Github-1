@@ -23,7 +23,15 @@ export default function ProductionSafety() {
           </h1>
           <div className="w-24 h-1 bg-hydrogen-500 mx-auto rounded-full"></div>
           <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
-            Safety risks associated with different hydrogen production methods
+            Hydrogen production methods come with varying safety risks. "Green
+            hydrogen" from renewable sources and electrolysis is generally
+            safer, though it still poses electrical hazards and risks related to
+            flammable gas mixtures. Steam methane reforming (SMR) involves high
+            temperatures and pressures, increasing the potential for equipment
+            failure and other hazards. Coal and biomass gasification introduce
+            risks from toxic chemicals, fire, and high-temperature processes.
+            Each method requires stringent safety measures to manage
+            environmental, energy, and operational risks.
           </p>
         </div>
 
