@@ -8,7 +8,7 @@ import NotFound from "@/pages/not-found";
 import GeneralSafety from "@/pages/general-safety";
 import ProductionSafety from "@/pages/production-safety";
 import TransportationSafety from "@/pages/transportation-safety";
-import PPESafetyPage from "@/pages/ppe-safety";
+import StorageSafety from "@/pages/storage-safety";
 
 function Router() {
   return (
@@ -17,7 +17,7 @@ function Router() {
       <Route path="/safety/general" component={GeneralSafety} />
       <Route path="/safety/production" component={ProductionSafety} />
       <Route path="/safety/transportation" component={TransportationSafety} />
-      <Route path="/safety/ppe" component={PPESafetyPage} />
+      <Route path="/safety/storage" component={StorageSafety} />
       <Route component={NotFound} />
     </Switch>
   );

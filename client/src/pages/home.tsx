@@ -174,9 +174,9 @@ export default function Home() {
                   >
                   </button>
                   <button
-                    onClick={() => setLocation("/safety/ppe")}
+                    onClick={() => setLocation("/safety/storage")}
                     className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-medium text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
-                    data-testid="button-center-ppe-safety"
+                    data-testid="button-center-storage-safety"
                   >
                   </button>
                 </div>
