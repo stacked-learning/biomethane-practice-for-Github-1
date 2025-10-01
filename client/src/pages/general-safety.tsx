@@ -23,7 +23,7 @@ export default function GeneralSafety() {
           </h1>
           <div className="w-24 h-1 bg-hydrogen-500 mx-auto rounded-full"></div>
           <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
-            Understanding the fundamental safety considerations when working with hydrogen
+            It is important to understand the fundamental safety considerations when working with hydrogen
           </p>
         </div>
 
