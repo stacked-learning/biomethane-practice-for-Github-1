@@ -34,18 +34,21 @@ export default function VolumetricDensity() {
           </div>
           
           <div className="flex flex-col gap-2">
-            <p className="font-medium text-blue-600 opacity-80">
-              Energy per kilogram
+            <p className="font-medium text-blue-600">
+              Volumetric Density: Energy per
+            </p>
+            <p className="font-medium text-blue-600">
+              unit volume
             </p>
             <p className="text-sm text-blue-600 opacity-60">
-              [kJ/kg]
+              [kJ/L] or [kJ/m³]
             </p>
           </div>
         </div>
 
         <div className="flex flex-col items-center text-center gap-8">
           <h2 className="text-xl font-medium text-emerald-600">
-            Energy Density
+            Gravimetric Energy Density
           </h2>
           
           <div className="flex justify-center items-center">
@@ -65,14 +68,11 @@ export default function VolumetricDensity() {
           </div>
           
           <div className="flex flex-col gap-2">
-            <p className="font-medium text-emerald-600">
-              Volumetric Density: Energy per
-            </p>
-            <p className="font-medium text-emerald-600">
-              unit volume
+            <p className="font-medium text-emerald-600 opacity-80">
+              Energy per kilogram
             </p>
             <p className="text-sm text-emerald-600 opacity-60">
-              [kJ/L] or [kJ/m³]
+              [kJ/kg]
             </p>
           </div>
         </div>
