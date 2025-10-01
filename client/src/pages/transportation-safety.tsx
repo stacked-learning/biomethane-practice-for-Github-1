@@ -10,29 +10,29 @@ export default function TransportationSafety() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           <button
-            onClick={() => setLocation("/")}
-            className="px-8 py-4 rounded-full font-medium text-lg bg-hydrogen-500 hover:bg-hydrogen-600 text-white transition-all duration-300"
+            onClick={() => setLocation("/safety/general")}
+            className="px-8 py-4 rounded-full font-medium text-lg bg-orange-400 hover:bg-orange-300 text-white transition-all duration-300"
             data-testid="button-nav-product"
           >
             Product
           </button>
           <button
-            onClick={() => setLocation("/")}
-            className="px-8 py-4 rounded-full font-medium text-lg bg-hydrogen-500 hover:bg-hydrogen-600 text-white transition-all duration-300"
+            onClick={() => setLocation("/safety/transportation")}
+            className="px-8 py-4 rounded-full font-medium text-lg bg-orange-400 hover:bg-orange-300 text-white transition-all duration-300"
             data-testid="button-nav-transport"
           >
             Transport
           </button>
           <button
-            onClick={() => setLocation("/")}
-            className="px-8 py-4 rounded-full font-medium text-lg bg-hydrogen-500 hover:bg-hydrogen-600 text-white transition-all duration-300"
+            onClick={() => setLocation("/safety/ppe")}
+            className="px-8 py-4 rounded-full font-medium text-lg bg-orange-400 hover:bg-orange-300 text-white transition-all duration-300"
             data-testid="button-nav-storage"
           >
             Storage
           </button>
           <button
-            onClick={() => setLocation("/")}
-            className="px-8 py-4 rounded-full font-medium text-lg bg-hydrogen-500 hover:bg-hydrogen-600 text-white transition-all duration-300"
+            onClick={() => setLocation("/safety/production")}
+            className="px-8 py-4 rounded-full font-medium text-lg bg-orange-400 hover:bg-orange-300 text-white transition-all duration-300"
             data-testid="button-nav-process"
           >
             Process
