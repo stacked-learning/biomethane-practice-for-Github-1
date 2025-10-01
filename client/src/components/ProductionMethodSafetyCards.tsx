@@ -25,10 +25,10 @@ const productionMethods: ProductionMethod[] = [
   {
     title: "Electrolysis",
     risks: [
-      "Flammable mixtures – During startup, shutdown, or ageing, hydrogen and oxygen can mix in dangerous concentrations, risking explosions if carried downstream.",
-      "Residual charge – After shutdown, electrolysis cells can retain electrical charge for hours due to trapped gases, creating hazards for service personnel.",
-      "Ventilation & ignition control – Because units sit in non-classified areas, strong ventilation and non-sparking auxiliary equipment are needed to manage leaks safely.",
-      "Outdoor installation risks – Systems must be weather-protected, with hydrogen and oxygen vents carefully separated from each other and from air intakes to prevent accumulation."
+      "During startup, shutdown, or ageing, hydrogen and oxygen can mix in dangerous concentrations, creating flammable mixtures that pose a risk of explosions if carried downstream.",
+      "Electrolysis cells can retain electrical charge for hours after shutdown due to trapped gases, creating hazards for service personnel.",
+      "Strong ventilation and non-sparking auxiliary equipment are required to manage leaks safely, as electrolysis units are often installed in non-classified areas.",
+      "Systems must be weather-protected when installed outdoors, with hydrogen and oxygen vents carefully separated to prevent accumulation and avoid potential hazards."
     ]
   },
   {
