@@ -151,7 +151,7 @@ export default function HydrogenRainbow() {
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="text-3xl lg:text-4xl font-bold text-hydrogen-600 mb-2 italic">
-          Hydrogen Rainbow
+          Stacked Learning Hydrogen Rainbow
         </h1>
         <p className="text-lg text-gray-600">
           Discover the rainbow of hydrogen production methods
