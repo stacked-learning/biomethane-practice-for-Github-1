@@ -5,11 +5,19 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
+import GeneralSafety from "@/pages/general-safety";
+import ProductionSafety from "@/pages/production-safety";
+import TransportationSafety from "@/pages/transportation-safety";
+import PPESafetyPage from "@/pages/ppe-safety";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/safety/general" component={GeneralSafety} />
+      <Route path="/safety/production" component={ProductionSafety} />
+      <Route path="/safety/transportation" component={TransportationSafety} />
+      <Route path="/safety/ppe" component={PPESafetyPage} />
       <Route component={NotFound} />
     </Switch>
   );
