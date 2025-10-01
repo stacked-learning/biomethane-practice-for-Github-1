@@ -95,7 +95,7 @@ export default function Home() {
   const getButtonClasses = (quadrant: Quadrant, isNav: boolean = false) => {
     const baseClasses = isNav
       ? "px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 ease-out transform hover:scale-105 focus:outline-none focus:ring-4 hover:shadow-lg"
-      : "min-h-[140px] md:min-h-[180px] rounded-2xl font-semibold text-2xl md:text-3xl transition-all duration-300 ease-out transform hover:scale-105 focus:outline-none focus:ring-4 hover:shadow-xl active:scale-95";
+      : "min-h-[140px] md:min-h-[180px] rounded-2xl font-semibold text-2xl md:text-3xl transition-all duration-300 ease-out focus:outline-none focus:ring-4 hover:shadow-xl";
     
     const isActive = selectedQuadrant === quadrant && isDetailView;
     const colorClasses = isActive
