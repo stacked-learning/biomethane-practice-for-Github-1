@@ -175,8 +175,8 @@ export default function PPESafety() {
                   min-h-[120px] flex flex-col items-center justify-center text-center
                   shadow-md hover:shadow-lg hover:-translate-y-1
                   ${isActive 
-                    ? 'bg-green-500 text-white border-green-600 shadow-lg' 
-                    : 'bg-white text-gray-700 border-gray-300 hover:border-green-500'
+                    ? 'bg-orange-500 text-white border-orange-600 shadow-lg' 
+                    : 'bg-white text-gray-700 border-gray-300 hover:border-orange-500'
                   }
                 `}
               >
@@ -208,7 +208,7 @@ export default function PPESafety() {
                 className={`
                   relative h-72 cursor-pointer transition-all duration-300 hover:-translate-y-1
                   ${isRequired 
-                    ? 'border-green-500 shadow-lg ring-2 ring-green-200' 
+                    ? 'border-orange-500 shadow-lg ring-2 ring-orange-200' 
                     : 'border-gray-300 shadow-md'
                   }
                 `}
@@ -226,7 +226,7 @@ export default function PPESafety() {
                     className={`
                       absolute inset-0 rounded-xl border-2 p-6 flex flex-col items-center justify-center text-center
                       ${isRequired 
-                        ? 'bg-gradient-to-br from-green-500 to-green-600 text-white border-green-600' 
+                        ? 'bg-gradient-to-br from-orange-500 to-orange-600 text-white border-orange-600' 
                         : 'bg-gray-100 text-gray-600 border-gray-300'
                       }
                     `}
@@ -239,7 +239,7 @@ export default function PPESafety() {
 
                   {/* Back Side */}
                   <div 
-                    className="absolute inset-0 bg-green-500 text-white rounded-xl border-2 border-green-600 p-6 flex flex-col items-center justify-center text-center"
+                    className="absolute inset-0 bg-orange-500 text-white rounded-xl border-2 border-orange-600 p-6 flex flex-col items-center justify-center text-center"
                     style={{ 
                       backfaceVisibility: 'hidden',
                       transform: 'rotateY(180deg)'
