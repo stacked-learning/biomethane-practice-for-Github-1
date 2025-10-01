@@ -154,8 +154,8 @@ export default function Home() {
               
               {/* Center Buttons */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden md:block">
-                <div className="flex flex-col items-center gap-3">
-                  <div className="bg-orange-400 px-6 py-2 rounded-lg">
+                <div className="flex flex-col items-center">
+                  <div className="bg-orange-400 px-6 py-2 rounded-lg mb-3">
                     <span className="text-white font-semibold text-lg">Safety Quadrant</span>
                   </div>
                   <div className="grid grid-cols-2 gap-3">
