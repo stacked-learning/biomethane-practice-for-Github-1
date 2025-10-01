@@ -163,9 +163,9 @@ export default function Home() {
                     1
                   </button>
                   <button
-                    onClick={() => setLocation("/safety/production")}
+                    onClick={() => setLocation("/safety/transportation")}
                     className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-4xl text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
-                    data-testid="button-center-production-safety"
+                    data-testid="button-center-transportation-safety"
                   >
                     2
                   </button>
@@ -177,9 +177,9 @@ export default function Home() {
                     3
                   </button>
                   <button
-                    onClick={() => setLocation("/safety/transportation")}
+                    onClick={() => setLocation("/safety/production")}
                     className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-4xl text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
-                    data-testid="button-center-transportation-safety"
+                    data-testid="button-center-production-safety"
                   >
                     4
                   </button>
