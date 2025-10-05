@@ -191,7 +191,7 @@ export default function Home() {
                       data-testid="button-center-production-safety"
                     >
                       <Factory className="w-8 h-8 mb-1" />
-                      <span className="text-xs">Production Safety</span>
+                      <span className="text-xs">Process Safety</span>
                     </button>
                   </div>
                 </div>
