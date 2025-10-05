@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
 import { Card } from "@/components/ui/card";
+import { Gift, Truck, HardHat, Factory } from "lucide-react";
 import HydrogenRainbow from "@/components/HydrogenRainbow";
 import TransportMethods from "@/components/TransportMethods";
 import PPESafety from "@/components/PPESafety";
@@ -162,27 +163,35 @@ export default function Home() {
                   <div className="grid grid-cols-2 gap-3">
                     <button
                       onClick={() => setLocation("/safety/general")}
-                      className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                      className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200 flex flex-col items-center justify-center"
                       data-testid="button-center-general-safety"
                     >
+                      <Gift className="w-8 h-8 mb-1" />
+                      <span className="text-xs">General Safety</span>
                     </button>
                     <button
                       onClick={() => setLocation("/safety/transportation")}
-                      className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                      className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200 flex flex-col items-center justify-center"
                       data-testid="button-center-transportation-safety"
                     >
+                      <Truck className="w-8 h-8 mb-1" />
+                      <span className="text-xs">Transportation Safety</span>
                     </button>
                     <button
                       onClick={() => setLocation("/safety/ppe")}
-                      className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                      className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200 flex flex-col items-center justify-center"
                       data-testid="button-center-ppe-safety"
                     >
+                      <HardHat className="w-8 h-8 mb-1" />
+                      <span className="text-xs">PPE Safety</span>
                     </button>
                     <button
                       onClick={() => setLocation("/safety/production")}
-                      className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                      className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200 flex flex-col items-center justify-center"
                       data-testid="button-center-production-safety"
                     >
+                      <Factory className="w-8 h-8 mb-1" />
+                      <span className="text-xs">Production Safety</span>
                     </button>
                   </div>
                 </div>
