@@ -17,11 +17,11 @@ export default function GeneralSafety() {
             Product
           </button>
           <button
-            onClick={() => setLocation("/safety/transportation")}
+            onClick={() => setLocation("/safety/production")}
             className="px-8 py-4 rounded-full font-medium text-lg bg-orange-400 hover:bg-orange-300 text-white transition-all duration-300"
-            data-testid="button-nav-transport"
+            data-testid="button-nav-process"
           >
-            Transport
+            Process
           </button>
           <button
             onClick={() => setLocation("/safety/ppe")}
@@ -31,11 +31,11 @@ export default function GeneralSafety() {
             Storage
           </button>
           <button
-            onClick={() => setLocation("/safety/production")}
+            onClick={() => setLocation("/safety/transportation")}
             className="px-8 py-4 rounded-full font-medium text-lg bg-orange-400 hover:bg-orange-300 text-white transition-all duration-300"
-            data-testid="button-nav-process"
+            data-testid="button-nav-transport"
           >
-            Process
+            Transport
           </button>
         </div>
 
