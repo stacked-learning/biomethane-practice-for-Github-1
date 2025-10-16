@@ -170,12 +170,12 @@ export default function Home() {
                       <span className="text-xs">General Safety</span>
                     </button>
                     <button
-                      onClick={() => setLocation("/safety/transportation")}
+                      onClick={() => setLocation("/safety/production")}
                       className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200 flex flex-col items-center justify-center"
-                      data-testid="button-center-transportation-safety"
+                      data-testid="button-center-production-safety"
                     >
-                      <Truck className="w-8 h-8 mb-1" />
-                      <span className="text-xs">Transportation Safety</span>
+                      <Factory className="w-8 h-8 mb-1" />
+                      <span className="text-xs">Process Safety</span>
                     </button>
                     <button
                       onClick={() => setLocation("/safety/ppe")}
@@ -186,12 +186,12 @@ export default function Home() {
                       <span className="text-xs">PPE Safety</span>
                     </button>
                     <button
-                      onClick={() => setLocation("/safety/production")}
+                      onClick={() => setLocation("/safety/transportation")}
                       className="w-28 h-28 bg-orange-400 hover:bg-orange-300 rounded-xl font-bold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-orange-200 flex flex-col items-center justify-center"
-                      data-testid="button-center-production-safety"
+                      data-testid="button-center-transportation-safety"
                     >
-                      <Factory className="w-8 h-8 mb-1" />
-                      <span className="text-xs">Process Safety</span>
+                      <Truck className="w-8 h-8 mb-1" />
+                      <span className="text-xs">Transportation Safety</span>
                     </button>
                   </div>
                 </div>
