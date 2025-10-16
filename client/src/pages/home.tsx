@@ -130,11 +130,11 @@ export default function Home() {
                   Product
                 </button>
                 <button
-                  onClick={() => handleQuadrantClick("transport")}
-                  className={getButtonClasses("transport")}
-                  data-testid="button-transport-quadrant"
+                  onClick={() => handleQuadrantClick("process")}
+                  className={getButtonClasses("process")}
+                  data-testid="button-process-quadrant"
                 >
-                  Transport
+                  Process
                 </button>
                 <button
                   onClick={() => handleQuadrantClick("storage")}
@@ -144,11 +144,11 @@ export default function Home() {
                   Storage
                 </button>
                 <button
-                  onClick={() => handleQuadrantClick("process")}
-                  className={getButtonClasses("process")}
-                  data-testid="button-process-quadrant"
+                  onClick={() => handleQuadrantClick("transport")}
+                  className={getButtonClasses("transport")}
+                  data-testid="button-transport-quadrant"
                 >
-                  Process
+                  Transport
                 </button>
               </div>
               
@@ -209,10 +209,10 @@ export default function Home() {
                 Product
               </button>
               <button
-                onClick={() => handleQuadrantClick("transport")}
-                className={getButtonClasses("transport", true)}
+                onClick={() => handleQuadrantClick("process")}
+                className={getButtonClasses("process", true)}
               >
-                Transport
+                Process
               </button>
               <button
                 onClick={() => handleQuadrantClick("storage")}
@@ -221,10 +221,10 @@ export default function Home() {
                 Storage
               </button>
               <button
-                onClick={() => handleQuadrantClick("process")}
-                className={getButtonClasses("process", true)}
+                onClick={() => handleQuadrantClick("transport")}
+                className={getButtonClasses("transport", true)}
               >
-                Process
+                Transport
               </button>
             </div>
           )}
