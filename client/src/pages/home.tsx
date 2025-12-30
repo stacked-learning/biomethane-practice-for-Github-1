@@ -28,14 +28,14 @@ const quadrantData: Record<Quadrant, QuadrantContent> = {
   process: {
     title: "Process",
     subtitle: "",
-    description: "There are several methods for producing hydrogen, collectively represented by the hydrogen \"rainbow.\" Hydrogen generated using renewable energy and electrolysis is referred to as green hydrogen. The most common production method remains steam methane reforming, though alternative approaches such as coal and biomass gasification are also employed. The choice of feedstock largely depends on the local availability of resources and the technologies in place.\nScroll down to learn more about the various ways in which hydrogen is produced.",
-    safetyDescription: "Each hydrogen production method presents unique safety risks. Green hydrogen, made through electrolysis, involves electrical hazards and pressurised gases. Steam methane reforming carries risks of leaks, explosions, and hazardous gases like carbon monoxide. Coal and biomass gasification introduce additional dangers, such as toxic by-products and explosion hazards. Safety measures must be tailored to each method's specific risks.",
+    description: "The value of biomethane as a green fuel is closely tied to how it is produced. By converting organic waste streams into usable energy, biomethane supports a circular economy approach that improves resource efficiency across multiple sectors.\n\nIn the process section, we will explore:\nHow biomethane is produced\nThe different feedstocks used in its generation\nThe role of biogas, and how it differs from biomethane",
+    safetyDescription: "",
     points: []
   },
   transport: {
     title: "Transport",
     subtitle: "",
-    description: "Safe and efficient transportation is a critical component of the hydrogen supply chain, ensuring that hydrogen can move reliably from production sites to end users. Current transport options include pipelines, road transport, and tankers, with ongoing development to improve efficiency and safety. Each method presents unique challenges, such as hydrogen embrittlement in pipelines or managing complex systems during road and marine transport. Strict safety procedures and protocols are essential to protect both the workforce and the public, while maintaining the integrity of the hydrogen being transported.\n\nScroll down to learn more about the various hydrogen transportation methods",
+    description: "For biomethane to be effectively deployed at scale, suitable transport infrastructure is essential. A key advantage is that, in many cases, existing gas networks and technologies can be readily leveraged, accelerating adoption and reducing the need for entirely new systems.\n\nIn the transport section, we will explore:\nThe key methods used to transport biomethane\nThe advantages and limitations of each approach\nExisting technologies and infrastructure that can be exploited",
     points: []
   },
   storage: {
@@ -46,13 +46,9 @@ const quadrantData: Record<Quadrant, QuadrantContent> = {
   },
   product: {
     title: "Product",
-    subtitle: "Hydrogen ",
-    description: "Hydrogen is emerging as a key fuel in the global decarbonisation efforts, offering a cleaner alternative to traditional fossil fuels. As the lightest element in the universe, hydrogen is not naturally found on Earth, but its unique properties make it a valuable energy carrier. While non-toxic, hydrogen's characteristics pose challenges: it is highly flammable, can cause hydrogen embrittlement in metals, and burns with nearly invisible flames, making it particularly hazardous to handle. In the context of gas turbine engines, hydrogen is increasingly seen as a replacement for conventional fuels, driving forward the transition to a carbon-free energy network. This shift is vital for achieving decarbonisation goals, but it requires overcoming technical challenges related to its storage, transportation, and combustion characteristics.\nScroll down to learn more about the hydrogen.",
-    points: [
-      "Energy Applications: It is used as a fuel for power generation, transport (through hydrogen fuel cells), and as a feedstock for chemical processes like ammonia production, methanol synthesis, and petroleum refining.",
-      "Clean Energy Role: Because it can be generated from renewable energy, hydrogen is seen as a key player in decarbonising hard-to-electrify sectors.",
-      "Safety Considerations: Hydrogen is not toxic, but it poses unique safety challenges. It disperses quickly, burns with an almost invisible flame, and forms explosive mixtures with air. Safe use relies on good ventilation, leak detection, and strict ignition control to prevent accidents and ensure safe handling."
-    ]
+    subtitle: "",
+    description: "As decarbonisation efforts continue, biomethane is increasingly recognised as a practical option for replacing conventional fossil fuels in fuel-dependent industrial applications, particularly gas turbines. Its composition being the same as natural gas enables meaningful emissions reduction while continuing to make use of existing assets.\n\nIn the product section, we will explore:\nWhy biomethane is being considered as a viable decarbonisation pathway\nWhere it can be employed in tandem with existing infrastructure\nHow biomethane differs from other low-carbon fuel options such as hydrogen and natural gas (methane gas)",
+    points: []
   }
 };
 
@@ -230,13 +226,23 @@ export default function Home() {
             </div>
             <div className="text-gray-700 text-lg leading-relaxed">
               {(() => {
-                const lines = quadrantData[selectedQuadrant].description.split('\n');
-                const mainText = lines.slice(0, -1).join('\n');
-                const scrollText = lines[lines.length - 1];
+                const lines = quadrantData[selectedQuadrant].description.split('\n').filter(line => line.trim());
+                const introParagraph = lines[0];
+                const sectionTitle = lines[1];
+                const bulletPoints = lines.slice(2);
                 return (
                   <>
-                    <p className="mb-6">{mainText}</p>
-                    <p className="font-bold italic text-gray-800">{scrollText}</p>
+                    <p className="mb-6">{introParagraph}</p>
+                    {sectionTitle && (
+                      <p className="font-semibold text-gray-800 mb-3">{sectionTitle}</p>
+                    )}
+                    {bulletPoints.length > 0 && (
+                      <ul className="list-disc list-inside space-y-2 text-gray-700">
+                        {bulletPoints.map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    )}
                   </>
                 );
               })()}
