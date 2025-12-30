@@ -370,26 +370,28 @@ export default function Home() {
               </h3>
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
-            <div className="flex flex-col md:flex-row justify-center gap-6">
-              {/* Methane Tile */}
-              <div className="bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 max-w-xs">
-                <h4 className="text-xl font-bold text-gray-800 mb-3 text-center">Methane</h4>
-                <div className="w-32 h-32 mx-auto bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-gray-400 text-xs">Image</span>
+            <div className="flex justify-center">
+              <div className="flex flex-col md:flex-row gap-6 w-full md:w-3/5">
+                {/* Methane Tile */}
+                <div className="flex-1 bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300">
+                  <h4 className="text-xl font-bold text-gray-800 mb-3 text-center">Methane</h4>
+                  <div className="w-32 h-32 mx-auto bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                    <span className="text-gray-400 text-xs">Image</span>
+                  </div>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
+                    <li>Content coming soon</li>
+                  </ul>
                 </div>
-                <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
-                  <li>Content coming soon</li>
-                </ul>
-              </div>
-              {/* Carbon Dioxide Tile */}
-              <div className="bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 max-w-xs">
-                <h4 className="text-xl font-bold text-gray-800 mb-3 text-center">Carbon Dioxide</h4>
-                <div className="w-32 h-32 mx-auto bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-gray-400 text-xs">Image</span>
+                {/* Carbon Dioxide Tile */}
+                <div className="flex-1 bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300">
+                  <h4 className="text-xl font-bold text-gray-800 mb-3 text-center">Carbon Dioxide</h4>
+                  <div className="w-32 h-32 mx-auto bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                    <span className="text-gray-400 text-xs">Image</span>
+                  </div>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
+                    <li>Content coming soon</li>
+                  </ul>
                 </div>
-                <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
-                  <li>Content coming soon</li>
-                </ul>
               </div>
             </div>
           </div>
