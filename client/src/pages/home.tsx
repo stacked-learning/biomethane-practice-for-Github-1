@@ -287,7 +287,46 @@ export default function Home() {
               {/* Subsection: Biomethane vs Natural Gas vs Hydrogen */}
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <h4 className="text-xl font-bold text-gray-800 mb-4">Biomethane vs Natural Gas vs Hydrogen</h4>
-                <p className="text-gray-600">Content coming soon.</p>
+                <div className="flex justify-center">
+                  <div className="flex flex-col md:flex-row gap-6 w-full md:w-4/5">
+                    {/* Biomethane Tile */}
+                    <div className="flex-1 bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 min-h-[450px] flex flex-col">
+                      <h5 className="text-lg font-bold text-gray-800 mb-3 text-center">Biomethane</h5>
+                      <div className="w-full bg-gray-100 rounded-lg mb-4 flex items-center justify-center h-[100px]">
+                        <span className="text-gray-400 text-xs">Image</span>
+                      </div>
+                      <div className="flex-1">
+                        <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
+                          <li>Content coming soon</li>
+                        </ul>
+                      </div>
+                    </div>
+                    {/* Natural Gas Tile */}
+                    <div className="flex-1 bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 min-h-[450px] flex flex-col">
+                      <h5 className="text-lg font-bold text-gray-800 mb-3 text-center">Natural Gas</h5>
+                      <div className="w-full bg-gray-100 rounded-lg mb-4 flex items-center justify-center h-[100px]">
+                        <span className="text-gray-400 text-xs">Image</span>
+                      </div>
+                      <div className="flex-1">
+                        <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
+                          <li>Content coming soon</li>
+                        </ul>
+                      </div>
+                    </div>
+                    {/* Hydrogen Tile */}
+                    <div className="flex-1 bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 min-h-[450px] flex flex-col">
+                      <h5 className="text-lg font-bold text-gray-800 mb-3 text-center">Hydrogen</h5>
+                      <div className="w-full bg-gray-100 rounded-lg mb-4 flex items-center justify-center h-[100px]">
+                        <span className="text-gray-400 text-xs">Image</span>
+                      </div>
+                      <div className="flex-1">
+                        <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
+                          <li>Content coming soon</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
