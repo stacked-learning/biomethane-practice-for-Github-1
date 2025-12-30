@@ -361,6 +361,28 @@ export default function Home() {
           </div>
         )}
 
+        {/* Product Section - Biomethane Constitution */}
+        {isDetailView && selectedQuadrant === "product" && (
+          <div className="mb-8 animate-slide-up">
+            <div className="border-b border-gray-200 pb-4 mb-6">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                Biomethane Constitution
+              </h3>
+              <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
+            </div>
+            <div className="text-gray-700 text-lg leading-relaxed">
+              <p>Content coming soon.</p>
+            </div>
+          </div>
+        )}
+
+        {/* Section Divider */}
+        {isDetailView && selectedQuadrant === "product" && (
+          <div className="flex justify-center my-6">
+            <div className="w-3 h-3 bg-hydrogen-500 rounded-full"></div>
+          </div>
+        )}
+
         {/* Product Section - Methane vs Carbon Dioxide Emissions */}
         {isDetailView && selectedQuadrant === "product" && (
           <div className="mb-8 animate-slide-up">
