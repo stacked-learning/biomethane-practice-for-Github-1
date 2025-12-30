@@ -283,6 +283,12 @@ export default function Home() {
               <p>
                 Biomethane production can be tailored for many places globally, with various organic feedstocks being suitable for its production. These production methods contribute to establishing a circular economy, where waste feed-stocks from other sectors are reused.
               </p>
+              
+              {/* Subsection: Biomethane vs Natural Gas vs Hydrogen */}
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <h4 className="text-xl font-bold text-gray-800 mb-4">Biomethane vs Natural Gas vs Hydrogen</h4>
+                <p className="text-gray-600">Content coming soon.</p>
+              </div>
             </div>
           </div>
         )}
