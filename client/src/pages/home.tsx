@@ -354,6 +354,47 @@ export default function Home() {
           </div>
         )}
 
+        {/* Section Divider */}
+        {isDetailView && selectedQuadrant === "product" && (
+          <div className="flex justify-center my-6">
+            <div className="w-3 h-3 bg-hydrogen-500 rounded-full"></div>
+          </div>
+        )}
+
+        {/* Product Section - Methane vs Carbon Dioxide Emissions */}
+        {isDetailView && selectedQuadrant === "product" && (
+          <div className="mb-8 animate-slide-up">
+            <div className="border-b border-gray-200 pb-4 mb-6">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                Methane vs Carbon Dioxide Emissions
+              </h3>
+              <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Methane Tile */}
+              <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300">
+                <h4 className="text-xl font-bold text-gray-800 mb-4 text-center">Methane</h4>
+                <div className="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-gray-400 text-sm">Image placeholder</span>
+                </div>
+                <ul className="list-disc list-inside space-y-2 text-gray-600 text-base">
+                  <li>Content coming soon</li>
+                </ul>
+              </div>
+              {/* Carbon Dioxide Tile */}
+              <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300">
+                <h4 className="text-xl font-bold text-gray-800 mb-4 text-center">Carbon Dioxide</h4>
+                <div className="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-gray-400 text-sm">Image placeholder</span>
+                </div>
+                <ul className="list-disc list-inside space-y-2 text-gray-600 text-base">
+                  <li>Content coming soon</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
+
       </div>
     </div>
   );
