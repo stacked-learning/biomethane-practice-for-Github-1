@@ -41,7 +41,7 @@ const quadrantData: Record<Quadrant, QuadrantContent> = {
   storage: {
     title: "Storage",
     subtitle: "",
-    description: "An important consideration in the hydrogen supply chain is how it is stored. There are several storage options available, ranging from traditional compressed gas storage to more advanced systems involving cryogenic liquefaction and micro-structured technologies. Each method comes with its own set of challenges, including cost, efficiency, and safety concerns. Given the inherent dangers of hydrogen, including its flammability and potential for leakage, those involved in hydrogen storage must be fully aware of the specific risks and safety protocols associated with each storage method.\n\nScroll down to discover the different hydrogen storage methods and their associated risks.",
+    description: "Biomethane can be stored using a range of established and emerging gas storage technologies. These approaches are largely aligned with conventional natural gas storage practices, allowing biomethane to be stored using well-understood methods and infrastructure from across the gas industry.\n\nIn the storage section, we will explore:\nCurrent and emerging methods for storing biomethane\nThe benefits and drawbacks of each storage option\nKey safety, operational, and training considerations",
     points: []
   },
   product: {
