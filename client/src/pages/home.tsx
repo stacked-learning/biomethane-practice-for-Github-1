@@ -237,12 +237,15 @@ export default function Home() {
                       <p className="font-semibold text-gray-800 mb-3">{sectionTitle}</p>
                     )}
                     {bulletPoints.length > 0 && (
-                      <ul className="list-disc list-inside space-y-2 text-gray-700">
+                      <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
                         {bulletPoints.map((point, index) => (
                           <li key={index}>{point}</li>
                         ))}
                       </ul>
                     )}
+                    <p className="font-bold italic text-gray-800">
+                      Scroll down to view the {quadrantData[selectedQuadrant].title} section in more detail.
+                    </p>
                   </>
                 );
               })()}
