@@ -317,6 +317,43 @@ export default function Home() {
           </div>
         )}
 
+        {/* Section Divider */}
+        {isDetailView && selectedQuadrant === "product" && (
+          <div className="flex justify-center my-6">
+            <div className="w-3 h-3 bg-hydrogen-500 rounded-full"></div>
+          </div>
+        )}
+
+        {/* Product Section - Sectors Biomethane Can Be Used In */}
+        {isDetailView && selectedQuadrant === "product" && (
+          <div className="mb-8 animate-slide-up">
+            <div className="border-b border-gray-200 pb-4 mb-6">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                Sectors Biomethane Can Be Used In
+              </h3>
+              <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 cursor-pointer">
+                <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-hydrogen-600">Heavy Industry</h4>
+                <p className="text-gray-600 text-base">Energy-intensive manufacturing processes requiring high-temperature heat and consistent fuel supply.</p>
+              </div>
+              <div className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 cursor-pointer">
+                <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-hydrogen-600">Aviation</h4>
+                <p className="text-gray-600 text-base">Accounts for 3% of global and 10% of transport-related energy consumption. This sector currently employs energy dense fuels such as kerosene.</p>
+              </div>
+              <div className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 cursor-pointer">
+                <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-hydrogen-600">Shipping</h4>
+                <p className="text-gray-600 text-base">Heavily reliant on low-grade fossil fuels. Despite being a less carbon-intensive transportation method, it is a major emitter of greenhouse gases, given the scale of shipping operations. Overall, 3% of global energy consumption, and 10% of transport-related energy consumption is from shipping.</p>
+              </div>
+              <div className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 cursor-pointer">
+                <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-hydrogen-600">Trucking</h4>
+                <p className="text-gray-600 text-base">Emits a quarter of all transportation carbon dioxide emissions, being more than the shipping and aviation sectors combined. Employs fuels such as diesel, petrol, and natural gas.</p>
+              </div>
+            </div>
+          </div>
+        )}
+
       </div>
     </div>
   );
