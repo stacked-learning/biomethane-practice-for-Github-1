@@ -255,7 +255,7 @@ export default function Home() {
 
         {/* Product Section - What is Biomethane? */}
         {isDetailView && selectedQuadrant === "product" && (
-          <Card className="bg-white rounded-2xl shadow-lg p-8 mb-8 animate-slide-up">
+          <div className="mb-8 animate-slide-up">
             <div className="border-b border-gray-200 pb-4 mb-6">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">
                 What is Biomethane?
@@ -277,7 +277,7 @@ export default function Home() {
                 Biomethane production can be tailored for many places globally, with various organic feedstocks being suitable for its production. These production methods contribute to establishing a circular economy, where waste feed-stocks from other sectors are reused.
               </p>
             </div>
-          </Card>
+          </div>
         )}
 
       </div>
