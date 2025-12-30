@@ -253,6 +253,13 @@ export default function Home() {
           </Card>
         )}
 
+        {/* Section Divider */}
+        {isDetailView && selectedQuadrant === "product" && (
+          <div className="flex justify-center my-6">
+            <div className="w-3 h-3 bg-hydrogen-500 rounded-full"></div>
+          </div>
+        )}
+
         {/* Product Section - What is Biomethane? */}
         {isDetailView && selectedQuadrant === "product" && (
           <div className="mb-8 animate-slide-up">
