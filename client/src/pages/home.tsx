@@ -468,6 +468,65 @@ export default function Home() {
           </div>
         )}
 
+        {/* Process Section - How is Biogas Obtained? */}
+        {isDetailView && selectedQuadrant === "process" && (
+          <div className="mb-8 animate-slide-up">
+            <div className="border-b border-gray-200 pb-4 mb-6">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                How is Biogas Obtained?
+              </h3>
+              <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
+            </div>
+            <div className="text-gray-700 text-lg leading-relaxed">
+              <p>Content coming soon.</p>
+            </div>
+          </div>
+        )}
+
+        {/* Section Divider */}
+        {isDetailView && selectedQuadrant === "process" && (
+          <div className="flex justify-center my-6">
+            <div className="w-3 h-3 bg-hydrogen-500 rounded-full"></div>
+          </div>
+        )}
+
+        {/* Process Section - Biomethane Production */}
+        {isDetailView && selectedQuadrant === "process" && (
+          <div className="mb-8 animate-slide-up">
+            <div className="border-b border-gray-200 pb-4 mb-6">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                Biomethane Production
+              </h3>
+              <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
+            </div>
+            <div className="text-gray-700 text-lg leading-relaxed">
+              <p>Content coming soon.</p>
+            </div>
+          </div>
+        )}
+
+        {/* Section Divider */}
+        {isDetailView && selectedQuadrant === "process" && (
+          <div className="flex justify-center my-6">
+            <div className="w-3 h-3 bg-hydrogen-500 rounded-full"></div>
+          </div>
+        )}
+
+        {/* Process Section - Conditioning/Upgrading Biogas */}
+        {isDetailView && selectedQuadrant === "process" && (
+          <div className="mb-8 animate-slide-up">
+            <div className="border-b border-gray-200 pb-4 mb-6">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                Conditioning/Upgrading Biogas
+              </h3>
+              <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
+            </div>
+            <div className="text-gray-700 text-lg leading-relaxed">
+              <p>Content coming soon.</p>
+            </div>
+          </div>
+        )}
+
         {/* Storage Section - Key Biomethane Storage Considerations */}
         {isDetailView && selectedQuadrant === "storage" && (
           <div className="mb-8 animate-slide-up">
