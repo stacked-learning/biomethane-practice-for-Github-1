@@ -253,6 +253,33 @@ export default function Home() {
           </Card>
         )}
 
+        {/* Product Section - What is Biomethane? */}
+        {isDetailView && selectedQuadrant === "product" && (
+          <Card className="bg-white rounded-2xl shadow-lg p-8 mb-8 animate-slide-up">
+            <div className="border-b border-gray-200 pb-4 mb-6">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                What is Biomethane?
+              </h3>
+              <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
+            </div>
+            <div className="text-gray-700 text-lg leading-relaxed space-y-4">
+              <p>
+                Biomethane, also known as Renewable Natural Gas (RNG) refers to an almost pure-methane gas obtained from "upgrading" biogas. It is physically indistinguishable from natural gas, differing as it is produced through green methods.
+              </p>
+              <div className="bg-hydrogen-50 border-l-4 border-hydrogen-500 p-4 rounded-r-lg">
+                <p className="font-semibold text-gray-800">Definition: Dispatchable Energy</p>
+                <p className="text-gray-700">Energy that can be dispatched to users as required.</p>
+              </div>
+              <p>
+                When compared with other renewable energy sources, biomethane is dispatchable, avoiding the pitfalls of solar and wind energy. This enables it to replace natural gas - completely or within a blend, especially for industrial equipment and infrastructure, including existing gas turbine engines.
+              </p>
+              <p>
+                Biomethane production can be tailored for many places globally, with various organic feedstocks being suitable for its production. These production methods contribute to establishing a circular economy, where waste feed-stocks from other sectors are reused.
+              </p>
+            </div>
+          </Card>
+        )}
+
       </div>
     </div>
   );
