@@ -56,7 +56,7 @@ export default function HydrogenSafetyCards() {
       </h1>
 
       <p className="text-base lg:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-12 text-center" data-testid="text-safety-description">
-        Biomethane, while a cleaner alternative to fossil fuels, presents several safety considerations due to its physical and chemical properties. Understanding these characteristics is essential for safe handling, storage, and use in various applications including gas turbine engines and heating systems.
+        Biomethane possesses key dangers which must be considered due to its physical and chemical properties. Because these characteristics closely align with those of natural gas, existing industry knowledge, standards, and practices remain largely applicable. Understanding these properties is important for ensuring safe handling, storage, and use across industrial applications, including gas turbines and heating systems.
       </p>
 
       <div className="flex flex-col gap-8">
