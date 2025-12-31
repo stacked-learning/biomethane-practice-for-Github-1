@@ -30,7 +30,7 @@ const safetyCards: SafetyCard[] = [
   {
     id: "visible-flame",
     title: "Visible Flame",
-    description: "Biomethane flames are visible, but their pale, low-luminosity nature means they can be difficult to see in well-lit or outdoor environments, increasing the risk of accidental exposure to an active fire."
+    description: "Biomethane flames are visible, but their pale, low-luminosity nature means they can be difficult to see in well-lit or outdoor environments."
   }
 ];
 
