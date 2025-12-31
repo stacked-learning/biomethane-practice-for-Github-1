@@ -8,6 +8,7 @@ import catchingSystemOverlay from "@assets/image_1767223394917.png";
 import hearingProtectionOverlay from "@assets/image_1767223414501.png";
 import filterMaskOverlay from "@assets/image_1767223465478.png";
 import protectiveClothingOverlay from "@assets/image_1767223547939.png";
+import safetyGlassesOverlay from "@assets/image_1767223775378.png";
 
 interface EnvironmentalCondition {
   id: string;
@@ -97,7 +98,7 @@ const ppeItems: PPEItem[] = [
     icon: Shield,
     description: 'Shields the eyes from flying particles, debris, and intense lighting.',
     detailedInfo: 'Safety glasses protect against flying debris, chemical splashes, and harmful vapors.',
-    overlayImage: null
+    overlayImage: safetyGlassesOverlay
   },
   {
     id: 'filter-mask',
