@@ -84,7 +84,7 @@ export default function HydrogenSafetyCards() {
                   className="absolute w-full h-full rounded-xl shadow-lg p-6 flex items-center justify-center text-center"
                   style={{
                     backfaceVisibility: 'hidden',
-                    background: 'linear-gradient(to bottom right, #4a8f44, #32612D)'
+                    background: 'linear-gradient(to bottom right, #fb923c, #ea580c)'
                   }}
                 >
                   <h3 className="text-2xl font-bold text-white leading-tight">
@@ -97,11 +97,11 @@ export default function HydrogenSafetyCards() {
                   className="absolute w-full h-full rounded-xl shadow-lg p-6 flex flex-col items-start justify-start text-left"
                   style={{
                     backfaceVisibility: 'hidden',
-                    background: 'linear-gradient(to bottom right, #32612D, #244821)',
+                    background: 'linear-gradient(to bottom right, #f97316, #c2410c)',
                     transform: 'rotateY(180deg)'
                   }}
                 >
-                  <h4 className="text-base font-bold mb-3 text-green-200">
+                  <h4 className="text-base font-bold mb-3 text-orange-200">
                     {card.title}
                   </h4>
                   <p className="text-xs leading-relaxed text-white opacity-95">
@@ -137,7 +137,7 @@ export default function HydrogenSafetyCards() {
                   className="absolute w-full h-full rounded-xl shadow-lg p-6 flex items-center justify-center text-center hover:shadow-2xl transition-shadow"
                   style={{
                     backfaceVisibility: 'hidden',
-                    background: 'linear-gradient(to bottom right, #4a8f44, #32612D)'
+                    background: 'linear-gradient(to bottom right, #fb923c, #ea580c)'
                   }}
                 >
                   <h3 className="text-2xl font-bold text-white leading-tight">
@@ -150,11 +150,11 @@ export default function HydrogenSafetyCards() {
                   className="absolute w-full h-full rounded-xl shadow-lg p-6 flex flex-col items-start justify-start text-left"
                   style={{
                     backfaceVisibility: 'hidden',
-                    background: 'linear-gradient(to bottom right, #32612D, #244821)',
+                    background: 'linear-gradient(to bottom right, #f97316, #c2410c)',
                     transform: 'rotateY(180deg)'
                   }}
                 >
-                  <h4 className="text-base font-bold mb-3 text-green-200">
+                  <h4 className="text-base font-bold mb-3 text-orange-200">
                     {card.title}
                   </h4>
                   <p className="text-xs leading-relaxed text-white opacity-95">
