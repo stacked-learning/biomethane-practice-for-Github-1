@@ -162,7 +162,6 @@ export default function PPESafety() {
         {/* Left Buttons */}
         <div className="flex flex-col gap-4 md:w-1/4">
           {leftButtons.map((ppe) => {
-            const IconComponent = ppe.icon;
             const isSelected = selectedPPE.has(ppe.id);
             return (
               <button
@@ -175,10 +174,7 @@ export default function PPESafety() {
                 }`}
                 data-testid={`button-ppe-${ppe.id}`}
               >
-                <div className="flex items-center gap-3">
-                  <IconComponent className={`w-6 h-6 ${isSelected ? 'text-orange-600' : 'text-orange-500'}`} />
-                  <span className={`font-medium ${isSelected ? 'text-orange-700' : 'text-gray-800'}`}>{ppe.name}</span>
-                </div>
+                <span className={`font-medium ${isSelected ? 'text-orange-700' : 'text-gray-800'}`}>{ppe.name}</span>
               </button>
             );
           })}
@@ -208,7 +204,6 @@ export default function PPESafety() {
         {/* Right Buttons */}
         <div className="flex flex-col gap-4 md:w-1/4">
           {rightButtons.map((ppe) => {
-            const IconComponent = ppe.icon;
             const isSelected = selectedPPE.has(ppe.id);
             return (
               <button
@@ -221,10 +216,7 @@ export default function PPESafety() {
                 }`}
                 data-testid={`button-ppe-${ppe.id}`}
               >
-                <div className="flex items-center gap-3">
-                  <IconComponent className={`w-6 h-6 ${isSelected ? 'text-orange-600' : 'text-orange-500'}`} />
-                  <span className={`font-medium ${isSelected ? 'text-orange-700' : 'text-gray-800'}`}>{ppe.name}</span>
-                </div>
+                <span className={`font-medium ${isSelected ? 'text-orange-700' : 'text-gray-800'}`}>{ppe.name}</span>
               </button>
             );
           })}
