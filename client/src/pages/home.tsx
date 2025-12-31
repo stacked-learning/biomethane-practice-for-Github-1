@@ -618,19 +618,6 @@ export default function Home() {
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
             <div className="space-y-6">
-              {/* Existing Infrastructure */}
-              <div className="flex flex-col md:flex-row gap-6 bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                <div className="md:w-1/4 flex-shrink-0">
-                  <div className="w-full aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-400 text-sm">Image</span>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h4 className="text-xl font-bold text-gray-800 mb-3">Existing Infrastructure</h4>
-                  <p className="text-gray-600 mb-4">Content coming soon.</p>
-                </div>
-              </div>
-
               {/* Underground */}
               <div className="flex flex-col md:flex-row gap-6 bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
                 <div className="md:w-1/4 flex-shrink-0">
