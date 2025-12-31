@@ -41,11 +41,11 @@ export default function GeneralSafety() {
 
         <div className="text-center mb-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-            General Hydrogen Safety
+            General Biomethane Safety
           </h1>
           <div className="w-24 h-1 bg-orange-400 mx-auto rounded-full"></div>
           <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
-            It is important to understand the fundamental safety considerations when working with hydrogen
+            It is important to understand the fundamental safety considerations when working with biomethane
           </p>
         </div>
 
