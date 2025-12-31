@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MapPin, Thermometer, Shield, Skull, Volume2 } from "lucide-react";
+import ppePersonImage from "@assets/image_1767223091933.png";
 
 interface EnvironmentalCondition {
   id: string;
@@ -186,8 +187,12 @@ export default function PPESafety() {
 
         {/* Center Image */}
         <div className="md:w-1/2 flex items-center justify-center">
-          <div className="w-full aspect-square bg-gray-100 rounded-xl border-2 border-gray-200 flex items-center justify-center max-h-[400px]">
-            <span className="text-gray-400 text-lg">Image</span>
+          <div className="w-full flex items-center justify-center max-h-[500px]">
+            <img 
+              src={ppePersonImage} 
+              alt="Person wearing PPE" 
+              className="max-h-[500px] object-contain"
+            />
           </div>
         </div>
 
