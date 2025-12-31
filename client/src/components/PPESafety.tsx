@@ -51,53 +51,60 @@ const environmentalConditions: EnvironmentalCondition[] = [
 
 const ppeItems: PPEItem[] = [
   {
-    id: 'gas-detector',
-    name: 'Personal Gas Detector',
-    icon: MapPin,
-    description: 'Essential for preventing asphyxiation in low-oxygen or oxygen-enriched atmospheres.',
-    detailedInfo: 'Monitors air quality and detects hazardous gases in oxygen-deficient or enriched environments. Essential for confined spaces and chemical handling areas. Provides real-time readings and audible alarms.'
-  },
-  {
-    id: 'eye-protection',
-    name: 'Eye Protection',
-    icon: Shield,
-    description: 'Shields the eyes from flying particles, debris, caustic liquids, gases, vapours, and intense lighting.',
-    detailedInfo: 'Safety glasses and goggles protect against flying debris, chemical splashes, and harmful vapors. Essential when working with toxic substances or impact hazards. Available in various lens types for different applications.'
-  },
-  {
-    id: 'foot-protection',
-    name: 'Foot Protection',
-    icon: Shield,
-    description: 'A range of options are available to protect against falling objects, tools, equipment, electrical hazards, and chemical exposure.',
-    detailedInfo: 'Steel-toed boots and safety shoes protect against falling objects, punctures, and crushing injuries. Required in environments with physical impact risks. Features slip-resistant soles and electrical hazard protection.'
-  },
-  {
-    id: 'head-face',
-    name: 'Head & Face Protection',
-    icon: Shield,
-    description: 'Hard Hats: Protect the head from impacts caused by falling objects or collisions. Thermal Face Liner: Used in hydrogen environments where cold working conditions are present.',
-    detailedInfo: 'Comprehensive protection including hard hats for impact resistance, thermal linings for extreme temperatures, welding helmets for arc flash protection, and face shields for chemical splash protection. Critical for construction and industrial environments.'
-  },
-  {
-    id: 'hand-protection',
-    name: 'Hand Protection',
+    id: 'gloves',
+    name: 'Gloves',
     icon: Shield,
     description: 'Safeguards against heat, cold, chemicals, and cuts.',
-    detailedInfo: 'Chemical-resistant gloves and thermal protection prevent burns, cuts, and chemical exposure. Essential for handling hazardous materials and extreme temperatures. Available in various materials for specific hazard protection.'
-  },
-  {
-    id: 'hearing-protection',
-    name: 'Hearing Protection',
-    icon: Volume2,
-    description: 'Includes various options such as earplugs and earmuffs to reduce noise exposure.',
-    detailedInfo: 'Earplugs and noise-canceling headphones protect against hearing damage in high-noise environments exceeding 85 decibels. Available in disposable and reusable options with various noise reduction ratings.'
+    detailedInfo: 'Chemical-resistant gloves and thermal protection prevent burns, cuts, and chemical exposure.'
   },
   {
     id: 'protective-clothing',
     name: 'Protective Clothing',
     icon: Shield,
     description: 'Must be flame- and chemical-resistant, as well as highly visible.',
-    detailedInfo: 'Chemical suits, thermal protection, and coveralls shield the body from hazardous substances, extreme temperatures, and contamination. Features flame-resistant materials and high-visibility designs for safety compliance.'
+    detailedInfo: 'Chemical suits, thermal protection, and coveralls shield the body from hazardous substances.'
+  },
+  {
+    id: 'hearing-protection',
+    name: 'Hearing Protection',
+    icon: Volume2,
+    description: 'Includes various options such as earplugs and earmuffs to reduce noise exposure.',
+    detailedInfo: 'Earplugs and noise-canceling headphones protect against hearing damage in high-noise environments.'
+  },
+  {
+    id: 'safety-helmet',
+    name: 'Safety Helmet',
+    icon: Shield,
+    description: 'Protects the head from impacts caused by falling objects or collisions.',
+    detailedInfo: 'Hard hats provide impact resistance and protection in construction and industrial environments.'
+  },
+  {
+    id: 'safety-glasses',
+    name: 'Safety Glasses',
+    icon: Shield,
+    description: 'Shields the eyes from flying particles, debris, and intense lighting.',
+    detailedInfo: 'Safety glasses protect against flying debris, chemical splashes, and harmful vapors.'
+  },
+  {
+    id: 'filter-mask',
+    name: 'Filter Mask',
+    icon: Shield,
+    description: 'Provides respiratory protection against airborne particles and gases.',
+    detailedInfo: 'Filter masks protect against inhalation of harmful particles, fumes, and gases.'
+  },
+  {
+    id: 'catching-system',
+    name: 'Catching System',
+    icon: Shield,
+    description: 'Fall protection equipment for working at heights.',
+    detailedInfo: 'Safety harnesses and fall arrest systems prevent injuries when working at elevated positions.'
+  },
+  {
+    id: 'safety-shoes',
+    name: 'Safety Shoes',
+    icon: Shield,
+    description: 'Protects against falling objects, punctures, and electrical hazards.',
+    detailedInfo: 'Steel-toed boots protect against falling objects, punctures, and crushing injuries.'
   }
 ];
 
