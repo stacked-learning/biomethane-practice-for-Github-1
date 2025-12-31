@@ -140,6 +140,9 @@ export default function PPESafety() {
 
   const requiredPPE = getRequiredPPE();
 
+  const leftButtons = ppeItems.slice(0, 4);
+  const rightButtons = ppeItems.slice(4, 8);
+
   return (
     <div className="w-full max-w-6xl mx-auto p-4">
       {/* Header */}
@@ -149,8 +152,56 @@ export default function PPESafety() {
           PPE Safety Selection Tool
         </h1>
         <p className="text-base lg:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-4">
-          It is essential to wear appropriate personal protective equipment (PPE) when working with hydrogen to minimise the risks associated with its flammability and potential for explosive reactions. PPE such as flame-resistant clothing, face shields, and safety gloves helps protect against potential hazards in environments where hydrogen is present.
+          It is essential to wear appropriate personal protective equipment (PPE) when working with biomethane to minimise the risks associated with its flammability and potential for explosive reactions. PPE such as flame-resistant clothing, face shields, and safety gloves helps protect against potential hazards in environments where biomethane is present.
         </p>
+      </div>
+
+      {/* PPE Selection Layout */}
+      <div className="flex flex-col md:flex-row gap-6 items-stretch">
+        {/* Left Buttons */}
+        <div className="flex flex-col gap-4 md:w-1/4">
+          {leftButtons.map((ppe) => {
+            const IconComponent = ppe.icon;
+            return (
+              <button
+                key={ppe.id}
+                className="p-4 rounded-xl border-2 border-gray-300 bg-white hover:border-orange-500 hover:shadow-lg transition-all duration-300 text-left"
+                data-testid={`button-ppe-${ppe.id}`}
+              >
+                <div className="flex items-center gap-3">
+                  <IconComponent className="w-6 h-6 text-orange-500" />
+                  <span className="font-medium text-gray-800">{ppe.name}</span>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Center Image */}
+        <div className="md:w-1/2 flex items-center justify-center">
+          <div className="w-full aspect-square bg-gray-100 rounded-xl border-2 border-gray-200 flex items-center justify-center max-h-[400px]">
+            <span className="text-gray-400 text-lg">Image</span>
+          </div>
+        </div>
+
+        {/* Right Buttons */}
+        <div className="flex flex-col gap-4 md:w-1/4">
+          {rightButtons.map((ppe) => {
+            const IconComponent = ppe.icon;
+            return (
+              <button
+                key={ppe.id}
+                className="p-4 rounded-xl border-2 border-gray-300 bg-white hover:border-orange-500 hover:shadow-lg transition-all duration-300 text-left"
+                data-testid={`button-ppe-${ppe.id}`}
+              >
+                <div className="flex items-center gap-3">
+                  <IconComponent className="w-6 h-6 text-orange-500" />
+                  <span className="font-medium text-gray-800">{ppe.name}</span>
+                </div>
+              </button>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
