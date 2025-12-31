@@ -151,43 +151,6 @@ export default function PPESafety() {
         <p className="text-base lg:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-4">
           It is essential to wear appropriate personal protective equipment (PPE) when working with hydrogen to minimise the risks associated with its flammability and potential for explosive reactions. PPE such as flame-resistant clothing, face shields, and safety gloves helps protect against potential hazards in environments where hydrogen is present.
         </p>
-        <p className="text-lg text-gray-600">
-          Select environmental conditions to determine required Personal Protective Equipment
-        </p>
-      </div>
-
-      {/* Environmental Conditions Section */}
-      <div className="mb-12">
-        <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 text-center mb-6">
-          Select Environmental Conditions
-        </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
-          {environmentalConditions.map((condition) => {
-            const IconComponent = condition.icon;
-            const isActive = activeConditions.includes(condition.id);
-            
-            return (
-              <button
-                key={condition.id}
-                onClick={() => toggleCondition(condition.id)}
-                className={`
-                  p-4 lg:p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 
-                  min-h-[120px] flex flex-col items-center justify-center text-center
-                  shadow-md hover:shadow-lg hover:-translate-y-1
-                  ${isActive 
-                    ? 'bg-orange-500 text-white border-orange-600 shadow-lg' 
-                    : 'bg-white text-gray-700 border-gray-300 hover:border-orange-500'
-                  }
-                `}
-              >
-                <IconComponent className="w-8 h-8 mb-3" />
-                <span className="text-sm lg:text-base font-medium leading-tight">
-                  {condition.name}
-                </span>
-              </button>
-            );
-          })}
-        </div>
       </div>
 
       {/* PPE Equipment Section */}
