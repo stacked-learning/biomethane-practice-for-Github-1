@@ -8,29 +8,29 @@ interface SafetyCard {
 
 const safetyCards: SafetyCard[] = [
   {
-    id: "molecular-size",
-    title: "Molecular Size",
-    description: "Hydrogen molecules are extremely small and light, making them prone to leaks."
+    id: "highly-flammable",
+    title: "Highly Flammable",
+    description: "Methane forms flammable mixtures with air over a relatively wide concentration range, meaning even small leaks can present an ignition risk if an ignition source is present."
   },
   {
-    id: "flammable",
-    title: "Flammable",
-    description: "Hydrogen is highly flammable, with a wide explosive range (4-75% in air). It ignites easily with a low Minimum Ignition Energy (MIE) of just 0.02 millijoules, making it highly susceptible to sparks, heat, or even static electricity."
+    id: "lighter-than-air",
+    title: "Lighter Than Air",
+    description: "Because methane is lighter than air, it tends to rise and accumulate in enclosed or poorly ventilated spaces such as roof voids or overhead structures, creating hidden explosion hazards."
   },
   {
-    id: "buoyant",
-    title: "Buoyant",
-    description: "As the lightest gas, hydrogen rises rapidly, meaning it can accumulate in high spaces or confined areas, creating an explosion risk if not properly ventilated."
+    id: "colourless",
+    title: "Colourless",
+    description: "Methane cannot be detected visually, which means leaks may go unnoticed without dedicated gas detection systems in place."
   },
   {
-    id: "embrittlement",
-    title: "Hydrogen Embrittlement",
-    description: "Hydrogen can cause metal embrittlement, making materials like steel more brittle and prone to cracking or failure - that can result in catastrophic leaks."
+    id: "naturally-odourless",
+    title: "Naturally Odourless",
+    description: "In its natural state methane has no smell, requiring the addition of odorants or the use of gas monitors to ensure leaks can be detected by personnel."
   },
   {
-    id: "flame-visibility",
-    title: "Flame Visibility",
-    description: "Hydrogen flames are invisible in daylight, making it extremely difficult for personnel to detect a hydrogen fire or ignition. This, combined with low IR radiation, increases the risk of undetected fires or explosions."
+    id: "visible-flame",
+    title: "Visible Flame",
+    description: "Biomethane flames are visible, but their pale, low-luminosity nature means they can be difficult to see in well-lit or outdoor environments, increasing the risk of accidental exposure to an active fire."
   }
 ];
 
@@ -52,11 +52,11 @@ export default function HydrogenSafetyCards() {
   return (
     <div className="w-full max-w-5xl mx-auto p-4">
       <h1 className="text-3xl font-bold text-center mb-6 text-gray-900" data-testid="text-safety-cards-title">
-        Hydrogen Safety Considerations
+        Biomethane Safety Considerations
       </h1>
 
       <p className="text-base lg:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-12 text-center" data-testid="text-safety-description">
-        Hydrogen, though non-toxic, presents several safety challenges due to its unique properties. It is highly flammable, can cause hydrogen embrittlement in metals, and burns with nearly invisible flames, making it particularly dangerous to handle. In the context of gas turbine engines, hydrogen is emerging as a promising alternative to conventional fuels, supporting the transition to a carbon-free energy system. This shift is crucial for achieving global decarbonisation goals. However, it requires addressing significant technical challenges related to hydrogen's storage, transportation, and combustion characteristics. Scroll down to explore more about hydrogen and its associated safety considerations.
+        Biomethane, while a cleaner alternative to fossil fuels, presents several safety considerations due to its physical and chemical properties. Understanding these characteristics is essential for safe handling, storage, and use in various applications including gas turbine engines and heating systems.
       </p>
 
       <div className="flex flex-col gap-8">
@@ -84,7 +84,7 @@ export default function HydrogenSafetyCards() {
                   className="absolute w-full h-full rounded-xl shadow-lg p-6 flex items-center justify-center text-center"
                   style={{
                     backfaceVisibility: 'hidden',
-                    background: 'linear-gradient(to bottom right, #fb923c, #ea580c)'
+                    background: 'linear-gradient(to bottom right, #4a8f44, #32612D)'
                   }}
                 >
                   <h3 className="text-2xl font-bold text-white leading-tight">
@@ -97,11 +97,11 @@ export default function HydrogenSafetyCards() {
                   className="absolute w-full h-full rounded-xl shadow-lg p-6 flex flex-col items-start justify-start text-left"
                   style={{
                     backfaceVisibility: 'hidden',
-                    background: 'linear-gradient(to bottom right, #f97316, #c2410c)',
+                    background: 'linear-gradient(to bottom right, #32612D, #244821)',
                     transform: 'rotateY(180deg)'
                   }}
                 >
-                  <h4 className="text-base font-bold mb-3 text-orange-200">
+                  <h4 className="text-base font-bold mb-3 text-green-200">
                     {card.title}
                   </h4>
                   <p className="text-xs leading-relaxed text-white opacity-95">
@@ -137,7 +137,7 @@ export default function HydrogenSafetyCards() {
                   className="absolute w-full h-full rounded-xl shadow-lg p-6 flex items-center justify-center text-center hover:shadow-2xl transition-shadow"
                   style={{
                     backfaceVisibility: 'hidden',
-                    background: 'linear-gradient(to bottom right, #fb923c, #ea580c)'
+                    background: 'linear-gradient(to bottom right, #4a8f44, #32612D)'
                   }}
                 >
                   <h3 className="text-2xl font-bold text-white leading-tight">
@@ -150,11 +150,11 @@ export default function HydrogenSafetyCards() {
                   className="absolute w-full h-full rounded-xl shadow-lg p-6 flex flex-col items-start justify-start text-left"
                   style={{
                     backfaceVisibility: 'hidden',
-                    background: 'linear-gradient(to bottom right, #f97316, #c2410c)',
+                    background: 'linear-gradient(to bottom right, #32612D, #244821)',
                     transform: 'rotateY(180deg)'
                   }}
                 >
-                  <h4 className="text-base font-bold mb-3 text-orange-200">
+                  <h4 className="text-base font-bold mb-3 text-green-200">
                     {card.title}
                   </h4>
                   <p className="text-xs leading-relaxed text-white opacity-95">
