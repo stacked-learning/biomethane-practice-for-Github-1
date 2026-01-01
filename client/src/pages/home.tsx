@@ -418,6 +418,17 @@ export default function Home() {
                   </div>
                 )}
               </div>
+              
+              <p className="text-gray-500 text-sm mt-3">
+                Source: <a 
+                  href="https://www.sciencedirect.com/science/article/pii/S1364032123005543?ref=pdf_download&fr=RR-2&rr=9b6defaae8dca961#fig3" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-hydrogen-500 hover:underline"
+                >
+                  Marconi, P. & Rosa, L., The role of biomethane to offset natural gas (2023).
+                </a>
+              </p>
             </div>
           </div>
         )}
