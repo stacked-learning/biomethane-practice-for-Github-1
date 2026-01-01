@@ -311,27 +311,27 @@ export default function Home() {
                       </div>
                       <div className="flex-1 space-y-2 text-sm">
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Lower Heating Value</span>
+                          <span className="text-gray-500 max-w-[60%]">Lower Heating Value</span>
                           <span className="font-medium text-gray-700 text-right">50 MJ/kg</span>
                         </div>
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Volumetric Energy Density</span>
+                          <span className="text-gray-500 max-w-[60%]">Volumetric Energy Density</span>
                           <span className="font-medium text-gray-700 text-right">36 MJ/m³</span>
                         </div>
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Density (STP)</span>
+                          <span className="text-gray-500 max-w-[60%]">Density (STP)</span>
                           <span className="font-medium text-gray-700 text-right">0.72 kg/m³</span>
                         </div>
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Flammability Range</span>
+                          <span className="text-gray-500 max-w-[60%]">Flammability Range</span>
                           <span className="font-medium text-gray-700 text-right">5–15%</span>
                         </div>
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Flame Speed</span>
+                          <span className="text-gray-500 max-w-[60%]">Flame Speed</span>
                           <span className="font-medium text-gray-700 text-right">0.4 m/s</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-500">Boiling Point</span>
+                          <span className="text-gray-500 max-w-[60%]">Boiling Point</span>
                           <span className="font-medium text-gray-700 text-right">−161 °C</span>
                         </div>
                       </div>
@@ -344,27 +344,27 @@ export default function Home() {
                       </div>
                       <div className="flex-1 space-y-2 text-sm">
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Lower Heating Value</span>
+                          <span className="text-gray-500 max-w-[60%]">Lower Heating Value</span>
                           <span className="font-medium text-gray-700 text-right">50 MJ/kg</span>
                         </div>
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Volumetric Energy Density</span>
+                          <span className="text-gray-500 max-w-[60%]">Volumetric Energy Density</span>
                           <span className="font-medium text-gray-700 text-right">36 MJ/m³</span>
                         </div>
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Density (STP)</span>
+                          <span className="text-gray-500 max-w-[60%]">Density (STP)</span>
                           <span className="font-medium text-gray-700 text-right">0.72 kg/m³</span>
                         </div>
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Flammability Range</span>
+                          <span className="text-gray-500 max-w-[60%]">Flammability Range</span>
                           <span className="font-medium text-gray-700 text-right">5–15%</span>
                         </div>
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Flame Speed</span>
+                          <span className="text-gray-500 max-w-[60%]">Flame Speed</span>
                           <span className="font-medium text-gray-700 text-right">0.4 m/s</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-500">Boiling Point</span>
+                          <span className="text-gray-500 max-w-[60%]">Boiling Point</span>
                           <span className="font-medium text-gray-700 text-right">−161 °C</span>
                         </div>
                       </div>
@@ -377,27 +377,27 @@ export default function Home() {
                       </div>
                       <div className="flex-1 space-y-2 text-sm">
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Lower Heating Value</span>
+                          <span className="text-gray-500 max-w-[60%]">Lower Heating Value</span>
                           <span className="font-medium text-gray-700 text-right">120 MJ/kg</span>
                         </div>
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Volumetric Energy Density</span>
+                          <span className="text-gray-500 max-w-[60%]">Volumetric Energy Density</span>
                           <span className="font-medium text-gray-700 text-right">10–11 MJ/m³</span>
                         </div>
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Density (STP)</span>
+                          <span className="text-gray-500 max-w-[60%]">Density (STP)</span>
                           <span className="font-medium text-gray-700 text-right">0.09 kg/m³</span>
                         </div>
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Flammability Range</span>
+                          <span className="text-gray-500 max-w-[60%]">Flammability Range</span>
                           <span className="font-medium text-gray-700 text-right">4–75%</span>
                         </div>
                         <div className="flex justify-between border-b border-gray-100 pb-1">
-                          <span className="text-gray-500">Flame Speed</span>
+                          <span className="text-gray-500 max-w-[60%]">Flame Speed</span>
                           <span className="font-medium text-gray-700 text-right">2.5–3.0 m/s</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-500">Boiling Point</span>
+                          <span className="text-gray-500 max-w-[60%]">Boiling Point</span>
                           <span className="font-medium text-gray-700 text-right">−253 °C</span>
                         </div>
                       </div>
