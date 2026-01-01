@@ -581,9 +581,12 @@ export default function Home() {
               </h3>
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
-            <div className="text-gray-700 text-lg leading-relaxed mb-6">
+            <div className="text-gray-700 text-lg leading-relaxed mb-6 space-y-4">
               <p>
                 Biomethane production reduces the greenhouse effect by capturing methane that would otherwise be released to the atmosphere, where it would exert a strong short-term warming impact due to its high Global Warming Potential (GWP). By combusting this methane to produce energy, it is converted to carbon dioxide, which has a significantly lower warming effect per molecule.
+              </p>
+              <p>
+                Additionally, biomethane is cleaner than natural gas, as it forms part of the biogenic cycle. This means that no new emissions are being added to the atmosphere. Furthermore, if the biomethane is obtained from sources where methane fugitive emissions occur, it can even be considered carbon-negative.
               </p>
             </div>
             <div className="flex justify-center">
