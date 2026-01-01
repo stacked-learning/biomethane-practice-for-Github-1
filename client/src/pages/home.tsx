@@ -293,7 +293,7 @@ export default function Home() {
                 <div className="flex justify-center">
                   <div className="flex flex-col md:flex-row gap-6 w-full md:w-4/5">
                     {/* Biomethane Tile */}
-                    <div className="flex-1 bg-green-50 border-2 border-green-200 rounded-xl p-5 hover:border-green-500 hover:shadow-lg transition-all duration-300 min-h-[450px] flex flex-col">
+                    <div className="flex-1 bg-white rounded-xl p-5 transition-all duration-300 min-h-[450px] flex flex-col border-2 border-green-400 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)]">
                       <h5 className="text-lg font-bold text-gray-800 mb-3 text-center">Biomethane</h5>
                       <div className="w-full rounded-lg mb-4 flex items-center justify-center h-[100px]">
                         <img src={methaneMolecule} alt="Methane molecule CH4" className="h-full object-contain" />
