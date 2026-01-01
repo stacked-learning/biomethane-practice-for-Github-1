@@ -815,8 +815,8 @@ export default function Home() {
               </h3>
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
-            <div className="space-y-4">
-              <div className="flex flex-wrap gap-2">
+            <div className="space-y-5">
+              <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2">
                 {[
                   { id: "initial-costs", label: "Initial Costs" },
                   { id: "maintenance-costs", label: "Maintenance Costs" },
@@ -829,10 +829,10 @@ export default function Home() {
                   <button
                     key={tab.id}
                     onClick={() => setStorageTab(tab.id)}
-                    className={`px-5 py-2.5 rounded-full font-medium text-sm transition-all duration-200 shadow-sm ${
+                    className={`px-3 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 text-center ${
                       storageTab === tab.id
                         ? "bg-hydrogen-500 text-white shadow-md"
-                        : "bg-white text-gray-600 border border-gray-200 hover:bg-hydrogen-50 hover:border-hydrogen-300"
+                        : "bg-white text-gray-600 border border-gray-200 hover:bg-hydrogen-50 hover:border-hydrogen-300 shadow-sm"
                     }`}
                     data-testid={`tab-${tab.id}`}
                   >
@@ -840,7 +840,7 @@ export default function Home() {
                   </button>
                 ))}
               </div>
-              <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <div className="bg-gradient-to-br from-hydrogen-50 to-white border border-hydrogen-200 rounded-xl p-6 shadow-sm">
                 {storageTab === "initial-costs" && (
                   <div className="text-gray-700 text-lg leading-relaxed">
                     <h4 className="font-bold text-gray-800 mb-3">Initial Costs</h4>
