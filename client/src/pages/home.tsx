@@ -743,7 +743,7 @@ export default function Home() {
                 ].map((card) => (
                   <div
                     key={card.id}
-                    className="w-full h-56 cursor-pointer"
+                    className="w-full h-72 cursor-pointer"
                     onClick={() => toggleBiogasCard(card.id)}
                     data-testid={`card-biogas-${card.id}`}
                   >
@@ -767,20 +767,20 @@ export default function Home() {
                         </h3>
                       </div>
                       <div
-                        className="absolute w-full h-full rounded-xl shadow-lg p-5 flex flex-col items-start justify-start text-left overflow-y-auto"
+                        className="absolute w-full h-full rounded-xl shadow-lg p-5 flex flex-col items-start justify-start text-left"
                         style={{
                           backfaceVisibility: 'hidden',
                           background: 'linear-gradient(to bottom right, #22c55e, #15803d)',
                           transform: 'rotateY(180deg)'
                         }}
                       >
-                        <h4 className="text-base font-bold mb-2 text-green-200">
+                        <h4 className="text-base font-bold mb-2 text-white">
                           {card.title}
                         </h4>
                         <ul className="text-white text-sm space-y-2">
                           {card.points.map((point, idx) => (
                             <li key={idx} className="flex gap-2">
-                              <span className="text-green-200 mt-0.5">•</span>
+                              <span className="text-white mt-0.5">•</span>
                               <span>{point}</span>
                             </li>
                           ))}
