@@ -849,9 +849,10 @@ export default function Home() {
               </div>
 
               <div className="mt-8">
-                <h4 className="text-xl font-bold text-gray-800 mb-4">Conditioning/Upgrading Biogas</h4>
-                <div className="text-gray-700 text-lg leading-relaxed">
-                  <p className="text-gray-500 italic">Content coming soon - please provide the text for this subsection.</p>
+                <h4 className="text-xl font-bold text-gray-800 mb-4">Conditioning/Upgrading</h4>
+                <div className="text-gray-700 text-lg leading-relaxed space-y-4">
+                  <p>For many equipment and vehicles, the quality of biomethane used must be more strictly controlled. If the quality is not high enough, grid equipment can suffer from corrosion - resulting in equipment failure and economic losses, and the risk of leaks is increased.</p>
+                  <p>The process of conditioning/upgrading involves removal of water, CO2, hydrogen sulphide, and other trace elements. Following this, the gas is comparable to conventional natural gas, and becomes suitable for applications where pipeline quality gas is needed.</p>
                 </div>
               </div>
             </div>
