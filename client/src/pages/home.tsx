@@ -697,8 +697,57 @@ export default function Home() {
               </h3>
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
-            <div className="text-gray-700 text-lg leading-relaxed">
-              <p>Content coming soon.</p>
+            <div className="space-y-6">
+              <h4 className="text-xl font-bold text-gray-800">Biogas Sources</h4>
+              <div className="grid gap-6 md:grid-cols-3">
+                <div className="bg-gradient-to-br from-hydrogen-50 to-white border border-hydrogen-200 rounded-xl p-5 shadow-sm">
+                  <h5 className="font-bold text-gray-800 text-lg mb-3">Landfills</h5>
+                  <ul className="text-gray-700 space-y-3">
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>Also referred to as landfill gas (LFG), produced from the decomposition of residential, industrial, and commercial waste.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>While landfill gas can be captured and upgraded, it is most commonly used for electricity generation rather than fuel-dependent applications.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>Landfills represent the third-largest source of human-related methane emissions.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-gradient-to-br from-hydrogen-50 to-white border border-hydrogen-200 rounded-xl p-5 shadow-sm">
+                  <h5 className="font-bold text-gray-800 text-lg mb-3">Livestock</h5>
+                  <ul className="text-gray-700 space-y-3">
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>Biogas is produced when animal manure is collected and processed through anaerobic digestion, with the resulting gas upgraded to biomethane or renewable natural gas (RNG).</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>Manure must be collected and mixed into a slurry within a collection tank before being fed into the anaerobic digester.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>Gas yields vary depending on animal type, manure characteristics, and the practicality of manure collection.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-gradient-to-br from-hydrogen-50 to-white border border-hydrogen-200 rounded-xl p-5 shadow-sm">
+                  <h5 className="font-bold text-gray-800 text-lg mb-3">Wastewater</h5>
+                  <ul className="text-gray-700 space-y-3">
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>Biogas is generated from the anaerobic digestion of solids removed during wastewater treatment processes.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>As a general rule of thumb, approximately 1 cubic foot of digester gas can be produced per 100 gallons of wastewater treated.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         )}
