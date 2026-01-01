@@ -578,7 +578,7 @@ export default function Home() {
           <div className="mb-8 animate-slide-up">
             <div className="border-b border-gray-200 pb-4 mb-6">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                Methane vs Carbon Dioxide Emissions
+                Biomethane Emissions
               </h3>
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
@@ -596,7 +596,7 @@ export default function Home() {
                 <div className="flex-1 bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 min-h-[450px] flex flex-col">
                   <h4 className="text-xl font-bold text-gray-800 mb-3 text-center">Methane (CH₄)</h4>
                   <div className="w-full rounded-lg mb-4 flex items-center justify-center h-[120px]">
-                    <img src={methaneMolecule} alt="Methane molecule CH4" className="h-full object-contain" />
+                    <img src={biomethaneMolecule} alt="Methane molecule CH4" className="h-full object-contain" />
                   </div>
                   <div className="flex-1 space-y-2 text-sm">
                     <div className="flex justify-between border-b border-gray-100 pb-1">
