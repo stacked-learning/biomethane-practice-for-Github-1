@@ -628,10 +628,19 @@ export default function Home() {
                 <div className="flex-1">
                   <h4 className="text-xl font-bold text-gray-800 mb-3">Underground</h4>
                   <p className="text-gray-600 mb-4">The biomethane storage method with the largest volume holding capacity. There are three main underground storage methods: depleted oil and gas reservoirs, salt caverns, and aquifers.</p>
-                  <ul className="text-gray-600 space-y-2 list-disc list-inside">
-                    <li><strong>Salt Caverns:</strong> Smaller capacities than oil and gas reservoirs, but provide higher gas injection and withdrawal rates, and minimal leakage. Their high turnover rate is suitable for integration with intermittent renewable sources (solar, wind, etc). Salt caverns are a common environment within many countries.</li>
-                    <li><strong>Oil and Gas Reservoir:</strong> Low turnover rates, and are typically operated on an annual seasonal-based cycle. Simpler than other below-ground methods, and possess lower investment costs.</li>
-                    <li><strong>Aquifers:</strong> Rarely used for gas storage due to limited tightness, low turnover-rates, and the geological nature of aquifers. Used when there are no better options.</li>
+                  <ul className="text-gray-600 space-y-3 ml-4">
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span><strong className="text-gray-700">Salt Caverns:</strong> Smaller capacities than oil and gas reservoirs, but provide higher gas injection and withdrawal rates, and minimal leakage. Their high turnover rate is suitable for integration with intermittent renewable sources (solar, wind, etc). Salt caverns are a common environment within many countries.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span><strong className="text-gray-700">Oil and Gas Reservoir:</strong> Low turnover rates, and are typically operated on an annual seasonal-based cycle. Simpler than other below-ground methods, and possess lower investment costs.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span><strong className="text-gray-700">Aquifers:</strong> Rarely used for gas storage due to limited tightness, low turnover-rates, and the geological nature of aquifers. Used when there are no better options.</span>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -645,12 +654,27 @@ export default function Home() {
                 </div>
                 <div className="flex-1">
                   <h4 className="text-xl font-bold text-gray-800 mb-3">Compressed Biomethane (CBM)</h4>
-                  <ul className="text-gray-600 space-y-2 list-disc list-inside">
-                    <li>Various different options exist for CBM, including: spherical, cylindrical, pipe tanks, and gas bottles.</li>
-                    <li>Due to pressures involved, CBM storage facilities require adequate safety devices, such as: rupture disks, pressure relief valves.</li>
-                    <li>These devices can excel with fast filling times.</li>
-                    <li>The main cost associated with CBM is the cost of compression.</li>
-                    <li>Safety considerations can make identifying suitable sites for CBM storage more difficult.</li>
+                  <ul className="text-gray-600 space-y-3 ml-4">
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span>Various different options exist for CBM, including: spherical, cylindrical, pipe tanks, and gas bottles.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span>Due to pressures involved, CBM storage facilities require adequate safety devices, such as: rupture disks, pressure relief valves.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span>These devices can excel with fast filling times.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span>The main cost associated with CBM is the cost of compression.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span>Safety considerations can make identifying suitable sites for CBM storage more difficult.</span>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -664,10 +688,19 @@ export default function Home() {
                 </div>
                 <div className="flex-1">
                   <h4 className="text-xl font-bold text-gray-800 mb-3">Liquefied Biomethane (LBM)</h4>
-                  <ul className="text-gray-600 space-y-2 list-disc list-inside">
-                    <li>LBM like LNG involves cooling methane gas to -162°C. It is very space efficient, taking up 1/600th of the volume gaseous biomethane would.</li>
-                    <li>Heat leakage into tank can severely reduce storage efficiency by vaporizing the LBM. Boil-off complicates LBM transportation and on-site maintenance.</li>
-                    <li>Improved safety due to non-explosive and non-toxic process. However, the cold temperatures pose unique risks.</li>
+                  <ul className="text-gray-600 space-y-3 ml-4">
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span>LBM like LNG involves cooling methane gas to -162°C. It is very space efficient, taking up 1/600th of the volume gaseous biomethane would.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span>Heat leakage into tank can severely reduce storage efficiency by vaporizing the LBM. Boil-off complicates LBM transportation and on-site maintenance.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span>Improved safety due to non-explosive and non-toxic process. However, the cold temperatures pose unique risks.</span>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -681,10 +714,19 @@ export default function Home() {
                 </div>
                 <div className="flex-1">
                   <h4 className="text-xl font-bold text-gray-800 mb-3">Material Adsorption - Adsorbed Biomethane (ABM)</h4>
-                  <ul className="text-gray-600 space-y-2 list-disc list-inside">
-                    <li>An emerging technology, which allows a material to adsorb significant amount of biomethane at lower pressures than more well-established methods.</li>
-                    <li>Enhanced safety due to reduced risk of fires, explosions, and lower pressures.</li>
-                    <li>The various challenges concerning ABM include: managing heat during adsorption process, inability to connect to high pressure devices, and the high costs associated with ABM materials.</li>
+                  <ul className="text-gray-600 space-y-3 ml-4">
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span>An emerging technology, which allows a material to adsorb significant amount of biomethane at lower pressures than more well-established methods.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span>Enhanced safety due to reduced risk of fires, explosions, and lower pressures.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1.5">•</span>
+                      <span>The various challenges concerning ABM include: managing heat during adsorption process, inability to connect to high pressure devices, and the high costs associated with ABM materials.</span>
+                    </li>
                   </ul>
                 </div>
               </div>
