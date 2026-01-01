@@ -629,7 +629,7 @@ export default function Home() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-500 max-w-[60%]">Atmospheric Lifetime</span>
-                      <span className="font-medium text-gray-700 text-right">100s–1000s years</span>
+                      <span className="font-medium text-gray-700 text-right">100s-1000s of years</span>
                     </div>
                   </div>
                 </div>
