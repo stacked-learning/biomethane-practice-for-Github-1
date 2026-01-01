@@ -712,7 +712,7 @@ export default function Home() {
             </div>
             <div className="space-y-6">
               <h4 className="text-xl font-bold text-gray-800">Biogas Sources</h4>
-              <div className="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
+              <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
                 {[
                   {
                     id: "landfills",
@@ -743,7 +743,7 @@ export default function Home() {
                 ].map((card) => (
                   <div
                     key={card.id}
-                    className="w-full h-72 cursor-pointer"
+                    className="w-full h-80 cursor-pointer"
                     onClick={() => toggleBiogasCard(card.id)}
                     data-testid={`card-biogas-${card.id}`}
                   >
