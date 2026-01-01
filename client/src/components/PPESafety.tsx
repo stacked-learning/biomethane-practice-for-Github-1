@@ -4,7 +4,7 @@ import ppePersonImage from "@assets/image_1767223091933.png";
 import safetyShoeOverlay from "@assets/image_1767223144570.png";
 import helmetOverlay from "@assets/image_1767223287870.png";
 import glovesOverlay from "@assets/image_1767223335565.png";
-import catchingSystemOverlay from "@assets/image_1767223394917.png";
+import catchingSystemOverlay from "@assets/image_1767242140266.png";
 import hearingProtectionOverlay from "@assets/image_1767223414501.png";
 import filterMaskOverlay from "@assets/image_1767223465478.png";
 import protectiveClothingOverlay from "@assets/image_1767223547939.png";
