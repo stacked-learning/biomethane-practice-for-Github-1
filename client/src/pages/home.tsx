@@ -6,6 +6,8 @@ import processImg from "@assets/process_img_1754391971848.jpg";
 import productImg from "@assets/product_img_1754391991610.jpg";
 import storageImg from "@assets/storage_img_1754392017212.jpg";
 import transportImg from "@assets/transport_img_1754392022435.jpg";
+import methaneMolecule from "@assets/image_1767226700710.png";
+import hydrogenMolecule from "@assets/image_1767226720777.png";
 
 type Quadrant = "process" | "transport" | "storage" | "product";
 
@@ -292,8 +294,8 @@ export default function Home() {
                     {/* Biomethane Tile */}
                     <div className="flex-1 bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 min-h-[450px] flex flex-col">
                       <h5 className="text-lg font-bold text-gray-800 mb-3 text-center">Biomethane</h5>
-                      <div className="w-full bg-gray-100 rounded-lg mb-4 flex items-center justify-center h-[100px]">
-                        <span className="text-gray-400 text-xs">Image</span>
+                      <div className="w-full rounded-lg mb-4 flex items-center justify-center h-[100px]">
+                        <img src={methaneMolecule} alt="Methane molecule CH4" className="h-full object-contain" />
                       </div>
                       <div className="flex-1">
                         <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
@@ -304,8 +306,8 @@ export default function Home() {
                     {/* Natural Gas Tile */}
                     <div className="flex-1 bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 min-h-[450px] flex flex-col">
                       <h5 className="text-lg font-bold text-gray-800 mb-3 text-center">Natural Gas</h5>
-                      <div className="w-full bg-gray-100 rounded-lg mb-4 flex items-center justify-center h-[100px]">
-                        <span className="text-gray-400 text-xs">Image</span>
+                      <div className="w-full rounded-lg mb-4 flex items-center justify-center h-[100px]">
+                        <img src={methaneMolecule} alt="Methane molecule CH4" className="h-full object-contain" />
                       </div>
                       <div className="flex-1">
                         <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
@@ -316,8 +318,8 @@ export default function Home() {
                     {/* Hydrogen Tile */}
                     <div className="flex-1 bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 min-h-[450px] flex flex-col">
                       <h5 className="text-lg font-bold text-gray-800 mb-3 text-center">Hydrogen</h5>
-                      <div className="w-full bg-gray-100 rounded-lg mb-4 flex items-center justify-center h-[100px]">
-                        <span className="text-gray-400 text-xs">Image</span>
+                      <div className="w-full rounded-lg mb-4 flex items-center justify-center h-[100px]">
+                        <img src={hydrogenMolecule} alt="Hydrogen molecule H2" className="h-full object-contain" />
                       </div>
                       <div className="flex-1">
                         <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
