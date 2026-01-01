@@ -368,13 +368,13 @@ export default function Home() {
             
             {/* Biomethane Potential Maps Switcher */}
             <div className="mt-8">
-              <div className="flex gap-2 mb-4">
+              <div className="flex justify-center gap-3 mb-6">
                 <button
                   onClick={() => setBiomassMapView("usage")}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                  className={`px-5 py-2.5 rounded-full font-medium text-sm transition-all duration-300 shadow-sm ${
                     biomassMapView === "usage"
-                      ? "bg-hydrogen-500 text-white"
-                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                      ? "bg-hydrogen-500 text-white shadow-md"
+                      : "bg-white text-gray-700 border border-gray-200 hover:border-hydrogen-300 hover:bg-hydrogen-50"
                   }`}
                   data-testid="button-map-usage"
                 >
@@ -382,10 +382,10 @@ export default function Home() {
                 </button>
                 <button
                   onClick={() => setBiomassMapView("imports")}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                  className={`px-5 py-2.5 rounded-full font-medium text-sm transition-all duration-300 shadow-sm ${
                     biomassMapView === "imports"
-                      ? "bg-hydrogen-500 text-white"
-                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                      ? "bg-hydrogen-500 text-white shadow-md"
+                      : "bg-white text-gray-700 border border-gray-200 hover:border-hydrogen-300 hover:bg-hydrogen-50"
                   }`}
                   data-testid="button-map-imports"
                 >
