@@ -816,7 +816,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
             <div className="space-y-4">
-              <div className="flex flex-wrap gap-2 border-b border-gray-200 pb-2">
+              <div className="flex flex-wrap gap-2">
                 {[
                   { id: "initial-costs", label: "Initial Costs" },
                   { id: "maintenance-costs", label: "Maintenance Costs" },
@@ -829,10 +829,10 @@ export default function Home() {
                   <button
                     key={tab.id}
                     onClick={() => setStorageTab(tab.id)}
-                    className={`px-4 py-2 rounded-t-lg font-medium text-sm transition-all duration-200 ${
+                    className={`px-5 py-2.5 rounded-full font-medium text-sm transition-all duration-200 shadow-sm ${
                       storageTab === tab.id
-                        ? "bg-hydrogen-500 text-white"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                        ? "bg-hydrogen-500 text-white shadow-md"
+                        : "bg-white text-gray-600 border border-gray-200 hover:bg-hydrogen-50 hover:border-hydrogen-300"
                     }`}
                     data-testid={`tab-${tab.id}`}
                   >
