@@ -308,8 +308,16 @@ export default function Home() {
               {/* Subsection: Biomethane Constitution */}
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <h4 className="text-xl font-bold text-gray-800 mb-4">Biomethane Constitution</h4>
-                <div className="text-gray-700 leading-relaxed">
-                  <p>Content coming soon.</p>
+                <div className="text-gray-700 leading-relaxed space-y-4">
+                  <p>
+                    Biomethane is made through upgrading biogas. This process is crucial for transforming biogas into a natural gas resembling product.
+                  </p>
+                  <p>
+                    Biogas is the product of anaerobic digestion. It consists of mainly methane (45-75% by volume), with the remainder being carbon dioxide and other anaerobic digestion product gases.
+                  </p>
+                  <p>
+                    Biomethane on the other hand is made through removing the CO2 and other gases from this biogas.
+                  </p>
                 </div>
               </div>
               
