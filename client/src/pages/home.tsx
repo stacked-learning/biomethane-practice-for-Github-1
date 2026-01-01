@@ -66,6 +66,7 @@ export default function Home() {
   const [showDispatchableDefinition, setShowDispatchableDefinition] = useState(false);
   const [showFugitiveDefinition, setShowFugitiveDefinition] = useState(false);
   const [showGWPDefinition, setShowGWPDefinition] = useState(false);
+  const [storageTab, setStorageTab] = useState<string>("initial-costs");
 
   const handleQuadrantClick = (quadrant: Quadrant) => {
     if (selectedQuadrant === quadrant && isDetailView) {
@@ -814,8 +815,75 @@ export default function Home() {
               </h3>
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
-            <div className="text-gray-700 text-lg leading-relaxed">
-              <p>Content coming soon.</p>
+            <div className="space-y-4">
+              <div className="flex flex-wrap gap-2 border-b border-gray-200 pb-2">
+                {[
+                  { id: "initial-costs", label: "Initial Costs" },
+                  { id: "maintenance-costs", label: "Maintenance Costs" },
+                  { id: "turnover-rate", label: "Turnover Rate" },
+                  { id: "storage-capacity", label: "Storage Capacity" },
+                  { id: "injection-rate", label: "Injection Rate" },
+                  { id: "withdrawal-rate", label: "Withdrawal Rate" },
+                  { id: "cushion-gas", label: "Cushion Gas" },
+                ].map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setStorageTab(tab.id)}
+                    className={`px-4 py-2 rounded-t-lg font-medium text-sm transition-all duration-200 ${
+                      storageTab === tab.id
+                        ? "bg-hydrogen-500 text-white"
+                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                    }`}
+                    data-testid={`tab-${tab.id}`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+              <div className="bg-white border border-gray-200 rounded-lg p-6">
+                {storageTab === "initial-costs" && (
+                  <div className="text-gray-700 text-lg leading-relaxed">
+                    <h4 className="font-bold text-gray-800 mb-3">Initial Costs</h4>
+                    <p>The upfront capital expenditure required to design, construct, and commission the storage facility, including vessels, caverns, compressors, control systems, and associated infrastructure.</p>
+                  </div>
+                )}
+                {storageTab === "maintenance-costs" && (
+                  <div className="text-gray-700 text-lg leading-relaxed">
+                    <h4 className="font-bold text-gray-800 mb-3">Maintenance Costs</h4>
+                    <p>The ongoing operational expenditure associated with inspection, testing, repair, and upkeep of the storage system to ensure continued safety, reliability, and regulatory compliance.</p>
+                  </div>
+                )}
+                {storageTab === "turnover-rate" && (
+                  <div className="text-gray-700 text-lg leading-relaxed">
+                    <h4 className="font-bold text-gray-800 mb-3">Turnover Rate / Ratio</h4>
+                    <p>The number of times the usable working gas volume of a storage facility can be fully injected and withdrawn over the course of a year, indicating how frequently the storage can be cycled.</p>
+                  </div>
+                )}
+                {storageTab === "storage-capacity" && (
+                  <div className="text-gray-700 text-lg leading-relaxed">
+                    <h4 className="font-bold text-gray-800 mb-3">Storage Capacity</h4>
+                    <p>The total volume of gas that can be held within the storage facility, typically divided into working gas and cushion (base) gas, and expressed in energy or volumetric terms.</p>
+                  </div>
+                )}
+                {storageTab === "injection-rate" && (
+                  <div className="text-gray-700 text-lg leading-relaxed">
+                    <h4 className="font-bold text-gray-800 mb-3">Injection Rate</h4>
+                    <p>The maximum rate at which gas can be introduced into the storage system under defined operating conditions, influenced by pressure, temperature, and infrastructure constraints.</p>
+                  </div>
+                )}
+                {storageTab === "withdrawal-rate" && (
+                  <div className="text-gray-700 text-lg leading-relaxed">
+                    <h4 className="font-bold text-gray-800 mb-3">Withdrawal Rate</h4>
+                    <p>The maximum rate at which gas can be extracted from storage while maintaining safe operating pressures and flow stability, often a critical factor during high-demand periods.</p>
+                  </div>
+                )}
+                {storageTab === "cushion-gas" && (
+                  <div className="text-gray-700 text-lg leading-relaxed">
+                    <h4 className="font-bold text-gray-800 mb-3">Cushion Gas (Base Gas)</h4>
+                    <p>The volume of gas permanently retained within the storage facility to maintain sufficient pressure for effective injection and withdrawal; this gas is generally non-recoverable and is particularly critical in underground storage systems where pressure and flow performance must be sustained.</p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}
