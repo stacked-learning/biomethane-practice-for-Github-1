@@ -8,7 +8,7 @@ import storageImg from "@assets/storage_img_1754392017212.jpg";
 import transportImg from "@assets/transport_img_1754392022435.jpg";
 import methaneMolecule from "@assets/image_1767226700710.png";
 import hydrogenMolecule from "@assets/image_1767227019937.png";
-import carbonDioxideMolecule from "@assets/image_1767227093105.png";
+import carbonDioxideMolecule from "@assets/image_1767227272524.png";
 
 type Quadrant = "process" | "transport" | "storage" | "product";
 
