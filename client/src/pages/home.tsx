@@ -581,6 +581,11 @@ export default function Home() {
               </h3>
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
+            <div className="text-gray-700 text-lg leading-relaxed mb-6">
+              <p>
+                Biomethane production reduces the greenhouse effect by capturing methane that would otherwise be released to the atmosphere, where it would exert a strong short-term warming impact due to its high Global Warming Potential (GWP). By combusting this methane to produce energy, it is converted to carbon dioxide, which has a significantly lower warming effect per molecule.
+              </p>
+            </div>
             <div className="flex justify-center">
               <div className="flex flex-col md:flex-row gap-6 w-full md:w-3/5">
                 {/* Methane Tile */}
