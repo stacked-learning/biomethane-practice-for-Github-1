@@ -794,7 +794,7 @@ export default function Home() {
 
               <div className="mt-8">
                 <h4 className="text-xl font-bold text-gray-800 mb-4">Substances to Avoid in Feedstock</h4>
-                <div className="flex flex-col items-center gap-3">
+                <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
                   {[
                     { id: "poorly-degradable", label: "Poorly degradable materials" },
                     { id: "toxic-compounds", label: "Compounds toxic to or inhibiting anaerobic bacteria" },
@@ -802,7 +802,7 @@ export default function Home() {
                   ].map((item) => (
                     <button
                       key={item.id}
-                      className="w-full max-w-2xl px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:border-hydrogen-500 transition-all text-gray-700 font-medium text-left"
+                      className="aspect-square p-4 bg-red-500 hover:bg-red-600 rounded-lg shadow-md hover:shadow-lg transition-all text-white font-medium text-center flex items-center justify-center"
                       data-testid={`button-feedstock-${item.id}`}
                     >
                       {item.label}
