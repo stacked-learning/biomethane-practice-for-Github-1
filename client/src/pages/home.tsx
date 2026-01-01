@@ -9,6 +9,8 @@ import transportImg from "@assets/transport_img_1754392022435.jpg";
 import methaneMolecule from "@assets/image_1767226700710.png";
 import hydrogenMolecule from "@assets/image_1767227019937.png";
 import carbonDioxideMolecule from "@assets/image_1767227272524.png";
+import biomethaneUsageMap from "@assets/image_1767227953715.png";
+import biomethaneImportsMap from "@assets/image_1767227983217.png";
 
 type Quadrant = "process" | "transport" | "storage" | "product";
 
@@ -59,6 +61,7 @@ export default function Home() {
   const [selectedQuadrant, setSelectedQuadrant] = useState<Quadrant | null>(null);
   const [isDetailView, setIsDetailView] = useState(false);
   const [, setLocation] = useLocation();
+  const [biomassMapView, setBiomassMapView] = useState<"usage" | "imports">("usage");
 
   const handleQuadrantClick = (quadrant: Quadrant) => {
     if (selectedQuadrant === quadrant && isDetailView) {
@@ -361,6 +364,60 @@ export default function Home() {
               <p>
                 In others, it can help reduce dependence on gas imports, increasing energy security.
               </p>
+            </div>
+            
+            {/* Biomethane Potential Maps Switcher */}
+            <div className="mt-8">
+              <div className="flex gap-2 mb-4">
+                <button
+                  onClick={() => setBiomassMapView("usage")}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    biomassMapView === "usage"
+                      ? "bg-hydrogen-500 text-white"
+                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  }`}
+                  data-testid="button-map-usage"
+                >
+                  Biomethane Potential Over Annual Natural Gas Use
+                </button>
+                <button
+                  onClick={() => setBiomassMapView("imports")}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    biomassMapView === "imports"
+                      ? "bg-hydrogen-500 text-white"
+                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  }`}
+                  data-testid="button-map-imports"
+                >
+                  Biomethane Potential Over Annual Natural Gas Imports
+                </button>
+              </div>
+              
+              <div className="bg-white rounded-xl border border-gray-200 p-4">
+                {biomassMapView === "usage" ? (
+                  <div>
+                    <img 
+                      src={biomethaneUsageMap} 
+                      alt="Biomethane Potential Over Annual Natural Gas Use" 
+                      className="w-full rounded-lg"
+                    />
+                    <p className="text-gray-600 text-sm mt-3 text-center italic">
+                      Map of the biomethane's estimated potential usage compared to each country's annual natural gas usage in 2019.
+                    </p>
+                  </div>
+                ) : (
+                  <div>
+                    <img 
+                      src={biomethaneImportsMap} 
+                      alt="Biomethane Potential Over Annual Natural Gas Imports" 
+                      className="w-full rounded-lg"
+                    />
+                    <p className="text-gray-600 text-sm mt-3 text-center italic">
+                      Map of the biomethane's estimated potential usage compared to each country's annual net natural gas imports in 2019.
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}
