@@ -301,10 +301,31 @@ export default function Home() {
                       <div className="w-full rounded-lg mb-4 flex items-center justify-center h-[100px]">
                         <img src={methaneMolecule} alt="Methane molecule CH4" className="h-full object-contain" />
                       </div>
-                      <div className="flex-1">
-                        <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
-                          <li>Content coming soon</li>
-                        </ul>
+                      <div className="flex-1 space-y-2 text-sm">
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Lower Heating Value</span>
+                          <span className="font-medium text-gray-700">~50 MJ/kg</span>
+                        </div>
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Volumetric Energy Density</span>
+                          <span className="font-medium text-gray-700">~36 MJ/m³</span>
+                        </div>
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Density (STP)</span>
+                          <span className="font-medium text-gray-700">~0.72 kg/m³</span>
+                        </div>
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Flammability Range</span>
+                          <span className="font-medium text-gray-700">~5–15%</span>
+                        </div>
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Flame Speed</span>
+                          <span className="font-medium text-gray-700">~0.4 m/s</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-500">Boiling Point</span>
+                          <span className="font-medium text-gray-700">~−161 °C</span>
+                        </div>
                       </div>
                     </div>
                     {/* Natural Gas Tile */}
@@ -313,10 +334,31 @@ export default function Home() {
                       <div className="w-full rounded-lg mb-4 flex items-center justify-center h-[100px]">
                         <img src={methaneMolecule} alt="Methane molecule CH4" className="h-full object-contain" />
                       </div>
-                      <div className="flex-1">
-                        <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
-                          <li>Content coming soon</li>
-                        </ul>
+                      <div className="flex-1 space-y-2 text-sm">
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Lower Heating Value</span>
+                          <span className="font-medium text-gray-700">~50 MJ/kg</span>
+                        </div>
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Volumetric Energy Density</span>
+                          <span className="font-medium text-gray-700">~36 MJ/m³</span>
+                        </div>
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Density (STP)</span>
+                          <span className="font-medium text-gray-700">~0.72 kg/m³</span>
+                        </div>
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Flammability Range</span>
+                          <span className="font-medium text-gray-700">~5–15%</span>
+                        </div>
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Flame Speed</span>
+                          <span className="font-medium text-gray-700">~0.4 m/s</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-500">Boiling Point</span>
+                          <span className="font-medium text-gray-700">~−161 °C</span>
+                        </div>
                       </div>
                     </div>
                     {/* Hydrogen Tile */}
@@ -325,10 +367,31 @@ export default function Home() {
                       <div className="w-full rounded-lg mb-4 flex items-center justify-center h-[100px]">
                         <img src={hydrogenMolecule} alt="Hydrogen molecule H2" className="h-full object-contain" />
                       </div>
-                      <div className="flex-1">
-                        <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
-                          <li>Content coming soon</li>
-                        </ul>
+                      <div className="flex-1 space-y-2 text-sm">
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Lower Heating Value</span>
+                          <span className="font-medium text-gray-700">~120 MJ/kg</span>
+                        </div>
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Volumetric Energy Density</span>
+                          <span className="font-medium text-gray-700">~10–11 MJ/m³</span>
+                        </div>
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Density (STP)</span>
+                          <span className="font-medium text-gray-700">~0.09 kg/m³</span>
+                        </div>
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Flammability Range</span>
+                          <span className="font-medium text-gray-700">~4–75%</span>
+                        </div>
+                        <div className="flex justify-between border-b border-gray-100 pb-1">
+                          <span className="text-gray-500">Flame Speed</span>
+                          <span className="font-medium text-gray-700">~2.5–3.0 m/s</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-500">Boiling Point</span>
+                          <span className="font-medium text-gray-700">~−253 °C</span>
+                        </div>
                       </div>
                     </div>
                   </div>
