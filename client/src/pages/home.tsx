@@ -7,6 +7,7 @@ import productImg from "@assets/product_img_1754391991610.jpg";
 import storageImg from "@assets/storage_img_1754392017212.jpg";
 import transportImg from "@assets/transport_img_1754392022435.jpg";
 import methaneMolecule from "@assets/image_1767226700710.png";
+import biomethaneMolecule from "@assets/image_1767237045523.png";
 import hydrogenMolecule from "@assets/image_1767227019937.png";
 import carbonDioxideMolecule from "@assets/image_1767227272524.png";
 import biomethaneUsageMap from "@assets/image_1767228304482.png";
@@ -330,7 +331,7 @@ export default function Home() {
                     <div className="flex-1 bg-green-50/70 rounded-xl p-5 transition-all duration-300 min-h-[450px] flex flex-col border-2 border-green-400 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)]">
                       <h5 className="text-lg font-bold text-gray-800 mb-3 text-center">Biomethane</h5>
                       <div className="w-full rounded-lg mb-4 flex items-center justify-center h-[100px]">
-                        <img src={methaneMolecule} alt="Methane molecule CH4" className="h-full object-contain" />
+                        <img src={biomethaneMolecule} alt="Biomethane molecule CH4" className="h-full object-contain" />
                       </div>
                       <div className="flex-1 space-y-2 text-sm">
                         <div className="flex justify-between border-b border-gray-100 pb-1">
