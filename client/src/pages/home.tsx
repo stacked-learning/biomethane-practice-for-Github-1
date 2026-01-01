@@ -848,6 +848,15 @@ export default function Home() {
                 </div>
               </div>
 
+              <div className="flex flex-col items-center mt-6">
+                <img 
+                  src="/attached_assets/image_(8)_1767240740099.png" 
+                  alt="Biomethane production process diagram showing organic matter conversion through anaerobic digestion and gasification to consumption"
+                  className="max-w-full rounded-lg shadow-md"
+                />
+                <p className="text-sm text-gray-500 mt-2 italic">Source: The International Energy Agency</p>
+              </div>
+
               <div className="mt-8">
                 <h4 className="text-xl font-bold text-gray-800 mb-4">Conditioning/Upgrading</h4>
                 <div className="text-gray-700 text-lg leading-relaxed space-y-4">
