@@ -290,6 +290,14 @@ export default function Home() {
                 Biomethane production can be tailored for many places globally, with various organic feedstocks being suitable for its production. These production methods contribute to establishing a circular economy, where waste feed-stocks from other sectors are reused.
               </p>
               
+              {/* Subsection: Biomethane Constitution */}
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <h4 className="text-xl font-bold text-gray-800 mb-4">Biomethane Constitution</h4>
+                <div className="text-gray-700 leading-relaxed">
+                  <p>Content coming soon.</p>
+                </div>
+              </div>
+              
               {/* Subsection: Biomethane vs Natural Gas vs Hydrogen */}
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <h4 className="text-xl font-bold text-gray-800 mb-4">Biomethane vs Natural Gas vs Hydrogen</h4>
@@ -540,27 +548,6 @@ export default function Home() {
           </div>
         )}
 
-        {/* Product Section - Biomethane Constitution */}
-        {isDetailView && selectedQuadrant === "product" && (
-          <div className="mb-8 animate-slide-up">
-            <div className="border-b border-gray-200 pb-4 mb-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                Biomethane Constitution
-              </h3>
-              <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
-            </div>
-            <div className="text-gray-700 text-lg leading-relaxed">
-              <p>Content coming soon.</p>
-            </div>
-          </div>
-        )}
-
-        {/* Section Divider */}
-        {isDetailView && selectedQuadrant === "product" && (
-          <div className="flex justify-center my-6">
-            <div className="w-3 h-3 bg-hydrogen-500 rounded-full"></div>
-          </div>
-        )}
 
         {/* Product Section - Methane vs Carbon Dioxide Emissions */}
         {isDetailView && selectedQuadrant === "product" && (
