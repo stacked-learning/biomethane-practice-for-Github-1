@@ -12,6 +12,7 @@ import hydrogenMolecule from "@assets/image_1767227019937.png";
 import carbonDioxideMolecule from "@assets/image_1767227272524.png";
 import biomethaneUsageMap from "@assets/image_1767228304482.png";
 import biomethaneImportsMap from "@assets/image_1767228309723.png";
+import ieaProductionDiagram from "@assets/image_(8)_1767240740099.png";
 
 type Quadrant = "process" | "transport" | "storage" | "product";
 
@@ -850,7 +851,7 @@ export default function Home() {
 
               <div className="flex flex-col items-center mt-6">
                 <img 
-                  src="/attached_assets/image_(8)_1767240740099.png" 
+                  src={ieaProductionDiagram} 
                   alt="Biomethane production process diagram showing organic matter conversion through anaerobic digestion and gasification to consumption"
                   className="max-w-full rounded-lg shadow-md"
                 />
