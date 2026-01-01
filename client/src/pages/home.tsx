@@ -62,6 +62,7 @@ export default function Home() {
   const [isDetailView, setIsDetailView] = useState(false);
   const [, setLocation] = useLocation();
   const [biomassMapView, setBiomassMapView] = useState<"usage" | "imports">("usage");
+  const [showDispatchableDefinition, setShowDispatchableDefinition] = useState(false);
 
   const handleQuadrantClick = (quadrant: Quadrant) => {
     if (selectedQuadrant === quadrant && isDetailView) {
@@ -279,13 +280,27 @@ export default function Home() {
               <p>
                 Biomethane, also known as Renewable Natural Gas (RNG) refers to an almost pure-methane gas obtained from "upgrading" biogas. It is physically indistinguishable from natural gas, differing as it is produced through green methods.
               </p>
-              <div className="bg-hydrogen-50 border-l-4 border-hydrogen-500 p-4 rounded-r-lg">
-                <p className="font-semibold text-gray-800">Definition: Dispatchable Energy</p>
-                <p className="text-gray-700">Energy that can be dispatched to users as required.</p>
-              </div>
               <p>
                 When compared with other renewable energy sources, biomethane is dispatchable, avoiding the pitfalls of solar and wind energy. This enables it to replace natural gas - completely or within a blend, especially for industrial equipment and infrastructure, including existing gas turbine engines.
               </p>
+              <div className="relative inline-block">
+                <button
+                  onClick={() => setShowDispatchableDefinition(!showDispatchableDefinition)}
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-hydrogen-100 hover:bg-hydrogen-200 text-hydrogen-700 rounded-lg font-medium text-sm transition-all duration-200"
+                  data-testid="button-dispatchable-definition"
+                >
+                  <span>What is Dispatchable Energy?</span>
+                  <svg className={`w-4 h-4 transition-transform duration-200 ${showDispatchableDefinition ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {showDispatchableDefinition && (
+                  <div className="mt-3 bg-hydrogen-50 border-l-4 border-hydrogen-500 p-4 rounded-r-lg animate-slide-up">
+                    <p className="font-semibold text-gray-800">Definition: Dispatchable Energy</p>
+                    <p className="text-gray-700">Energy that can be dispatched to users as required.</p>
+                  </div>
+                )}
+              </div>
               <p>
                 Biomethane production can be tailored for many places globally, with various organic feedstocks being suitable for its production. These production methods contribute to establishing a circular economy, where waste feed-stocks from other sectors are reused.
               </p>
