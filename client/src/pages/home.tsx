@@ -8,6 +8,7 @@ import storageImg from "@assets/storage_img_1754392017212.jpg";
 import transportImg from "@assets/transport_img_1754392022435.jpg";
 import methaneMolecule from "@assets/image_1767226700710.png";
 import hydrogenMolecule from "@assets/image_1767227019937.png";
+import carbonDioxideMolecule from "@assets/image_1767227093105.png";
 
 type Quadrant = "process" | "transport" | "storage" | "product";
 
@@ -456,8 +457,8 @@ export default function Home() {
                 {/* Carbon Dioxide Tile */}
                 <div className="flex-1 bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 min-h-[450px] flex flex-col">
                   <h4 className="text-xl font-bold text-gray-800 mb-3 text-center">Carbon Dioxide</h4>
-                  <div className="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center max-h-[120px]">
-                    <span className="text-gray-400 text-xs">Image</span>
+                  <div className="w-full rounded-lg mb-4 flex items-center justify-center h-[120px]">
+                    <img src={carbonDioxideMolecule} alt="Carbon dioxide molecule CO2" className="h-full object-contain" />
                   </div>
                   <div className="flex-1">
                     <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
