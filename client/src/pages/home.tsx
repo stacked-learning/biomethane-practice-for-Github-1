@@ -953,7 +953,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
             <div className="text-gray-700 text-lg leading-relaxed">
-              <p>Content coming soon.</p>
+              <p>As biogas is an almost pure-methane product, it can integrate into the existing natural gas network with minimal modifications. It is due to it being an alternative for natural gas that it is being so widely considered.</p>
             </div>
           </div>
         )}
