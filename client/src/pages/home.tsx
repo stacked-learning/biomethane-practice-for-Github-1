@@ -888,17 +888,28 @@ export default function Home() {
           </div>
         )}
 
-        {/* Transport Section - Biomethane Transportation Forms */}
+        {/* Transport Section - Transportation Forms */}
         {isDetailView && selectedQuadrant === "transport" && (
           <div className="mb-8 animate-slide-up">
             <div className="border-b border-gray-200 pb-4 mb-6">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                Biomethane Transportation Forms
+                Transportation Forms
               </h3>
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
-            <div className="text-gray-700 text-lg leading-relaxed">
-              <p>Content coming soon.</p>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="text-xl font-bold text-gray-800 mb-4">Compressed Natural Gas (CNG)</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  Where biomethane is compressed to higher pressures, allowing more gas to be transported.
+                </p>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="text-xl font-bold text-gray-800 mb-4">Liquefied Natural Gas (LNG)</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  Where biomethane is cooled to cryogenic temperatures, allowing for high volumetric density at low pressures and temperatures.
+                </p>
+              </div>
             </div>
           </div>
         )}
