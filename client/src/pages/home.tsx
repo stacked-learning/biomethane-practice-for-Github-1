@@ -700,7 +700,7 @@ export default function Home() {
             <div className="space-y-6">
               <h4 className="text-xl font-bold text-gray-800">Biogas Sources</h4>
               <div className="grid gap-6 md:grid-cols-3">
-                <div className="bg-gradient-to-br from-hydrogen-50 to-white border border-hydrogen-200 rounded-xl p-5 shadow-sm">
+                <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
                   <h5 className="font-bold text-gray-800 text-lg mb-3">Landfills</h5>
                   <ul className="text-gray-700 space-y-3">
                     <li className="flex gap-3">
@@ -717,7 +717,7 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-gradient-to-br from-hydrogen-50 to-white border border-hydrogen-200 rounded-xl p-5 shadow-sm">
+                <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
                   <h5 className="font-bold text-gray-800 text-lg mb-3">Livestock</h5>
                   <ul className="text-gray-700 space-y-3">
                     <li className="flex gap-3">
@@ -734,7 +734,7 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-gradient-to-br from-hydrogen-50 to-white border border-hydrogen-200 rounded-xl p-5 shadow-sm">
+                <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
                   <h5 className="font-bold text-gray-800 text-lg mb-3">Wastewater</h5>
                   <ul className="text-gray-700 space-y-3">
                     <li className="flex gap-3">
