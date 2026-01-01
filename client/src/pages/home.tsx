@@ -591,11 +591,11 @@ export default function Home() {
               <p>
                 Additionally, biomethane is cleaner than natural gas, as it forms part of the biogenic cycle. This means that no new emissions are being added to the atmosphere. Furthermore, if the biomethane is obtained from sources where methane fugitive emissions occur, it can even be considered carbon-negative.
               </p>
-              <div className="flex flex-col gap-3 mt-2">
-                <div>
+              <div className="flex flex-col items-center gap-3 mt-2">
+                <div className="w-full max-w-md">
                   <button
                     onClick={() => setShowFugitiveDefinition(!showFugitiveDefinition)}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-hydrogen-100 hover:bg-hydrogen-200 text-hydrogen-700 rounded-lg font-medium text-sm transition-all duration-200"
+                    className="w-full flex items-center justify-between gap-2 px-4 py-2 bg-hydrogen-100 hover:bg-hydrogen-200 text-hydrogen-700 rounded-lg font-medium text-sm transition-all duration-200"
                     data-testid="button-fugitive-definition"
                   >
                     <span>What are Fugitive Emissions?</span>
@@ -604,16 +604,16 @@ export default function Home() {
                     </svg>
                   </button>
                   {showFugitiveDefinition && (
-                    <div className="mt-3 bg-hydrogen-50 border-l-4 border-hydrogen-500 p-4 rounded-r-lg animate-slide-up w-full">
+                    <div className="mt-3 bg-hydrogen-50 border-l-4 border-hydrogen-500 p-4 rounded-r-lg animate-slide-up">
                       <p className="font-semibold text-gray-800">Definition: Fugitive Emissions</p>
                       <p className="text-gray-700">Any uncontrolled emissions of a substance.</p>
                     </div>
                   )}
                 </div>
-                <div>
+                <div className="w-full max-w-md">
                   <button
                     onClick={() => setShowGWPDefinition(!showGWPDefinition)}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-hydrogen-100 hover:bg-hydrogen-200 text-hydrogen-700 rounded-lg font-medium text-sm transition-all duration-200"
+                    className="w-full flex items-center justify-between gap-2 px-4 py-2 bg-hydrogen-100 hover:bg-hydrogen-200 text-hydrogen-700 rounded-lg font-medium text-sm transition-all duration-200"
                     data-testid="button-gwp-definition"
                   >
                     <span>What is Global Warming Potential?</span>
@@ -622,7 +622,7 @@ export default function Home() {
                     </svg>
                   </button>
                   {showGWPDefinition && (
-                    <div className="mt-3 bg-hydrogen-50 border-l-4 border-hydrogen-500 p-4 rounded-r-lg animate-slide-up w-full">
+                    <div className="mt-3 bg-hydrogen-50 border-l-4 border-hydrogen-500 p-4 rounded-r-lg animate-slide-up">
                       <p className="font-semibold text-gray-800">Definition: Global Warming Potential</p>
                       <p className="text-gray-700">A measure of how much energy a given amount of gas absorbs over a period of time.</p>
                     </div>
