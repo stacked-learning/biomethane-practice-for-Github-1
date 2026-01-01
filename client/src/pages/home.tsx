@@ -810,30 +810,50 @@ export default function Home() {
               </h3>
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
-            <div className="text-gray-700 text-lg leading-relaxed">
-              <p>Content coming soon.</p>
-            </div>
-          </div>
-        )}
+            <div className="space-y-6">
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">Biochemical Processes: Anaerobic Digestion</h4>
+                  <ul className="text-gray-700 space-y-3">
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>Accounts for the majority of global biomethane production.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>Anaerobic digestion uses naturally occurring bacteria to break down organic material in an oxygen-deprived environment.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>The resulting biogas can then be upgraded to biomethane or renewable natural gas (RNG).</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">Thermochemical Processes: Gasification</h4>
+                  <ul className="text-gray-700 space-y-3">
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>Involves breaking down woody or solid biomass at high temperatures and pressures under low-oxygen conditions.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>This process converts biomass into a mixture of gases, primarily carbon monoxide, hydrogen, and carbon dioxide.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-hydrogen-500 mt-1">•</span>
+                      <span>A subsequent methanation step uses a catalyst to promote reactions between hydrogen and carbon dioxide, producing methane.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-        {/* Section Divider */}
-        {isDetailView && selectedQuadrant === "process" && (
-          <div className="flex justify-center my-6">
-            <div className="w-3 h-3 bg-hydrogen-500 rounded-full"></div>
-          </div>
-        )}
-
-        {/* Process Section - Conditioning/Upgrading Biogas */}
-        {isDetailView && selectedQuadrant === "process" && (
-          <div className="mb-8 animate-slide-up">
-            <div className="border-b border-gray-200 pb-4 mb-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                Conditioning/Upgrading Biogas
-              </h3>
-              <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
-            </div>
-            <div className="text-gray-700 text-lg leading-relaxed">
-              <p>Content coming soon.</p>
+              <div className="mt-8">
+                <h4 className="text-xl font-bold text-gray-800 mb-4">Conditioning/Upgrading Biogas</h4>
+                <div className="text-gray-700 text-lg leading-relaxed">
+                  <p className="text-gray-500 italic">Content coming soon - please provide the text for this subsection.</p>
+                </div>
+              </div>
             </div>
           </div>
         )}
