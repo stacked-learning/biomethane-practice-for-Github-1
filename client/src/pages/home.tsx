@@ -585,26 +585,52 @@ export default function Home() {
               <div className="flex flex-col md:flex-row gap-6 w-full md:w-3/5">
                 {/* Methane Tile */}
                 <div className="flex-1 bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 min-h-[450px] flex flex-col">
-                  <h4 className="text-xl font-bold text-gray-800 mb-3 text-center">Methane</h4>
+                  <h4 className="text-xl font-bold text-gray-800 mb-3 text-center">Methane (CH₄)</h4>
                   <div className="w-full rounded-lg mb-4 flex items-center justify-center h-[120px]">
                     <img src={methaneMolecule} alt="Methane molecule CH4" className="h-full object-contain" />
                   </div>
-                  <div className="flex-1">
-                    <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
-                      <li>Content coming soon</li>
-                    </ul>
+                  <div className="flex-1 space-y-2 text-sm">
+                    <div className="flex justify-between border-b border-gray-100 pb-1">
+                      <span className="text-gray-500 max-w-[60%]">GWP (20-year)</span>
+                      <span className="font-medium text-gray-700 text-right">84–86</span>
+                    </div>
+                    <div className="flex justify-between border-b border-gray-100 pb-1">
+                      <span className="text-gray-500 max-w-[60%]">GWP (100-year)</span>
+                      <span className="font-medium text-gray-700 text-right">28–34</span>
+                    </div>
+                    <div className="flex justify-between border-b border-gray-100 pb-1">
+                      <span className="text-gray-500 max-w-[60%]">GWP (500-year)</span>
+                      <span className="font-medium text-gray-700 text-right">7–10</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-500 max-w-[60%]">Atmospheric Lifetime</span>
+                      <span className="font-medium text-gray-700 text-right">10–12 years</span>
+                    </div>
                   </div>
                 </div>
                 {/* Carbon Dioxide Tile */}
                 <div className="flex-1 bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-hydrogen-500 hover:shadow-lg transition-all duration-300 min-h-[450px] flex flex-col">
-                  <h4 className="text-xl font-bold text-gray-800 mb-3 text-center">Carbon Dioxide</h4>
+                  <h4 className="text-xl font-bold text-gray-800 mb-3 text-center">Carbon Dioxide (CO₂)</h4>
                   <div className="w-full rounded-lg mb-4 flex items-center justify-center h-[120px]">
                     <img src={carbonDioxideMolecule} alt="Carbon dioxide molecule CO2" className="h-full object-contain" />
                   </div>
-                  <div className="flex-1">
-                    <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
-                      <li>Content coming soon</li>
-                    </ul>
+                  <div className="flex-1 space-y-2 text-sm">
+                    <div className="flex justify-between border-b border-gray-100 pb-1">
+                      <span className="text-gray-500 max-w-[60%]">GWP (20-year)</span>
+                      <span className="font-medium text-gray-700 text-right">1</span>
+                    </div>
+                    <div className="flex justify-between border-b border-gray-100 pb-1">
+                      <span className="text-gray-500 max-w-[60%]">GWP (100-year)</span>
+                      <span className="font-medium text-gray-700 text-right">1</span>
+                    </div>
+                    <div className="flex justify-between border-b border-gray-100 pb-1">
+                      <span className="text-gray-500 max-w-[60%]">GWP (500-year)</span>
+                      <span className="font-medium text-gray-700 text-right">1</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-500 max-w-[60%]">Atmospheric Lifetime</span>
+                      <span className="font-medium text-gray-700 text-right">100s–1000s years</span>
+                    </div>
                   </div>
                 </div>
               </div>
