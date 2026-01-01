@@ -853,7 +853,7 @@ export default function Home() {
                 <img 
                   src={ieaProductionDiagram} 
                   alt="Biomethane production process diagram showing organic matter conversion through anaerobic digestion and gasification to consumption"
-                  className="max-w-full rounded-lg shadow-md"
+                  className="w-[70%] rounded-lg shadow-md"
                 />
                 <p className="text-sm text-gray-500 mt-2 italic">Source: The International Energy Agency</p>
               </div>
