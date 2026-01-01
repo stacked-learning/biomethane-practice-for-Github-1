@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
 import { Card } from "@/components/ui/card";
-import { Gift, Truck, HardHat, Factory } from "lucide-react";
+import { Gift, Truck, HardHat, Factory, Cylinder, Ship } from "lucide-react";
 import processImg from "@assets/process_img_1754391971848.jpg";
 import productImg from "@assets/product_img_1754391991610.jpg";
 import storageImg from "@assets/storage_img_1754392017212.jpg";
@@ -931,59 +931,32 @@ export default function Home() {
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
             <div className="flex flex-col gap-6">
-              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow relative">
+                <Cylinder className="absolute top-4 right-4 w-8 h-8 text-hydrogen-500" />
                 <h4 className="text-xl font-bold text-gray-800 mb-4">Pipelines</h4>
-                <ul className="text-gray-700 space-y-3">
-                  <li className="flex gap-3">
-                    <span className="text-hydrogen-500 mt-1">•</span>
-                    <span>Dedicated biomethane pipelines may be used close to the point of production.</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-hydrogen-500 mt-1">•</span>
-                    <span>Existing natural gas pipeline networks can also be utilised, subject to agreements with the pipeline owner. This typically requires the biomethane to meet defined gas quality and composition standards prior to injection.</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-hydrogen-500 mt-1">•</span>
-                    <span>LNG or LBM pipelines may be employed in some cases; however, these systems are more complex and costly to construct and operate.</span>
-                  </li>
+                <ul className="text-gray-700 space-y-3 list-disc list-inside marker:text-hydrogen-500">
+                  <li>Dedicated biomethane pipelines may be used close to the point of production.</li>
+                  <li>Existing natural gas pipeline networks can also be utilised, subject to agreements with the pipeline owner. This typically requires the biomethane to meet defined gas quality and composition standards prior to injection.</li>
+                  <li>LNG or LBM pipelines may be employed in some cases; however, these systems are more complex and costly to construct and operate.</li>
                 </ul>
               </div>
-              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow relative">
+                <Truck className="absolute top-4 right-4 w-8 h-8 text-hydrogen-500" />
                 <h4 className="text-xl font-bold text-gray-800 mb-4">Road</h4>
-                <ul className="text-gray-700 space-y-3">
-                  <li className="flex gap-3">
-                    <span className="text-hydrogen-500 mt-1">•</span>
-                    <span>Road transport is used where pipeline connection is impractical or not economically viable.</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-hydrogen-500 mt-1">•</span>
-                    <span>Due to biomethane's low density at ambient conditions, the gas must be compressed or converted to a liquid for transport.</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-hydrogen-500 mt-1">•</span>
-                    <span>This typically involves the use of liquefied natural gas (LNG) or liquefied biomethane (LBM) transported by road.</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-hydrogen-500 mt-1">•</span>
-                    <span>Road transport is generally not a long-term, cost-effective solution and is more suited to temporary or transitional applications.</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-hydrogen-500 mt-1">•</span>
-                    <span>LBM is transported at relatively low pressures but requires cryogenic temperatures, meaning strict safety and handling procedures are essential.</span>
-                  </li>
+                <ul className="text-gray-700 space-y-3 list-disc list-inside marker:text-hydrogen-500">
+                  <li>Road transport is used where pipeline connection is impractical or not economically viable.</li>
+                  <li>Due to biomethane's low density at ambient conditions, the gas must be compressed or converted to a liquid for transport.</li>
+                  <li>This typically involves the use of liquefied natural gas (LNG) or liquefied biomethane (LBM) transported by road.</li>
+                  <li>Road transport is generally not a long-term, cost-effective solution and is more suited to temporary or transitional applications.</li>
+                  <li>LBM is transported at relatively low pressures but requires cryogenic temperatures, meaning strict safety and handling procedures are essential.</li>
                 </ul>
               </div>
-              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow relative">
+                <Ship className="absolute top-4 right-4 w-8 h-8 text-hydrogen-500" />
                 <h4 className="text-xl font-bold text-gray-800 mb-4">Tankers</h4>
-                <ul className="text-gray-700 space-y-3">
-                  <li className="flex gap-3">
-                    <span className="text-hydrogen-500 mt-1">•</span>
-                    <span>LNG or LBM tankers are primarily used for long-distance or intercontinental transport.</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-hydrogen-500 mt-1">•</span>
-                    <span>In these scenarios, pipeline transport is impractical, making marine transport the preferred option.</span>
-                  </li>
+                <ul className="text-gray-700 space-y-3 list-disc list-inside marker:text-hydrogen-500">
+                  <li>LNG or LBM tankers are primarily used for long-distance or intercontinental transport.</li>
+                  <li>In these scenarios, pipeline transport is impractical, making marine transport the preferred option.</li>
                 </ul>
               </div>
             </div>
