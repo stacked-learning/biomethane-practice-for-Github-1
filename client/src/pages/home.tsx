@@ -9,8 +9,8 @@ import transportImg from "@assets/transport_img_1754392022435.jpg";
 import methaneMolecule from "@assets/image_1767226700710.png";
 import hydrogenMolecule from "@assets/image_1767227019937.png";
 import carbonDioxideMolecule from "@assets/image_1767227272524.png";
-import biomethaneUsageMap from "@assets/image_1767227953715.png";
-import biomethaneImportsMap from "@assets/image_1767227983217.png";
+import biomethaneUsageMap from "@assets/image_1767228304482.png";
+import biomethaneImportsMap from "@assets/image_1767228309723.png";
 
 type Quadrant = "process" | "transport" | "storage" | "product";
 
