@@ -67,6 +67,19 @@ export default function Home() {
   const [showFugitiveDefinition, setShowFugitiveDefinition] = useState(false);
   const [showGWPDefinition, setShowGWPDefinition] = useState(false);
   const [storageTab, setStorageTab] = useState<string>("initial-costs");
+  const [flippedBiogasCards, setFlippedBiogasCards] = useState<Set<string>>(new Set());
+
+  const toggleBiogasCard = (id: string) => {
+    setFlippedBiogasCards(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(id)) {
+        newSet.delete(id);
+      } else {
+        newSet.add(id);
+      }
+      return newSet;
+    });
+  };
 
   const handleQuadrantClick = (quadrant: Quadrant) => {
     if (selectedQuadrant === quadrant && isDetailView) {
@@ -699,54 +712,83 @@ export default function Home() {
             </div>
             <div className="space-y-6">
               <h4 className="text-xl font-bold text-gray-800">Biogas Sources</h4>
-              <div className="grid gap-6 md:grid-cols-3">
-                <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
-                  <h5 className="font-bold text-gray-800 text-lg mb-3">Landfills</h5>
-                  <ul className="text-gray-700 space-y-3">
-                    <li className="flex gap-3">
-                      <span className="text-hydrogen-500 mt-1">•</span>
-                      <span>Also referred to as landfill gas (LFG), produced from the decomposition of residential, industrial, and commercial waste.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-hydrogen-500 mt-1">•</span>
-                      <span>While landfill gas can be captured and upgraded, it is most commonly used for electricity generation rather than fuel-dependent applications.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-hydrogen-500 mt-1">•</span>
-                      <span>Landfills represent the third-largest source of human-related methane emissions.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
-                  <h5 className="font-bold text-gray-800 text-lg mb-3">Livestock</h5>
-                  <ul className="text-gray-700 space-y-3">
-                    <li className="flex gap-3">
-                      <span className="text-hydrogen-500 mt-1">•</span>
-                      <span>Biogas is produced when animal manure is collected and processed through anaerobic digestion, with the resulting gas upgraded to biomethane or renewable natural gas (RNG).</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-hydrogen-500 mt-1">•</span>
-                      <span>Manure must be collected and mixed into a slurry within a collection tank before being fed into the anaerobic digester.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-hydrogen-500 mt-1">•</span>
-                      <span>Gas yields vary depending on animal type, manure characteristics, and the practicality of manure collection.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
-                  <h5 className="font-bold text-gray-800 text-lg mb-3">Wastewater</h5>
-                  <ul className="text-gray-700 space-y-3">
-                    <li className="flex gap-3">
-                      <span className="text-hydrogen-500 mt-1">•</span>
-                      <span>Biogas is generated from the anaerobic digestion of solids removed during wastewater treatment processes.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-hydrogen-500 mt-1">•</span>
-                      <span>As a general rule of thumb, approximately 1 cubic foot of digester gas can be produced per 100 gallons of wastewater treated.</span>
-                    </li>
-                  </ul>
-                </div>
+              <div className="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
+                {[
+                  {
+                    id: "landfills",
+                    title: "Landfills",
+                    points: [
+                      "Also referred to as landfill gas (LFG), produced from the decomposition of residential, industrial, and commercial waste.",
+                      "While landfill gas can be captured and upgraded, it is most commonly used for electricity generation rather than fuel-dependent applications.",
+                      "Landfills represent the third-largest source of human-related methane emissions."
+                    ]
+                  },
+                  {
+                    id: "livestock",
+                    title: "Livestock",
+                    points: [
+                      "Biogas is produced when animal manure is collected and processed through anaerobic digestion, with the resulting gas upgraded to biomethane or renewable natural gas (RNG).",
+                      "Manure must be collected and mixed into a slurry within a collection tank before being fed into the anaerobic digester.",
+                      "Gas yields vary depending on animal type, manure characteristics, and the practicality of manure collection."
+                    ]
+                  },
+                  {
+                    id: "wastewater",
+                    title: "Wastewater",
+                    points: [
+                      "Biogas is generated from the anaerobic digestion of solids removed during wastewater treatment processes.",
+                      "As a general rule of thumb, approximately 1 cubic foot of digester gas can be produced per 100 gallons of wastewater treated."
+                    ]
+                  }
+                ].map((card) => (
+                  <div
+                    key={card.id}
+                    className="w-full h-56 cursor-pointer"
+                    onClick={() => toggleBiogasCard(card.id)}
+                    data-testid={`card-biogas-${card.id}`}
+                  >
+                    <div
+                      className="relative w-full h-full"
+                      style={{
+                        transformStyle: 'preserve-3d',
+                        transition: 'transform 0.6s',
+                        transform: flippedBiogasCards.has(card.id) ? 'rotateY(180deg)' : 'rotateY(0deg)'
+                      }}
+                    >
+                      <div
+                        className="absolute w-full h-full rounded-xl shadow-lg p-6 flex items-center justify-center text-center"
+                        style={{
+                          backfaceVisibility: 'hidden',
+                          background: 'linear-gradient(to bottom right, #4ade80, #16a34a)'
+                        }}
+                      >
+                        <h3 className="text-2xl font-bold text-white leading-tight">
+                          {card.title}
+                        </h3>
+                      </div>
+                      <div
+                        className="absolute w-full h-full rounded-xl shadow-lg p-5 flex flex-col items-start justify-start text-left overflow-y-auto"
+                        style={{
+                          backfaceVisibility: 'hidden',
+                          background: 'linear-gradient(to bottom right, #22c55e, #15803d)',
+                          transform: 'rotateY(180deg)'
+                        }}
+                      >
+                        <h4 className="text-base font-bold mb-2 text-green-200">
+                          {card.title}
+                        </h4>
+                        <ul className="text-white text-sm space-y-2">
+                          {card.points.map((point, idx) => (
+                            <li key={idx} className="flex gap-2">
+                              <span className="text-green-200 mt-0.5">•</span>
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
