@@ -1,49 +1,174 @@
 import { useLocation } from "wouter";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, AlertTriangle } from "lucide-react";
 import TransportationSafetyCards from "@/components/TransportationSafetyCards";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
-interface FlipCardProps {
-  title: string;
-  children: React.ReactNode;
+interface EmergencyCardData {
   id: string;
+  title: string;
+  content: React.ReactNode;
 }
 
-function HorizontalFlipCard({ title, children, id }: FlipCardProps) {
-  const [isFlipped, setIsFlipped] = useState(false);
+function PipelineEmergencyCards() {
+  const [flippedCards, setFlippedCards] = useState<Set<string>>(new Set());
 
-  return (
-    <div 
-      className="relative w-full min-h-[120px] cursor-pointer perspective-1000 mb-6"
-      onClick={() => setIsFlipped(!isFlipped)}
-      data-testid={`flip-card-${id}`}
-    >
-      <motion.div
-        className="w-full h-full transition-all duration-500 preserve-3d"
-        animate={{ rotateX: isFlipped ? 180 : 0 }}
-        transition={{ duration: 0.6, type: "spring", stiffness: 260, damping: 20 }}
-        style={{ transformStyle: "preserve-3d" }}
-      >
-        {/* Front */}
-        <div 
-          className="absolute inset-0 w-full h-full backface-hidden bg-white border-2 border-orange-200 rounded-2xl shadow-md hover:shadow-lg transition-shadow flex items-center px-8"
-          style={{ backfaceVisibility: "hidden" }}
-        >
-          <h3 className="text-xl font-bold text-gray-800">{title}</h3>
-          <div className="ml-auto text-orange-500 font-medium">Click for details</div>
-        </div>
+  const toggleCard = (id: string) => {
+    setFlippedCards(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(id)) {
+        newSet.delete(id);
+      } else {
+        newSet.add(id);
+      }
+      return newSet;
+    });
+  };
 
-        {/* Back */}
-        <div 
-          className="absolute inset-0 w-full h-full backface-hidden bg-orange-50 border-2 border-orange-300 rounded-2xl shadow-inner p-8 flex flex-col justify-start overflow-auto"
-          style={{ backfaceVisibility: "hidden", transform: "rotateX(180deg)" }}
-        >
-          <div className="text-gray-800 text-left" onClick={(e) => e.stopPropagation()}>
-            {children}
+  const emergencyCards: EmergencyCardData[] = [
+    {
+      id: "isolation",
+      title: "Public Safety and Isolation",
+      content: (
+        <p className="text-base leading-relaxed text-gray-700">
+          The area is isolated from the general public. Unauthorised persons, the public, and the media should be prevented from entering.
+        </p>
+      )
+    },
+    {
+      id: "exclusion",
+      title: "Exclusion Zones",
+      content: (
+        <div className="space-y-4">
+          <p className="text-base leading-relaxed text-gray-700">
+            An exclusion zone can be established around the location of fires, or where vapour clouds may form. The pipeline licensee should be contacted about establishing an exclusion zone - they will have calculated the exclusion zone distance.
+          </p>
+          <ul className="space-y-2 list-disc list-inside text-gray-700 ml-2">
+            <li>Additionally with low-pressure leaks of natural gas, a reading greater than 1% Gas-in-Air or 20% Lower Explosive Limit (LEL) will be inside this zone.</li>
+            <li>An exclusion zone is necessary due to heat radiation from fires.</li>
+          </ul>
+          
+          <div className="overflow-hidden rounded-xl border border-red-200 shadow-sm bg-white mt-4">
+            <table className="w-full text-left text-sm border-collapse">
+              <thead className="bg-red-600 text-white uppercase text-xs">
+                <tr>
+                  <th className="px-4 py-3 font-bold border-b border-red-700">Heat intensity (kW/m²)</th>
+                  <th className="px-4 py-3 font-bold border-b border-red-700">Effect</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-red-100">
+                <tr className="bg-white hover:bg-gray-50 transition-colors">
+                  <td className="px-4 py-3 font-medium text-gray-900 bg-red-50/50">4.7</td>
+                  <td className="px-4 py-3 text-gray-600">
+                    Exposure causes pain within 15-20 seconds, and injury occurs after 30 seconds, typically resulting in at least second-degree burns.
+                  </td>
+                </tr>
+                <tr className="bg-white hover:bg-gray-50 transition-colors">
+                  <td className="px-4 py-3 font-medium text-gray-900 bg-red-50/50">12.6</td>
+                  <td className="px-4 py-3 text-gray-600 space-y-2">
+                    <p>High probability of injury. Extended exposure carries a significant risk of fatality.</p>
+                    <p>Prolonged exposure can raise the temperature of wooden structures to the point where they may ignite if a flame is present.</p>
+                    <p>Thin steel surfaces with insulation on the side away from the fire may experience enough thermal stress to lead to structural failure.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-      </motion.div>
+      )
+    },
+    {
+      id: "excavation",
+      title: "Excavation Restrictions",
+      content: (
+        <p className="text-base leading-relaxed text-gray-700">
+          No excavations should be attempted to identify the pressure or diameter of the pipes. Instead, the gas company should be contacted for advice on the asset and the exclusion zone.
+        </p>
+      )
+    },
+    {
+      id: "ignition",
+      title: "Ignition Source Removal",
+      content: (
+        <div className="space-y-3">
+          <p className="text-base leading-relaxed text-gray-700">Any ignition sources should be removed. This can be undertaken by:</p>
+          <ul className="space-y-2 list-disc list-inside text-gray-700 ml-2">
+            <li>Restricting any vehicle traffic/access</li>
+            <li>Contacting electricity distribution businesses to request isolation or de-energisation of electrical infrastructure.</li>
+            <li>Prohibiting usage of unsafe electrical equipment (for instance anything producing sparks, mobile phones, etc).</li>
+          </ul>
+        </div>
+      )
+    }
+  ];
+
+  return (
+    <div className="flex flex-col gap-6">
+      {emergencyCards.map((card) => (
+        <div
+          key={card.id}
+          className="cursor-pointer perspective-1000"
+          onClick={() => toggleCard(card.id)}
+          data-testid={`flip-card-${card.id}`}
+        >
+          <div
+            className="relative w-full"
+            style={{
+              transformStyle: 'preserve-3d',
+              transition: 'transform 0.6s',
+              transform: flippedCards.has(card.id) ? 'rotateY(180deg)' : 'rotateY(0deg)'
+            }}
+          >
+            {/* Front */}
+            <div
+              className="w-full bg-orange-50 border-2 border-orange-200 rounded-xl p-6"
+              style={{
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden',
+                opacity: flippedCards.has(card.id) ? 0 : 1,
+                position: flippedCards.has(card.id) ? 'absolute' : 'relative'
+              }}
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <AlertTriangle className="w-6 h-6 text-orange-600" />
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    {card.title}
+                  </h3>
+                </div>
+                <span className="text-orange-500 font-medium text-sm">Click for details</span>
+              </div>
+            </div>
+
+            {/* Back */}
+            <div
+              className="w-full bg-orange-50 border-2 border-orange-300 rounded-xl p-6"
+              style={{
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden',
+                transform: 'rotateY(180deg)',
+                opacity: flippedCards.has(card.id) ? 1 : 0,
+                position: flippedCards.has(card.id) ? 'relative' : 'absolute',
+                top: flippedCards.has(card.id) ? 'auto' : 0
+              }}
+            >
+              <div className="flex items-start gap-3 mb-4">
+                <AlertTriangle className="w-6 h-6 text-orange-600 flex-shrink-0" />
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {card.title}
+                </h3>
+              </div>
+              
+              <div className="text-left">
+                {card.content}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+      
+      <p className="text-center mt-2 text-sm text-gray-500">
+        Click any card to reveal detailed safety information
+      </p>
     </div>
   );
 }
@@ -143,68 +268,8 @@ export default function TransportationSafety() {
               <div className="w-16 h-1 bg-orange-500 rounded-full"></div>
             </div>
 
-            <div className="max-w-5xl mx-auto space-y-6">
-              <HorizontalFlipCard title="Public Safety and Isolation" id="isolation">
-                <p className="text-lg">
-                  The area is isolated from the general public. Unauthorised persons, the public, and the media should be prevented from entering.
-                </p>
-              </HorizontalFlipCard>
-
-              <HorizontalFlipCard title="Exclusion Zones" id="exclusion">
-                <div className="space-y-6">
-                  <p className="text-lg">
-                    An exclusion zone can be established around the location of fires, or where vapour clouds may form. The pipeline licensee should be contacted about establishing an exclusion zone - they will have calculated the exclusion zone distance.
-                  </p>
-                  <ul className="space-y-2 list-disc list-inside text-gray-700 ml-4">
-                    <li>Additionally with low-pressure leaks of natural gas, a reading greater than 1% Gas-in-Air or 20% Lower Explosive Limit (LEL) will be inside this zone.</li>
-                    <li>An exclusion zone is necessary due to heat radiation from fires.</li>
-                  </ul>
-                  
-                  <div className="overflow-hidden rounded-xl border border-red-200 shadow-sm bg-white mt-4">
-                    <table className="w-full text-left text-sm border-collapse">
-                      <thead className="bg-red-600 text-white uppercase text-xs">
-                        <tr>
-                          <th className="px-6 py-4 font-bold border-b border-red-700">Heat intensity (kW/m²)</th>
-                          <th className="px-6 py-4 font-bold border-b border-red-700">Effect</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-red-100">
-                        <tr className="bg-white hover:bg-gray-50 transition-colors">
-                          <td className="px-6 py-4 font-medium text-gray-900 bg-red-50/50">4.7</td>
-                          <td className="px-6 py-4 text-gray-600">
-                            Exposure causes pain within 15-20 seconds, and injury occurs after 30 seconds, typically resulting in at least second-degree burns.
-                          </td>
-                        </tr>
-                        <tr className="bg-white hover:bg-gray-50 transition-colors">
-                          <td className="px-6 py-4 font-medium text-gray-900 bg-red-50/50">12.6</td>
-                          <td className="px-6 py-4 text-gray-600 space-y-2">
-                            <p>High probability of injury. Extended exposure carries a significant risk of fatality.</p>
-                            <p>Prolonged exposure can raise the temperature of wooden structures to the point where they may ignite if a flame is present.</p>
-                            <p>Thin steel surfaces with insulation on the side away from the fire may experience enough thermal stress to lead to structural failure.</p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </HorizontalFlipCard>
-
-              <HorizontalFlipCard title="Excavation Restrictions" id="excavation">
-                <p className="text-lg">
-                  No excavations should be attempted to identify the pressure or diameter of the pipes. Instead, the gas company should be contacted for advice on the asset and the exclusion zone.
-                </p>
-              </HorizontalFlipCard>
-
-              <HorizontalFlipCard title="Ignition Source Removal" id="ignition">
-                <div className="space-y-4">
-                  <p className="text-lg">Any ignition sources should be removed. This can be undertaken by:</p>
-                  <ul className="space-y-2 list-disc list-inside text-gray-700 ml-4">
-                    <li>Restricting any vehicle traffic/access</li>
-                    <li>Contacting electricity distribution businesses to request isolation or de-energisation of electrical infrastructure.</li>
-                    <li>Prohibiting usage of unsafe electrical equipment (for instance anything producing sparks, mobile phones, etc).</li>
-                  </ul>
-                </div>
-              </HorizontalFlipCard>
+            <div className="max-w-5xl mx-auto">
+              <PipelineEmergencyCards />
             </div>
           </div>
         </div>
