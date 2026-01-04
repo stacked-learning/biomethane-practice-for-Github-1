@@ -712,7 +712,10 @@ export default function Home() {
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
             <div className="space-y-6">
-              <h4 className="text-xl font-bold text-gray-800">Biogas Sources</h4>
+              <div className="flex items-center justify-between">
+                <h4 className="text-xl font-bold text-gray-800">Biogas Sources</h4>
+                <span className="text-sm text-gray-500 italic">Click to flip cards</span>
+              </div>
               <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
                 {[
                   {
