@@ -87,6 +87,16 @@ export default function TransportationSafety() {
               ))}
             </div>
           </div>
+
+          {/* Gas Related Pipeline Emergencies */}
+          <div className="mt-12">
+            <div className="border-b border-gray-200 pb-4 mb-6">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2 text-center">
+                Gas Related Pipeline Emergencies
+              </h3>
+              <div className="w-16 h-1 bg-orange-500 mx-auto rounded-full"></div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-12">
