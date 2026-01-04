@@ -153,7 +153,7 @@ export default function PPESafety() {
           PPE Safety Selection Tool
         </h1>
         <p className="text-base lg:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-4">
-          Biomethane's properties render it a dangerous substance during storage. These dangers heavily depend on the method used to store the biomethane. For instance, gaseous storage generally involves higher pressures, whilst liquefied storage methods possess unique challenges regarding their low temperature.
+          It is essential to wear appropriate personal protective equipment (PPE) when working with biomethane to minimise the risks associated with its flammability and potential for explosive reactions. PPE such as flame-resistant clothing, face shields, and safety gloves helps protect against potential hazards in environments where biomethane is present.
         </p>
       </div>
 
