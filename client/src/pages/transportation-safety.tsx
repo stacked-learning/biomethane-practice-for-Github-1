@@ -271,6 +271,18 @@ export default function TransportationSafety() {
             <div className="max-w-5xl mx-auto">
               <PipelineEmergencyCards />
             </div>
+
+            <div className="mt-10 max-w-5xl mx-auto">
+              <h4 className="text-xl font-bold text-gray-800 mb-4">Explosive Reignition</h4>
+              <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                <p className="text-gray-700 mb-4">
+                  A pipeline-fueled fire should never be extinguished unless the pipeline has been isolated.
+                </p>
+                <p className="text-gray-700">
+                  If a fire has been extinguished, but the gas pipeline isn't isolated, gas can migrate until it finds another ignition source. This is termed 'explosive re-ignition', and can endanger lives.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
