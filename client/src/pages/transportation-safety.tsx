@@ -118,21 +118,24 @@ export default function TransportationSafety() {
                 <table className="w-full text-left text-sm border-collapse">
                   <thead className="bg-red-600 text-white uppercase text-xs">
                     <tr>
-                      <th className="px-6 py-4 font-bold border-b border-red-700">Intensity (kW/m²)</th>
-                      <th className="px-6 py-4 font-bold border-b border-red-700">Effect on Personnel</th>
-                      <th className="px-6 py-4 font-bold border-b border-red-700">Effect on Equipment</th>
+                      <th className="px-6 py-4 font-bold border-b border-red-700">Heat intensity (kW/m²)</th>
+                      <th className="px-6 py-4 font-bold border-b border-red-700">Effect</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-red-100">
                     <tr className="bg-red-50 hover:bg-red-100 transition-colors">
                       <td className="px-6 py-4 font-medium text-gray-900 bg-red-100/30">4.7</td>
-                      <td className="px-6 py-4 text-gray-600">Pain in 15-20 seconds; injury in 30 seconds</td>
-                      <td className="px-6 py-4 text-gray-600">No effect</td>
+                      <td className="px-6 py-4 text-gray-600">
+                        Will cause pain in 15-20 seconds and injury after 30 seconds of exposure (at least second degree burns will occur).
+                      </td>
                     </tr>
                     <tr className="bg-red-50 hover:bg-red-100 transition-colors">
                       <td className="px-6 py-4 font-medium text-gray-900 bg-red-100/30">12.6</td>
-                      <td className="px-6 py-4 text-gray-600">Significant injury in 10 seconds; 1% lethality in 1 minute</td>
-                      <td className="px-6 py-4 text-gray-600">Plastic tubing melts</td>
+                      <td className="px-6 py-4 text-gray-600 space-y-4">
+                        <p>High chance of injury. Significant chance of fatality after extended exposure.</p>
+                        <p>Causes the temperature of wood to rise to a point where it can be ignited by a naked flame after extended exposure.</p>
+                        <p>Thin steel with insulation on the surface away from the fire may reach a thermal stress level high enough to cause structural failure.</p>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
