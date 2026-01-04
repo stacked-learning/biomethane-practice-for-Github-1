@@ -15,7 +15,7 @@ const safetyCards: SafetyCard[] = [
   {
     id: "lighter-than-air",
     title: "Lighter Than Air",
-    description: "Because methane is lighter than air, it tends to rise and accumulate in enclosed or poorly ventilated spaces such as roof voids or overhead structures."
+    description: "Because methane is lighter than air, it tends to rise and accumulate in enclosed or poorly ventilated spaces such as overhead structures."
   },
   {
     id: "colourless",
