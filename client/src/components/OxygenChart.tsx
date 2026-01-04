@@ -121,7 +121,7 @@ export default function OxygenChart() {
           Oxygen Percentage & Health Effects
         </h1>
         <p className="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto mb-6" data-testid="text-oxygen-description">
-          During maintainence procedures in confined areas, the displacement of oxygen by hydrogen can significantly reduce the breathable air, creating an asphyxiation risk. Such environments, where ventilation is limited, increase the danger of hydrogen accumulation, making it critical to monitor gas levels closely to prevent oxygen deprivation, and ensure safety of work members.
+          During maintainence procedures in confined areas, the displacement of oxygen by biomethane can significantly reduce the breathable air, creating an asphyxiation risk. Such environments, where ventilation is limited, increase the danger of biomethane accumulation, making it critical to monitor gas levels closely to prevent oxygen deprivation, and ensure safety of work members.
         </p>
         <p className="text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
           Interactive visualization showing the relationship between atmospheric oxygen levels and their corresponding health impacts. Hover over each zone to learn more.
