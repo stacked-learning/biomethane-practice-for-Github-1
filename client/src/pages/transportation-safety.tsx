@@ -146,10 +146,10 @@ export default function TransportationSafety() {
                     </tr>
                   </tbody>
                 </table>
-                <div className="p-4 text-left text-sm italic text-gray-600 bg-red-50 border-t border-red-100">
-                  An exclusion zone is neccesary due to the irradiated heat from fires. This table shows the consequences of different fire heat intensities.
-                </div>
               </div>
+              <p className="mt-4 text-left text-sm italic text-gray-600">
+                An exclusion zone is neccesary due to the irradiated heat from fires. This table shows the consequences of different fire heat intensities.
+              </p>
             </div>
           </div>
         </div>
