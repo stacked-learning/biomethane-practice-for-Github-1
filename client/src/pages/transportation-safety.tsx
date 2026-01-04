@@ -125,11 +125,6 @@ export default function TransportationSafety() {
                   </thead>
                   <tbody className="divide-y divide-red-100">
                     <tr className="bg-red-50 hover:bg-red-100 transition-colors">
-                      <td className="px-6 py-4 font-medium text-gray-900 bg-red-100/30">1.2</td>
-                      <td className="px-6 py-4 text-gray-600">Threshold of pain for prolonged exposure</td>
-                      <td className="px-6 py-4 text-gray-600">No effect</td>
-                    </tr>
-                    <tr className="bg-red-50 hover:bg-red-100 transition-colors">
                       <td className="px-6 py-4 font-medium text-gray-900 bg-red-100/30">4.7</td>
                       <td className="px-6 py-4 text-gray-600">Pain in 15-20 seconds; injury in 30 seconds</td>
                       <td className="px-6 py-4 text-gray-600">No effect</td>
@@ -138,11 +133,6 @@ export default function TransportationSafety() {
                       <td className="px-6 py-4 font-medium text-gray-900 bg-red-100/30">12.6</td>
                       <td className="px-6 py-4 text-gray-600">Significant injury in 10 seconds; 1% lethality in 1 minute</td>
                       <td className="px-6 py-4 text-gray-600">Plastic tubing melts</td>
-                    </tr>
-                    <tr className="bg-red-50 hover:bg-red-100 transition-colors">
-                      <td className="px-6 py-4 font-medium text-gray-900 bg-red-100/30">31.5</td>
-                      <td className="px-6 py-4 text-gray-600">1% lethality in 10 seconds; 100% lethality in 1 minute</td>
-                      <td className="px-6 py-4 text-gray-600">Unprotected wood ignites</td>
                     </tr>
                   </tbody>
                 </table>
