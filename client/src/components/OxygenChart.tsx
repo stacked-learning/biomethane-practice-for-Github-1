@@ -260,22 +260,33 @@ export default function OxygenChart() {
           </h3>
           <div className="w-16 h-1 bg-orange-500 rounded-full"></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto w-full">
+        <div className="flex flex-col gap-6 max-w-2xl mx-auto w-full">
           {[
             {
               id: "safety-precautions",
               title: "Safety Precautions",
-              description: "Isolate ignition sources, approach from downhill as natural gas is lighter than air, avoid enclosed spaces where oxygen may be displaced, ensure gas monitoring is in place, and utilize appropriate PPE including SCBA when required."
+              points: [
+                { label: "Ignition Sources", text: "Isolate or eliminate potential ignition sources (anything producing sparks)." },
+                { label: "Surroundings", text: "Ensure wind is not blowing gas towards you. If possible, approach from downhill, as natural gas is lighter than air." },
+                { label: "Enclosed Spaces", text: "Avoid enclosed spaces where oxygen may be displaced easier. Additionally, if outdoors, do not park over storm-water drains or manholes." },
+                { label: "Gas Monitoring", text: "Gas monitoring is crucial for keeping workers safe. If outdoors, monitoring can provide key information for establishing an evacuation area." },
+                { label: "Safety Equipment", text: "Adequate equipment is required. If possible, utilize a full Self-Contained Breathing Apparatus (SCBA). Utilize PPE as required." }
+              ]
             },
             {
               id: "indoor-leaks",
-              title: "Indoor Leak Considerations",
-              description: "Ensure ventilation systems are in place to prevent fatal oxygen displacement. Use only intrinsically safe equipment, isolate gas supply via facility valves, and avoid static electricity from PPE/clothing or objects like door mats."
+              title: "Key Considerations for Indoor Leaks",
+              points: [
+                { label: "", text: "Ensure a ventilation system is in place to avoid fatal displacement (which can be fatal). Certain environments will allow for natural ventilation (for example in buildings). For other environments, active ventilation systems should be designed for natural gas - with any electrical equipment being adequately designed for such applications." },
+                { label: "", text: "Only intrinsically safe equipment should be employed (eg: appropriate radios, flashlights, etc)." },
+                { label: "", text: "Isolate gas supply as required. Many facilities will have a gas isolation valve to perform this." },
+                { label: "", text: "Avoid PPE/clothing which can create buildups of static electricity. Additionally, avoid certain objects, such as door mats in buildings, which are known to cause sparks." }
+              ]
             }
           ].map((card) => (
             <div
               key={card.id}
-              className="w-full max-w-xs mx-auto h-48 cursor-pointer perspective-1000"
+              className="w-full h-72 cursor-pointer perspective-1000"
               onClick={() => {
                 setFlippedSafetyCards(prev => {
                   const newSet = new Set(prev);
@@ -309,7 +320,7 @@ export default function OxygenChart() {
                   </h3>
                 </div>
                 <div
-                  className="absolute w-full h-full rounded-xl shadow-lg p-6 flex flex-col items-start justify-start text-left"
+                  className="absolute w-full h-full rounded-xl shadow-lg p-5 flex flex-col items-start justify-start text-left overflow-y-auto"
                   style={{
                     backfaceVisibility: 'hidden',
                     background: 'linear-gradient(to bottom right, #f97316, #c2410c)',
@@ -319,9 +330,16 @@ export default function OxygenChart() {
                   <h4 className="text-base font-bold mb-3 text-orange-200">
                     {card.title}
                   </h4>
-                  <p className="text-xs leading-relaxed text-white opacity-95">
-                    {card.description}
-                  </p>
+                  <ul className="text-white text-xs space-y-2">
+                    {card.points.map((point, idx) => (
+                      <li key={idx} className="flex gap-2">
+                        <span className="text-white mt-0.5">•</span>
+                        <span>
+                          {point.label && <strong>{point.label}:</strong>} {point.text}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
