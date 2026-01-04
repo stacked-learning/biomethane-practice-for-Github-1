@@ -126,15 +126,15 @@ export default function TransportationSafety() {
                     <tr className="bg-red-50 hover:bg-red-100 transition-colors">
                       <td className="px-6 py-4 font-medium text-gray-900 bg-red-100/30">4.7</td>
                       <td className="px-6 py-4 text-gray-600">
-                        Will cause pain in 15-20 seconds and injury after 30 seconds of exposure (at least second degree burns will occur).
+                        Exposure causes pain within 15-20 seconds, and injury occurs after 30 seconds, typically resulting in at least second-degree burns.
                       </td>
                     </tr>
                     <tr className="bg-red-50 hover:bg-red-100 transition-colors">
                       <td className="px-6 py-4 font-medium text-gray-900 bg-red-100/30">12.6</td>
                       <td className="px-6 py-4 text-gray-600 space-y-4">
-                        <p>High chance of injury. Significant chance of fatality after extended exposure.</p>
-                        <p>Causes the temperature of wood to rise to a point where it can be ignited by a naked flame after extended exposure.</p>
-                        <p>Thin steel with insulation on the surface away from the fire may reach a thermal stress level high enough to cause structural failure.</p>
+                        <p>High probability of injury. Extended exposure carries a significant risk of fatality.</p>
+                        <p>Prolonged exposure can raise the temperature of wooden structures to the point where they may ignite if a flame is present.</p>
+                        <p>Thin steel surfaces with insulation on the side away from the fire may experience enough thermal stress to lead to structural failure.</p>
                       </td>
                     </tr>
                   </tbody>
