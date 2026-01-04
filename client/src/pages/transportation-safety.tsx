@@ -173,6 +173,145 @@ function PipelineEmergencyCards() {
   );
 }
 
+interface TransportMethodData {
+  id: string;
+  title: string;
+  risks: string[];
+}
+
+function TransportationMethodCards() {
+  const [flippedCards, setFlippedCards] = useState<Set<string>>(new Set());
+
+  const toggleCard = (id: string) => {
+    setFlippedCards(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(id)) {
+        newSet.delete(id);
+      } else {
+        newSet.add(id);
+      }
+      return newSet;
+    });
+  };
+
+  const transportMethods: TransportMethodData[] = [
+    {
+      id: "pipeline",
+      title: "Pipeline Transport",
+      risks: [
+        "Hydrogen embrittlement can weaken pipeline materials over time, making them prone to cracking and leaks.",
+        "High-pressure systems require continuous monitoring for pressure fluctuations and potential failures.",
+        "Third-party interference from construction activities poses significant damage risks."
+      ]
+    },
+    {
+      id: "road",
+      title: "Road Transport (Tube Trailers)",
+      risks: [
+        "Compressed gas cylinders operate at extremely high pressures (up to 500 bar), increasing explosion risks during accidents.",
+        "Vehicle collisions can rupture containers, leading to rapid gas release and potential ignition.",
+        "Driver training and route planning are critical to minimize exposure to populated areas."
+      ]
+    },
+    {
+      id: "cryogenic",
+      title: "Cryogenic Liquid Transport",
+      risks: [
+        "Liquid hydrogen is stored at -253°C, creating severe frostbite and cold burn hazards.",
+        "Boil-off occurs continuously, requiring proper venting systems to prevent pressure buildup.",
+        "Thermal insulation failures can lead to rapid vaporization and container rupture."
+      ]
+    },
+    {
+      id: "ship",
+      title: "Ship Transport",
+      risks: [
+        "Large-scale hydrogen carriers face unique maritime hazards including wave damage and collision risks.",
+        "Hydrogen storage tanks must withstand sea conditions while maintaining cryogenic temperatures.",
+        "Emergency response at sea is more complex due to limited access and evacuation challenges."
+      ]
+    }
+  ];
+
+  return (
+    <div className="flex flex-col gap-6">
+      {transportMethods.map((method) => (
+        <div
+          key={method.id}
+          className="cursor-pointer perspective-1000"
+          onClick={() => toggleCard(method.id)}
+          data-testid={`flip-card-transport-${method.id}`}
+        >
+          <div
+            className="relative w-full"
+            style={{
+              transformStyle: 'preserve-3d',
+              transition: 'transform 0.6s',
+              transform: flippedCards.has(method.id) ? 'rotateY(180deg)' : 'rotateY(0deg)'
+            }}
+          >
+            {/* Front */}
+            <div
+              className="w-full bg-orange-50 border-2 border-orange-200 rounded-xl p-6"
+              style={{
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden',
+                opacity: flippedCards.has(method.id) ? 0 : 1,
+                position: flippedCards.has(method.id) ? 'absolute' : 'relative'
+              }}
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <AlertTriangle className="w-6 h-6 text-orange-600" />
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    {method.title}
+                  </h3>
+                </div>
+                <span className="text-orange-500 font-medium text-sm">Click for details</span>
+              </div>
+            </div>
+
+            {/* Back */}
+            <div
+              className="w-full bg-orange-50 border-2 border-orange-300 rounded-xl p-6"
+              style={{
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden',
+                transform: 'rotateY(180deg)',
+                opacity: flippedCards.has(method.id) ? 1 : 0,
+                position: flippedCards.has(method.id) ? 'relative' : 'absolute',
+                top: flippedCards.has(method.id) ? 'auto' : 0
+              }}
+            >
+              <div className="flex items-start gap-3 mb-4">
+                <AlertTriangle className="w-6 h-6 text-orange-600 flex-shrink-0" />
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {method.title}
+                </h3>
+              </div>
+              
+              <div className="flex flex-col gap-3">
+                {method.risks.map((risk, index) => (
+                  <div key={index} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-gray-600 mt-2.5 flex-shrink-0" />
+                    <p className="text-base leading-relaxed text-gray-700">
+                      {risk}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+      
+      <p className="text-center mt-2 text-sm text-gray-500">
+        Click any card to reveal detailed safety information
+      </p>
+    </div>
+  );
+}
+
 export default function TransportationSafety() {
   const [, setLocation] = useLocation();
 
@@ -280,6 +419,23 @@ export default function TransportationSafety() {
               <p className="text-gray-700">
                 If a fire has been extinguished, but the gas pipeline isn't isolated, gas can migrate until it finds another ignition source. This is termed 'explosive re-ignition', and can endanger lives.
               </p>
+            </div>
+          </div>
+
+          {/* Transportation Method Dangers */}
+          <div className="mt-12 text-left">
+            <div className="border-b border-gray-200 pb-4 mb-6">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                Transportation Method Dangers
+              </h3>
+              <div className="w-16 h-1 bg-orange-500 rounded-full"></div>
+            </div>
+            <p className="text-lg text-gray-600 mb-8">
+              Each mode of transport presents unique challenges and requires specific safety protocols, which includes:
+            </p>
+
+            <div className="max-w-5xl mx-auto">
+              <TransportationMethodCards />
             </div>
           </div>
         </div>
