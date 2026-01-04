@@ -103,7 +103,7 @@ export default function TransportationSafety() {
                 </li>
                 <li>
                   An exclusion zone can be established around the location of fires, or where vapour clouds may form. The pipeline licensee should be contacted about establishing an exclusion zone - they will have calculated the exclusion zone distance.
-                  <ul className="mt-2 space-y-2 list-[circle] list-outside ml-6 text-gray-700">
+                  <ul className="mt-6 space-y-4 list-[circle] list-outside ml-12 text-gray-700">
                     <li>
                       Additionally with low-pressure leaks of natural gas, a reading greater than 1% Gas-in-Air or 20% Lower Explosive Limit (LEL) will be inside this zone.
                     </li>
