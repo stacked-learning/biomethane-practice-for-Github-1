@@ -113,6 +113,43 @@ export default function TransportationSafety() {
                   </ul>
                 </li>
               </ul>
+
+              <div className="mt-8 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+                <table className="w-full text-left text-sm border-collapse">
+                  <caption className="p-4 text-left text-lg font-semibold text-gray-800 bg-gray-50 border-b border-gray-200">
+                    An exclusion zone is neccesary due to the irradiated heat from fires. This table shows the consequences of different fire heat intensities.
+                  </caption>
+                  <thead className="bg-gray-100 text-gray-700 uppercase text-xs">
+                    <tr>
+                      <th className="px-6 py-4 font-bold border-b border-gray-200">Intensity (kW/m²)</th>
+                      <th className="px-6 py-4 font-bold border-b border-gray-200">Effect on Personnel</th>
+                      <th className="px-6 py-4 font-bold border-b border-gray-200">Effect on Equipment</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr className="hover:bg-gray-50 transition-colors">
+                      <td className="px-6 py-4 font-medium text-gray-900 bg-gray-50/50">1.2</td>
+                      <td className="px-6 py-4 text-gray-600">Threshold of pain for prolonged exposure</td>
+                      <td className="px-6 py-4 text-gray-600">No effect</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50 transition-colors">
+                      <td className="px-6 py-4 font-medium text-gray-900 bg-gray-50/50">4.7</td>
+                      <td className="px-6 py-4 text-gray-600">Pain in 15-20 seconds; injury in 30 seconds</td>
+                      <td className="px-6 py-4 text-gray-600">No effect</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50 transition-colors">
+                      <td className="px-6 py-4 font-medium text-gray-900 bg-gray-50/50">12.6</td>
+                      <td className="px-6 py-4 text-gray-600">Significant injury in 10 seconds; 1% lethality in 1 minute</td>
+                      <td className="px-6 py-4 text-gray-600">Plastic tubing melts</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50 transition-colors">
+                      <td className="px-6 py-4 font-medium text-gray-900 bg-gray-50/50">31.5</td>
+                      <td className="px-6 py-4 text-gray-600">1% lethality in 10 seconds; 100% lethality in 1 minute</td>
+                      <td className="px-6 py-4 text-gray-600">Unprotected wood ignites</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
