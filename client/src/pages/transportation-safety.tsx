@@ -120,7 +120,7 @@ function PipelineEmergencyCards() {
           >
             {/* Front */}
             <div
-              className="w-full bg-orange-50 border-2 border-orange-200 rounded-xl p-6"
+              className="w-full bg-red-50 border border-red-200 rounded-lg p-6"
               style={{
                 backfaceVisibility: 'hidden',
                 WebkitBackfaceVisibility: 'hidden',
@@ -128,20 +128,17 @@ function PipelineEmergencyCards() {
                 position: flippedCards.has(card.id) ? 'absolute' : 'relative'
               }}
             >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <AlertTriangle className="w-6 h-6 text-orange-600" />
-                  <h3 className="text-xl font-semibold text-gray-800">
-                    {card.title}
-                  </h3>
-                </div>
-                <span className="text-orange-500 font-medium text-sm">Click for details</span>
+              <div className="flex items-center justify-center gap-3">
+                <AlertTriangle className="w-6 h-6 text-red-800" />
+                <h3 className="text-xl font-semibold text-red-900">
+                  {card.title}
+                </h3>
               </div>
             </div>
 
             {/* Back */}
             <div
-              className="w-full bg-orange-50 border-2 border-orange-300 rounded-xl p-6"
+              className="w-full bg-red-50 border border-red-200 rounded-lg p-6"
               style={{
                 backfaceVisibility: 'hidden',
                 WebkitBackfaceVisibility: 'hidden',
@@ -152,8 +149,8 @@ function PipelineEmergencyCards() {
               }}
             >
               <div className="flex items-start gap-3 mb-4">
-                <AlertTriangle className="w-6 h-6 text-orange-600 flex-shrink-0" />
-                <h3 className="text-lg font-semibold text-gray-800">
+                <AlertTriangle className="w-6 h-6 text-red-800 flex-shrink-0" />
+                <h3 className="text-lg font-semibold text-red-900">
                   {card.title}
                 </h3>
               </div>
@@ -252,7 +249,7 @@ function TransportationMethodCards() {
           >
             {/* Front */}
             <div
-              className="w-full bg-orange-50 border-2 border-orange-200 rounded-xl p-6"
+              className="w-full bg-red-50 border border-red-200 rounded-lg p-6"
               style={{
                 backfaceVisibility: 'hidden',
                 WebkitBackfaceVisibility: 'hidden',
@@ -260,20 +257,17 @@ function TransportationMethodCards() {
                 position: flippedCards.has(method.id) ? 'absolute' : 'relative'
               }}
             >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <AlertTriangle className="w-6 h-6 text-orange-600" />
-                  <h3 className="text-xl font-semibold text-gray-800">
-                    {method.title}
-                  </h3>
-                </div>
-                <span className="text-orange-500 font-medium text-sm">Click for details</span>
+              <div className="flex items-center justify-center gap-3">
+                <AlertTriangle className="w-6 h-6 text-red-800" />
+                <h3 className="text-xl font-semibold text-red-900">
+                  {method.title}
+                </h3>
               </div>
             </div>
 
             {/* Back */}
             <div
-              className="w-full bg-orange-50 border-2 border-orange-300 rounded-xl p-6"
+              className="w-full bg-red-50 border border-red-200 rounded-lg p-6"
               style={{
                 backfaceVisibility: 'hidden',
                 WebkitBackfaceVisibility: 'hidden',
@@ -284,8 +278,8 @@ function TransportationMethodCards() {
               }}
             >
               <div className="flex items-start gap-3 mb-4">
-                <AlertTriangle className="w-6 h-6 text-orange-600 flex-shrink-0" />
-                <h3 className="text-lg font-semibold text-gray-800">
+                <AlertTriangle className="w-6 h-6 text-red-800 flex-shrink-0" />
+                <h3 className="text-lg font-semibold text-red-900">
                   {method.title}
                 </h3>
               </div>
@@ -294,7 +288,7 @@ function TransportationMethodCards() {
                 {method.risks.map((risk, index) => (
                   <div key={index} className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-gray-600 mt-2.5 flex-shrink-0" />
-                    <p className="text-base leading-relaxed text-gray-700">
+                    <p className="text-base leading-relaxed text-red-900">
                       {risk}
                     </p>
                   </div>
