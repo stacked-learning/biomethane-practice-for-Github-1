@@ -114,39 +114,39 @@ export default function TransportationSafety() {
                 </li>
               </ul>
 
-              <div className="mt-8 overflow-hidden rounded-xl border border-blue-200 shadow-sm">
+              <div className="mt-8 overflow-hidden rounded-xl border border-red-200 shadow-sm">
                 <table className="w-full text-left text-sm border-collapse">
-                  <thead className="bg-blue-600 text-white uppercase text-xs">
+                  <thead className="bg-red-600 text-white uppercase text-xs">
                     <tr>
-                      <th className="px-6 py-4 font-bold border-b border-blue-700">Intensity (kW/m²)</th>
-                      <th className="px-6 py-4 font-bold border-b border-blue-700">Effect on Personnel</th>
-                      <th className="px-6 py-4 font-bold border-b border-blue-700">Effect on Equipment</th>
+                      <th className="px-6 py-4 font-bold border-b border-red-700">Intensity (kW/m²)</th>
+                      <th className="px-6 py-4 font-bold border-b border-red-700">Effect on Personnel</th>
+                      <th className="px-6 py-4 font-bold border-b border-red-700">Effect on Equipment</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-blue-100">
-                    <tr className="hover:bg-blue-50 transition-colors">
-                      <td className="px-6 py-4 font-medium text-gray-900 bg-blue-50/30">1.2</td>
+                  <tbody className="divide-y divide-red-100">
+                    <tr className="bg-red-50 hover:bg-red-100 transition-colors">
+                      <td className="px-6 py-4 font-medium text-gray-900 bg-red-100/30">1.2</td>
                       <td className="px-6 py-4 text-gray-600">Threshold of pain for prolonged exposure</td>
                       <td className="px-6 py-4 text-gray-600">No effect</td>
                     </tr>
-                    <tr className="hover:bg-blue-50 transition-colors">
-                      <td className="px-6 py-4 font-medium text-gray-900 bg-blue-50/30">4.7</td>
+                    <tr className="bg-red-50 hover:bg-red-100 transition-colors">
+                      <td className="px-6 py-4 font-medium text-gray-900 bg-red-100/30">4.7</td>
                       <td className="px-6 py-4 text-gray-600">Pain in 15-20 seconds; injury in 30 seconds</td>
                       <td className="px-6 py-4 text-gray-600">No effect</td>
                     </tr>
-                    <tr className="hover:bg-blue-50 transition-colors">
-                      <td className="px-6 py-4 font-medium text-gray-900 bg-blue-50/30">12.6</td>
+                    <tr className="bg-red-50 hover:bg-red-100 transition-colors">
+                      <td className="px-6 py-4 font-medium text-gray-900 bg-red-100/30">12.6</td>
                       <td className="px-6 py-4 text-gray-600">Significant injury in 10 seconds; 1% lethality in 1 minute</td>
                       <td className="px-6 py-4 text-gray-600">Plastic tubing melts</td>
                     </tr>
-                    <tr className="hover:bg-blue-50 transition-colors">
-                      <td className="px-6 py-4 font-medium text-gray-900 bg-blue-50/30">31.5</td>
+                    <tr className="bg-red-50 hover:bg-red-100 transition-colors">
+                      <td className="px-6 py-4 font-medium text-gray-900 bg-red-100/30">31.5</td>
                       <td className="px-6 py-4 text-gray-600">1% lethality in 10 seconds; 100% lethality in 1 minute</td>
                       <td className="px-6 py-4 text-gray-600">Unprotected wood ignites</td>
                     </tr>
                   </tbody>
                 </table>
-                <div className="p-4 text-left text-sm italic text-gray-600 bg-blue-50/50 border-t border-blue-100">
+                <div className="p-4 text-left text-sm italic text-gray-600 bg-red-50 border-t border-red-100">
                   An exclusion zone is neccesary due to the irradiated heat from fires. This table shows the consequences of different fire heat intensities.
                 </div>
               </div>
