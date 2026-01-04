@@ -90,24 +90,26 @@ export default function TransportationSafety() {
 
           {/* Gas Related Pipeline Emergencies */}
           <div className="mt-12">
-            <div className="border-b border-gray-200 pb-4 mb-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2 text-center">
+            <div className="border-b border-gray-200 pb-4 mb-6 text-left">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">
                 Gas Related Pipeline Emergencies
               </h3>
-              <div className="w-16 h-1 bg-orange-500 mx-auto rounded-full"></div>
+              <div className="w-16 h-1 bg-orange-500 rounded-full"></div>
             </div>
-            <div className="max-w-4xl mx-auto text-gray-700 text-lg leading-relaxed">
+            <div className="max-w-4xl text-gray-700 text-lg leading-relaxed text-left">
               <ul className="space-y-4 list-disc list-outside ml-6">
                 <li>
                   The area is isolated from the general public. Unauthorised persons, the public, and the media should be prevented from entering.
                 </li>
                 <li>
                   An exclusion zone can be established around the location of fires, or where vapour clouds may form. The pipeline licensee should be contacted about establishing an exclusion zone - they will have calculated the exclusion zone distance.
-                  <ul className="mt-2 space-y-2 list-[circle] list-outside ml-6">
-                    <li>
+                  <ul className="mt-3 space-y-3 list-none ml-6 border-l-2 border-orange-200 pl-4 italic text-gray-600">
+                    <li className="relative">
+                      <span className="absolute -left-[22px] top-3 w-2 h-2 bg-orange-300 rounded-full"></span>
                       Additionally with low-pressure leaks of natural gas, a reading greater than 1% Gas-in-Air or 20% Lower Explosive Limit (LEL) will be inside this zone.
                     </li>
-                    <li>
+                    <li className="relative">
+                      <span className="absolute -left-[22px] top-3 w-2 h-2 bg-orange-300 rounded-full"></span>
                       An exclusion zone is necessary due to heat radiation from fires.
                     </li>
                   </ul>
