@@ -96,6 +96,24 @@ export default function TransportationSafety() {
               </h3>
               <div className="w-16 h-1 bg-orange-500 mx-auto rounded-full"></div>
             </div>
+            <div className="max-w-4xl mx-auto text-gray-700 text-lg leading-relaxed">
+              <ul className="space-y-4 list-disc list-outside ml-6">
+                <li>
+                  The area is isolated from the general public. Unauthorised persons, the public, and the media should be prevented from entering.
+                </li>
+                <li>
+                  An exclusion zone can be established around the location of fires, or where vapour clouds may form. The pipeline licensee should be contacted about establishing an exclusion zone - they will have calculated the exclusion zone distance.
+                  <ul className="mt-2 space-y-2 list-[circle] list-outside ml-6">
+                    <li>
+                      Additionally with low-pressure leaks of natural gas, a reading greater than 1% Gas-in-Air or 20% Lower Explosive Limit (LEL) will be inside this zone.
+                    </li>
+                    <li>
+                      An exclusion zone is necessary due to heat radiation from fires.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
