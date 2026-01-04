@@ -424,18 +424,11 @@ export default function TransportationSafety() {
               </h3>
               <div className="w-16 h-1 bg-orange-500 rounded-full"></div>
             </div>
-            <p className="text-lg text-gray-600 mb-8">
-              Each mode of transport presents unique challenges and requires specific safety protocols, which includes:
-            </p>
 
             <div className="max-w-5xl mx-auto">
-              <TransportationMethodCards />
+              <TransportationSafetyCards />
             </div>
           </div>
-        </div>
-
-        <div className="mt-12">
-          <TransportationSafetyCards />
         </div>
       </div>
     </div>
