@@ -67,6 +67,31 @@ export default function TransportationSafety() {
         <div className="mt-12">
           <TransportationSafetyCards />
         </div>
+
+        {/* Common Causes of Pipeline Leaks */}
+        <div className="mt-12">
+          <div className="border-b border-gray-200 pb-4 mb-6">
+            <h3 className="text-2xl font-bold text-gray-800 mb-2">
+              Common Causes of Pipeline Leaks
+            </h3>
+            <div className="w-16 h-1 bg-orange-500 rounded-full"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {[
+              "Unauthorised Excavation and Construction Activities",
+              "Extreme Weather Damaging Pipes",
+              "Pinholes from Corrosion in Pipes"
+            ].map((cause, index) => (
+              <div
+                key={index}
+                className="bg-red-500 hover:bg-red-600 text-white rounded-xl p-6 text-center font-semibold shadow-lg hover:shadow-xl transition-all duration-300 cursor-default"
+                data-testid={`button-pipeline-cause-${index}`}
+              >
+                {cause}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
