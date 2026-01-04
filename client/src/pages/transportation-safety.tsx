@@ -143,6 +143,22 @@ export default function TransportationSafety() {
               <p className="mt-4 text-left text-sm italic text-gray-600">
                 An exclusion zone is neccesary due to the irradiated heat from fires. This table shows the consequences of different fire heat intensities.
               </p>
+
+              <div className="mt-8 text-gray-700 text-lg leading-relaxed text-left">
+                <ul className="space-y-4 list-disc list-outside ml-6">
+                  <li>
+                    No excavations should be attempted to identify the pressure or diameter of the pipes. Instead, the gas company should be contacted for advice on the asset and the exclusion zone.
+                  </li>
+                  <li>
+                    Any ignition sources should be removed. This can be undertaken by:
+                    <ul className="mt-2 space-y-2 list-[circle] list-outside ml-12">
+                      <li>Restricting any vehicle traffic/access</li>
+                      <li>Contacting electricity distribution businesses to request isolation or de-energisation of electrical infrastructure.</li>
+                      <li>Prohibiting usage of unsafe electrical equipment (for instance anything producing sparks, mobile phones, etc).</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
