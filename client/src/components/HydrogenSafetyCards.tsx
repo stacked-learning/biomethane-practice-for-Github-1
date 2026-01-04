@@ -25,7 +25,7 @@ const safetyCards: SafetyCard[] = [
   {
     id: "naturally-odourless",
     title: "Naturally Odourless",
-    description: "In its natural state methane has no smell, requiring the addition of odorants or the use of gas monitors to ensure leaks can be detected by personnel."
+    description: "In its natural state methane has no smell, requiring the addition of odorants and the use of gas monitors to ensure leaks can be detected by personnel."
   },
   {
     id: "visible-flame",
