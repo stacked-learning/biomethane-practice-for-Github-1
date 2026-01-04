@@ -20,7 +20,7 @@ const safetyCards: SafetyCard[] = [
   {
     id: "colourless",
     title: "Colourless Gas",
-    description: "Methane cannot be detected visually, which means leaks may go unnoticed without dedicated gas detection systems in place."
+    description: "Methane cannot be always detected visually, which means leaks may go unnoticed without dedicated gas detection systems in place."
   },
   {
     id: "naturally-odourless",
