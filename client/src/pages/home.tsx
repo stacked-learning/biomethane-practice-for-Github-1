@@ -13,6 +13,8 @@ import carbonDioxideMolecule from "@assets/image_1767227272524.png";
 import biomethaneUsageMap from "@assets/image_1767228304482.png";
 import biomethaneImportsMap from "@assets/image_1767228309723.png";
 import ieaProductionDiagram from "@assets/image_(8)_1767240740099.png";
+import lngImage from "@assets/image_1767561093273.png";
+import cngImage from "@assets/image_1767561207005.png";
 
 type Quadrant = "process" | "transport" | "storage" | "product";
 
@@ -901,17 +903,23 @@ export default function Home() {
               <div className="w-16 h-1 bg-hydrogen-500 rounded-full"></div>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="text-xl font-bold text-gray-800 mb-4">Compressed Natural Gas (CNG)</h4>
-                <p className="text-gray-700 leading-relaxed">
-                  Where biomethane is compressed to higher pressures, allowing more gas to be transported.
-                </p>
+              <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <img src={cngImage} alt="Compressed Natural Gas storage facility" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">Compressed Natural Gas (CNG)</h4>
+                  <p className="text-gray-700 leading-relaxed">
+                    Where biomethane is compressed to higher pressures, allowing more gas to be transported.
+                  </p>
+                </div>
               </div>
-              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="text-xl font-bold text-gray-800 mb-4">Liquefied Natural Gas (LNG)</h4>
-                <p className="text-gray-700 leading-relaxed">
-                  Where biomethane is cooled to cryogenic temperatures, allowing for high volumetric density at low pressures and temperatures.
-                </p>
+              <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <img src={lngImage} alt="LNG tanker at port facility" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">Liquefied Natural Gas (LNG)</h4>
+                  <p className="text-gray-700 leading-relaxed">
+                    Where biomethane is cooled to cryogenic temperatures, allowing for high volumetric density at low pressures and temperatures.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
