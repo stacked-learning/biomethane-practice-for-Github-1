@@ -1,7 +1,7 @@
-import geologicalImg from "@assets/AdobeStock_213344901_1759276478059.jpeg";
-import compressedImg from "@assets/AdobeStock_52399211_1759276481425.jpeg";
-import liquifiedImg from "@assets/AdobeStock_1138075747_1759276483759.jpeg";
-import solidStateImg from "@assets/AdobeStock_241630821_1759276486644.jpeg";
+import geologicalImg from "@assets/image_1767582504144.png";
+import compressedImg from "@assets/image_1767582518225.png";
+import liquifiedImg from "@assets/image_1767582546073.png";
+import solidStateImg from "@assets/image_1767582571981.png";
 import chemicalImg from "@assets/AdobeStock_151458203_1759276488644.jpeg";
 
 interface StorageMethod {
