@@ -348,23 +348,8 @@ export default function TransportationSafety() {
             Transportation Safety
           </h1>
           <div className="w-24 h-1 bg-orange-400 mx-auto rounded-full"></div>
-          <h2 className="mt-8 text-2xl font-semibold text-gray-800 mb-4">
-            Critical Safety Considerations for Hydrogen Transportation Methods
-          </h2>
           <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
-            There are various means of transporting hydrogen from the production
-            point to the end user, and each option involves specific safety
-            considerations. For example, pipeline transport is efficient but can
-            be prone to issues like hydrogen embrittlement, where the material
-            becomes brittle and more prone to cracking due to the presence of
-            hydrogen. Road and tanker transport, while flexible, face the
-            challenge of ensuring secure containment under pressure or in
-            cryogenic states. Additionally, hydrogen is highly flammable, so
-            managing risks such as leakage, combustion, and proper ventilation
-            is crucial to prevent accidents. To maintain the safety of workers
-            and the public, robust safety procedures must be followed, including
-            regular inspections, monitoring for leaks, and managing potential
-            ignition sources.
+            Biomethane can be transported using pipelines, road vehicles, or tankers, with safety considerations largely aligned to those of conventional natural gas systems. Key risks include leakage, ignition, and accumulation in confined spaces, requiring effective gas detection, ventilation, and adherence to established gas quality and pressure standards. When transported in liquefied form, additional controls are required to manage cryogenic temperatures, handling procedures, and personnel training to ensure safe operation.
           </p>
 
           {/* Common Causes of Pipeline Leaks */}
