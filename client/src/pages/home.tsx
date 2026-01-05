@@ -18,6 +18,10 @@ import cngImage from "@assets/image_1767561207005.png";
 import methaneImage from "@assets/image_1767575871943.png";
 import carbonDioxideImage from "@assets/image_1767575876946.png";
 import hydrogenSulphideImage from "@assets/image_1767575882657.png";
+import undergroundStorageImg from "@assets/image_1767582504144.png";
+import cbmStorageImg from "@assets/image_1767582518225.png";
+import lbmStorageImg from "@assets/image_1767582546073.png";
+import abmStorageImg from "@assets/image_1767582571981.png";
 
 type Quadrant = "process" | "transport" | "storage" | "product";
 
@@ -1137,8 +1141,8 @@ export default function Home() {
               {/* Underground */}
               <div className="flex flex-col md:flex-row gap-6 bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
                 <div className="md:w-1/4 flex-shrink-0">
-                  <div className="w-full aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-400 text-sm">Image</span>
+                  <div className="w-full aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
+                    <img src={undergroundStorageImg} alt="Underground storage - salt cavern" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="flex-1">
@@ -1164,8 +1168,8 @@ export default function Home() {
               {/* Compressed Biomethane (CBM) */}
               <div className="flex flex-col md:flex-row gap-6 bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
                 <div className="md:w-1/4 flex-shrink-0">
-                  <div className="w-full aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-400 text-sm">Image</span>
+                  <div className="w-full aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
+                    <img src={cbmStorageImg} alt="Compressed Biomethane storage cylinders" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="flex-1">
@@ -1198,8 +1202,8 @@ export default function Home() {
               {/* Liquefied Biomethane (LBM) */}
               <div className="flex flex-col md:flex-row gap-6 bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
                 <div className="md:w-1/4 flex-shrink-0">
-                  <div className="w-full aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-400 text-sm">Image</span>
+                  <div className="w-full aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
+                    <img src={lbmStorageImg} alt="Liquefied Biomethane tanker ship" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="flex-1">
@@ -1224,8 +1228,8 @@ export default function Home() {
               {/* Material Adsorption - Adsorbed Biomethane (ABM) */}
               <div className="flex flex-col md:flex-row gap-6 bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
                 <div className="md:w-1/4 flex-shrink-0">
-                  <div className="w-full aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-400 text-sm">Image</span>
+                  <div className="w-full aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
+                    <img src={abmStorageImg} alt="Material adsorption molecular structure" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="flex-1">
