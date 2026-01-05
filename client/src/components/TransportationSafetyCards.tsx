@@ -10,17 +10,19 @@ const transportationDangers: TransportationDanger[] = [
   {
     title: "Pipeline Dangers",
     risks: [
-      "Common pipeline materials (steel, aluminium, nickel alloys) are vulnerable to hydrogen embrittlement, weakening them and increasing the risk of leaks; protective coatings can reduce this.",
-      "Hydrogen's small molecular size makes it prone to leakage, while its high flammability and explosion risk amplify the danger.",
-      "Burning hydrogen is nearly invisible and burns much faster than natural gas, which can cause rapid damage or secondary explosions.",
-      "Leak detection can be improved using additives (e.g. sodium for flame colour) or advanced methods such as thermal imaging.",
+      "There is a risk of damage to pipeline infrastructure during excavation/maintenance works. Reputable contractors should be employed for such undertakings.",
+      "Pipeline ruptures can be caused by mechanical impacts, including those from natural events such as earthquakes. To prevent this:",
+      "Ensure pipeline is designed to the correct standards (AS 2885), ensuring full-bore ruptures cannot occur.",
+      "Proper monitoring procedures are implemented.",
+      "Emergency response procedures exist.",
     ],
   },
   {
     title: "Road Transportation Dangers",
     risks: [
-      "Leaks are often caused by poor maintenance such as cracks, faulty seals, or degraded valves and regulators; securing equipment properly is vital.",
-      "Hydrogen trucks face risks from road accidents, where even minor collisions may have catastrophic consequences.",
+      "Trucks face risks from road accidents. For gas transportation vehicles, minor collisions may have significant consequences.",
+      "In the case of an LNG transportation vehicle accident, the extremely cold LNG will initially sink to the ground. Any people and ignition sources should be kept away from this, as the gas vaporizes as it heats up.",
+      "For CNG vehicle accidents, the gas will naturally rise. However, in enclosed spaces, there could be an increased risk of ignition. A \"rotten-egg\" smell from the odorant may be noticed, and all individuals should be kept away from this area.",
       "Sparks and static electricity from friction between vehicle components and tanks must be controlled with proper grounding.",
       "Human error remains a major factor; thorough training and strict adherence to safety procedures are essential.",
     ],
