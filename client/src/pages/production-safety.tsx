@@ -1,6 +1,5 @@
 import { useLocation } from "wouter";
 import { ArrowLeft } from "lucide-react";
-import ProductionMethodSafetyCards from "@/components/ProductionMethodSafetyCards";
 import BiogasPlantSafetyCards from "@/components/BiogasPlantSafetyCards";
 
 export default function ProductionSafety() {
@@ -45,21 +44,15 @@ export default function ProductionSafety() {
             Production Method Safety
           </h1>
           <div className="w-24 h-1 bg-orange-400 mx-auto rounded-full"></div>
-          <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
-            Hydrogen production methods come with varying safety risks. "Green
-            hydrogen" from renewable sources and electrolysis is generally
-            safer, though it still poses electrical hazards and risks related to
-            flammable gas mixtures. Steam methane reforming (SMR) involves high
-            temperatures and pressures, increasing the potential for equipment
-            failure and other hazards. Coal and biomass gasification introduce
-            risks from toxic chemicals, fire, and high-temperature processes.
-            Each method requires stringent safety measures to manage
-            environmental, energy, and operational risks.
-          </p>
         </div>
 
-        <div className="mt-12">
-          <ProductionMethodSafetyCards />
+        <div className="mt-12 w-full max-w-5xl mx-auto p-4">
+          <h2 className="text-3xl font-bold text-center mb-6 text-gray-900" data-testid="text-key-dangers-title">
+            Key Dangers in Biomethane Production Process
+          </h2>
+          <p className="text-base lg:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-8 text-center" data-testid="text-key-dangers-description">
+            Content coming soon...
+          </p>
         </div>
 
         <div className="mt-16">
