@@ -30,10 +30,10 @@ const transportationDangers: TransportationDanger[] = [
   {
     title: "Tanker Dangers",
     risks: [
-      "In enclosed spaces like ships, hydrogen leaks can cause asphyxiation by displacing oxygen; odorants help but cannot be fully relied upon.",
-      "Sensor choice and placement are critical, with options including pellistors, electrochemical, thermal conductivity, and molecular property spectrometer sensors; hydrogen tends to accumulate near ceilings.",
-      "Stored hydrogen is often cryogenic; contact with liquid hydrogen can cause severe frostbite.",
-      "Portable gas detectors are essential for fast, localised leak detection.",
+      "In enclosed spaces like ships, natural gas leaks can cause asphyxiation by displacing oxygen; odorants help but cannot be fully relied upon.",
+      "The cryogenic conditions involved with LNG storage can cause embrittlement of several materials.",
+      "In LNG tankers, double-hull designs are employed. This consists of two hulls made of steel - one on the outside of a ship, and another inside. Furthermore, the LNG's insulation system would also have to be pierced. This makes for a very safe system against collisions.",
+      "LNG itself will not burn. However, the vaporised gases from LNG can ignite if an ignition source is present.",
     ],
   },
 ];
