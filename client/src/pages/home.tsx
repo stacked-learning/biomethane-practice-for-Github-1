@@ -889,6 +889,14 @@ export default function Home() {
                   <p>The process of conditioning/upgrading involves removal of water, CO2, hydrogen sulphide, and other trace elements. Following this, the gas is comparable to conventional natural gas, and becomes suitable for applications where pipeline quality gas is needed.</p>
                   <p>Biogas upgrading can be performed with several technologies, including: Water Scrubbing, Organic Solvent Scrubbing, Amine Scrubbing, Pressure Swing Adsorption (PSA), and Gas Separation Membranes.</p>
                 </div>
+
+                <h5 className="text-lg font-semibold text-gray-800 mt-6 mb-3">Pre-Upgrading Gas Constitution</h5>
+                <div className="text-gray-700 text-lg leading-relaxed space-y-4">
+                </div>
+
+                <h5 className="text-lg font-semibold text-gray-800 mt-6 mb-3">Post-Upgrading Gas Constitution</h5>
+                <div className="text-gray-700 text-lg leading-relaxed space-y-4">
+                </div>
               </div>
             </div>
           </div>
