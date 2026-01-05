@@ -902,12 +902,12 @@ export default function Home() {
                     <p className="text-gray-600">55-65%</p>
                   </div>
                   <div className="flex flex-col items-center">
-                    <img src={carbonDioxideImage} alt="Carbon Dioxide molecule" className="w-32 h-32 object-contain" />
+                    <img src={carbonDioxideImage} alt="Carbon Dioxide molecule" className="w-28 h-28 object-contain" />
                     <h6 className="font-semibold text-gray-800 mt-2">Carbon Dioxide</h6>
                     <p className="text-gray-600">30-45%</p>
                   </div>
                   <div className="flex flex-col items-center">
-                    <img src={hydrogenSulphideImage} alt="Hydrogen Sulphide molecule" className="w-32 h-32 object-contain" />
+                    <img src={hydrogenSulphideImage} alt="Hydrogen Sulphide molecule" className="w-24 h-24 object-contain" />
                     <h6 className="font-semibold text-gray-800 mt-2">Hydrogen Sulphide</h6>
                     <p className="text-gray-600">0.1-5%</p>
                   </div>
