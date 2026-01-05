@@ -15,6 +15,9 @@ import biomethaneImportsMap from "@assets/image_1767228309723.png";
 import ieaProductionDiagram from "@assets/image_(8)_1767240740099.png";
 import lngImage from "@assets/image_1767561093273.png";
 import cngImage from "@assets/image_1767561207005.png";
+import methaneImage from "@assets/image_1767575871943.png";
+import carbonDioxideImage from "@assets/image_1767575876946.png";
+import hydrogenSulphideImage from "@assets/image_1767575882657.png";
 
 type Quadrant = "process" | "transport" | "storage" | "product";
 
@@ -891,7 +894,23 @@ export default function Home() {
                 </div>
 
                 <h5 className="text-lg font-semibold text-gray-800 mt-6 mb-3">Pre-Upgrading Gas Constitution</h5>
-                <div className="text-gray-700 text-lg leading-relaxed space-y-4">
+                <p className="text-gray-700 text-lg mb-4">Composition of Biogas:</p>
+                <div className="grid grid-cols-3 gap-6">
+                  <div className="flex flex-col items-center">
+                    <img src={methaneImage} alt="Methane molecule" className="w-32 h-32 object-contain" />
+                    <h6 className="font-semibold text-gray-800 mt-2">Methane</h6>
+                    <p className="text-gray-600">55-65%</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <img src={carbonDioxideImage} alt="Carbon Dioxide molecule" className="w-32 h-32 object-contain" />
+                    <h6 className="font-semibold text-gray-800 mt-2">Carbon Dioxide</h6>
+                    <p className="text-gray-600">30-45%</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <img src={hydrogenSulphideImage} alt="Hydrogen Sulphide molecule" className="w-32 h-32 object-contain" />
+                    <h6 className="font-semibold text-gray-800 mt-2">Hydrogen Sulphide</h6>
+                    <p className="text-gray-600">0.1-5%</p>
+                  </div>
                 </div>
 
                 <h5 className="text-lg font-semibold text-gray-800 mt-6 mb-3">Post-Upgrading Gas Constitution</h5>
