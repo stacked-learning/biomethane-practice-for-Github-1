@@ -47,8 +47,8 @@ export default function ProductionSafety() {
         </div>
 
         <div className="mt-12 w-full max-w-5xl mx-auto p-4">
-          <h2 className="text-3xl font-bold text-center mb-6 text-gray-900" data-testid="text-key-dangers-title">
-            Key Dangers in Biomethane Production Process
+          <h2 className="text-3xl font-bold text-center mb-6 text-gray-900" data-testid="text-phases-title">
+            Phases of Biogas/Biomethane Plant Operations
           </h2>
           <p className="text-base lg:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-8 text-center" data-testid="text-key-dangers-description">
             Content coming soon...
