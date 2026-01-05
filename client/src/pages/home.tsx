@@ -898,21 +898,21 @@ export default function Home() {
                 <div className="grid grid-cols-3 gap-6">
                   <div className="flex flex-col items-center">
                     <div className="h-32 flex items-center justify-center">
-                      <img src={methaneImage} alt="Methane molecule" className="w-32 h-32 object-contain cursor-pointer transition-transform duration-300 hover:scale-150 hover:z-10" />
+                      <img src={methaneImage} alt="Methane molecule" className="w-32 h-32 object-contain cursor-pointer transition-transform duration-300 hover:scale-105 hover:z-10" />
                     </div>
                     <h6 className="font-semibold text-gray-800 mt-2">Methane</h6>
                     <p className="text-gray-600">55-65%</p>
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="h-32 flex items-center justify-center">
-                      <img src={carbonDioxideImage} alt="Carbon Dioxide molecule" className="w-28 h-28 object-contain cursor-pointer transition-transform duration-300 hover:scale-150 hover:z-10" />
+                      <img src={carbonDioxideImage} alt="Carbon Dioxide molecule" className="w-28 h-28 object-contain cursor-pointer transition-transform duration-300 hover:scale-[1.14] hover:z-10" />
                     </div>
                     <h6 className="font-semibold text-gray-800 mt-2">Carbon Dioxide</h6>
                     <p className="text-gray-600">30-45%</p>
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="h-32 flex items-center justify-center">
-                      <img src={hydrogenSulphideImage} alt="Hydrogen Sulphide molecule" className="w-24 h-24 object-contain cursor-pointer transition-transform duration-300 hover:scale-150 hover:z-10" />
+                      <img src={hydrogenSulphideImage} alt="Hydrogen Sulphide molecule" className="w-24 h-24 object-contain cursor-pointer transition-transform duration-300 hover:scale-[1.33] hover:z-10" />
                     </div>
                     <h6 className="font-semibold text-gray-800 mt-2">Hydrogen Sulphide</h6>
                     <p className="text-gray-600">0.1-5%</p>
