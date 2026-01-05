@@ -1,39 +1,48 @@
 import { useState } from "react";
 import { AlertTriangle } from "lucide-react";
 
+interface RiskItem {
+  text: string;
+  subItems?: string[];
+}
+
 interface TransportationDanger {
   title: string;
-  risks: string[];
+  risks: RiskItem[];
 }
 
 const transportationDangers: TransportationDanger[] = [
   {
     title: "Pipeline Dangers",
     risks: [
-      "There is a risk of damage to pipeline infrastructure during excavation/maintenance works. Reputable contractors should be employed for such undertakings.",
-      "Pipeline ruptures can be caused by mechanical impacts, including those from natural events such as earthquakes. To prevent this:",
-      "Ensure pipeline is designed to the correct standards (AS 2885), ensuring full-bore ruptures cannot occur.",
-      "Proper monitoring procedures are implemented.",
-      "Emergency response procedures exist.",
+      { text: "There is a risk of damage to pipeline infrastructure during excavation/maintenance works. Reputable contractors should be employed for such undertakings." },
+      { 
+        text: "Pipeline ruptures can be caused by mechanical impacts, including those from natural events such as earthquakes. To prevent this:",
+        subItems: [
+          "Ensure pipeline is designed to the correct standards (AS 2885), ensuring full-bore ruptures cannot occur.",
+          "Proper monitoring procedures are implemented.",
+          "Emergency response procedures exist."
+        ]
+      },
     ],
   },
   {
     title: "Road Transportation Dangers",
     risks: [
-      "Trucks face risks from road accidents. For gas transportation vehicles, minor collisions may have significant consequences.",
-      "In the case of an LNG transportation vehicle accident, the extremely cold LNG will initially sink to the ground. Any people and ignition sources should be kept away from this, as the gas vaporizes as it heats up.",
-      "For CNG vehicle accidents, the gas will naturally rise. However, in enclosed spaces, there could be an increased risk of ignition. A \"rotten-egg\" smell from the odorant may be noticed, and all individuals should be kept away from this area.",
-      "Sparks and static electricity from friction between vehicle components and tanks must be controlled with proper grounding.",
-      "Human error remains a major factor; thorough training and strict adherence to safety procedures are essential.",
+      { text: "Trucks face risks from road accidents. For gas transportation vehicles, minor collisions may have significant consequences." },
+      { text: "In the case of an LNG transportation vehicle accident, the extremely cold LNG will initially sink to the ground. Any people and ignition sources should be kept away from this, as the gas vaporizes as it heats up." },
+      { text: "For CNG vehicle accidents, the gas will naturally rise. However, in enclosed spaces, there could be an increased risk of ignition. A \"rotten-egg\" smell from the odorant may be noticed, and all individuals should be kept away from this area." },
+      { text: "Sparks and static electricity from friction between vehicle components and tanks must be controlled with proper grounding." },
+      { text: "Human error remains a major factor; thorough training and strict adherence to safety procedures are essential." },
     ],
   },
   {
     title: "Tanker Dangers",
     risks: [
-      "In enclosed spaces like ships, natural gas leaks can cause asphyxiation by displacing oxygen; odorants help but cannot be fully relied upon.",
-      "The cryogenic conditions involved with LNG storage can cause embrittlement of several materials.",
-      "In LNG tankers, double-hull designs are employed. This consists of two hulls made of steel - one on the outside of a ship, and another inside. Furthermore, the LNG's insulation system would also have to be pierced. This makes for a very safe system against collisions.",
-      "LNG itself will not burn. However, the vaporised gases from LNG can ignite if an ignition source is present.",
+      { text: "In enclosed spaces like ships, natural gas leaks can cause asphyxiation by displacing oxygen; odorants help but cannot be fully relied upon." },
+      { text: "The cryogenic conditions involved with LNG storage can cause embrittlement of several materials." },
+      { text: "In LNG tankers, double-hull designs are employed. This consists of two hulls made of steel - one on the outside of a ship, and another inside. Furthermore, the LNG's insulation system would also have to be pierced. This makes for a very safe system against collisions." },
+      { text: "LNG itself will not burn. However, the vaporised gases from LNG can ignite if an ignition source is present." },
     ],
   },
 ];
@@ -124,11 +133,25 @@ export default function TransportationSafetyCards() {
 
                 <div className="flex flex-col gap-3">
                   {danger.risks.map((risk, index) => (
-                    <div key={index} className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-gray-600 mt-2.5 flex-shrink-0" />
-                      <p className="text-base leading-relaxed text-red-900">
-                        {risk}
-                      </p>
+                    <div key={index}>
+                      <div className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-gray-600 mt-2.5 flex-shrink-0" />
+                        <p className="text-base leading-relaxed text-red-900">
+                          {risk.text}
+                        </p>
+                      </div>
+                      {risk.subItems && (
+                        <div className="ml-6 mt-2 flex flex-col gap-2">
+                          {risk.subItems.map((subItem, subIndex) => (
+                            <div key={subIndex} className="flex items-start gap-2">
+                              <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 flex-shrink-0" />
+                              <p className="text-sm leading-relaxed text-red-800">
+                                {subItem}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
