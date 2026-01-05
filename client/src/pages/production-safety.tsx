@@ -1,6 +1,7 @@
 import { useLocation } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import ProductionMethodSafetyCards from "@/components/ProductionMethodSafetyCards";
+import BiogasPlantSafetyCards from "@/components/BiogasPlantSafetyCards";
 
 export default function ProductionSafety() {
   const [, setLocation] = useLocation();
@@ -59,6 +60,10 @@ export default function ProductionSafety() {
 
         <div className="mt-12">
           <ProductionMethodSafetyCards />
+        </div>
+
+        <div className="mt-16">
+          <BiogasPlantSafetyCards />
         </div>
       </div>
     </div>
