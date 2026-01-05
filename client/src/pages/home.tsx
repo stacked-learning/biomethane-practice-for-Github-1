@@ -920,7 +920,12 @@ export default function Home() {
                 </div>
 
                 <h5 className="text-lg font-semibold text-gray-800 mt-6 mb-3">Post-Upgrading Gas Constitution</h5>
-                <div className="text-gray-700 text-lg leading-relaxed space-y-4">
+                <div className="flex flex-col items-center">
+                  <div className="h-32 flex items-center justify-center">
+                    <img src={methaneImage} alt="Methane molecule" className="w-32 h-32 object-contain cursor-pointer transition-transform duration-300 hover:scale-105 hover:z-10" />
+                  </div>
+                  <h6 className="font-semibold text-gray-800 mt-2">Methane</h6>
+                  <p className="text-gray-600">95-98%</p>
                 </div>
               </div>
             </div>
