@@ -887,6 +887,7 @@ export default function Home() {
                 <div className="text-gray-700 text-lg leading-relaxed space-y-4">
                   <p>For many equipment and vehicles, the quality of biomethane used must be more strictly controlled. If the quality is not high enough, grid equipment can suffer from corrosion - resulting in equipment failure and economic losses, and the risk of leaks is increased.</p>
                   <p>The process of conditioning/upgrading involves removal of water, CO2, hydrogen sulphide, and other trace elements. Following this, the gas is comparable to conventional natural gas, and becomes suitable for applications where pipeline quality gas is needed.</p>
+                  <p>Biogas upgrading can be performed with several technologies, including: Water Scrubbing, Organic Solvent Scrubbing, Amine Scrubbing, Pressure Swing Adsorption (PSA), and Gas Separation Membranes.</p>
                 </div>
               </div>
             </div>
