@@ -897,17 +897,23 @@ export default function Home() {
                 <p className="text-gray-700 text-lg mb-4">Composition of Biogas:</p>
                 <div className="grid grid-cols-3 gap-6">
                   <div className="flex flex-col items-center">
-                    <img src={methaneImage} alt="Methane molecule" className="w-32 h-32 object-contain" />
+                    <div className="h-32 flex items-end justify-center">
+                      <img src={methaneImage} alt="Methane molecule" className="w-32 h-32 object-contain" />
+                    </div>
                     <h6 className="font-semibold text-gray-800 mt-2">Methane</h6>
                     <p className="text-gray-600">55-65%</p>
                   </div>
                   <div className="flex flex-col items-center">
-                    <img src={carbonDioxideImage} alt="Carbon Dioxide molecule" className="w-28 h-28 object-contain" />
+                    <div className="h-32 flex items-end justify-center">
+                      <img src={carbonDioxideImage} alt="Carbon Dioxide molecule" className="w-28 h-28 object-contain" />
+                    </div>
                     <h6 className="font-semibold text-gray-800 mt-2">Carbon Dioxide</h6>
                     <p className="text-gray-600">30-45%</p>
                   </div>
                   <div className="flex flex-col items-center">
-                    <img src={hydrogenSulphideImage} alt="Hydrogen Sulphide molecule" className="w-24 h-24 object-contain" />
+                    <div className="h-32 flex items-end justify-center">
+                      <img src={hydrogenSulphideImage} alt="Hydrogen Sulphide molecule" className="w-24 h-24 object-contain" />
+                    </div>
                     <h6 className="font-semibold text-gray-800 mt-2">Hydrogen Sulphide</h6>
                     <p className="text-gray-600">0.1-5%</p>
                   </div>
