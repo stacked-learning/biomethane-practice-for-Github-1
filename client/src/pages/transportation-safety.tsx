@@ -120,7 +120,7 @@ function PipelineEmergencyCards() {
           >
             {/* Front */}
             <div
-              className="w-full bg-red-50 border border-red-200 rounded-lg p-6"
+              className="w-full bg-orange-50 border-2 border-orange-200 rounded-xl p-6"
               style={{
                 backfaceVisibility: 'hidden',
                 WebkitBackfaceVisibility: 'hidden',
@@ -129,8 +129,8 @@ function PipelineEmergencyCards() {
               }}
             >
               <div className="flex items-center justify-center gap-3">
-                <AlertTriangle className="w-6 h-6 text-red-800" />
-                <h3 className="text-xl font-semibold text-red-900">
+                <AlertTriangle className="w-6 h-6 text-orange-600" />
+                <h3 className="text-xl font-semibold text-gray-800">
                   {card.title}
                 </h3>
               </div>
@@ -138,7 +138,7 @@ function PipelineEmergencyCards() {
 
             {/* Back */}
             <div
-              className="w-full bg-red-50 border border-red-200 rounded-lg p-6"
+              className="w-full bg-orange-50 border-2 border-orange-300 rounded-xl p-6"
               style={{
                 backfaceVisibility: 'hidden',
                 WebkitBackfaceVisibility: 'hidden',
@@ -149,8 +149,8 @@ function PipelineEmergencyCards() {
               }}
             >
               <div className="flex items-start gap-3 mb-4">
-                <AlertTriangle className="w-6 h-6 text-red-800 flex-shrink-0" />
-                <h3 className="text-lg font-semibold text-red-900">
+                <AlertTriangle className="w-6 h-6 text-orange-600 flex-shrink-0" />
+                <h3 className="text-lg font-semibold text-gray-800">
                   {card.title}
                 </h3>
               </div>
