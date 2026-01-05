@@ -70,7 +70,7 @@ export default function BiogasPlantSafetyCards() {
           {safetyCards.slice(0, 3).map((card) => (
             <div
               key={card.id}
-              className="w-full max-w-xs mx-auto h-48 cursor-pointer perspective-1000"
+              className="w-full max-w-xs mx-auto h-56 cursor-pointer perspective-1000"
               onClick={() => toggleCard(card.id)}
               data-testid={`card-biogas-${card.id}`}
             >
@@ -123,7 +123,7 @@ export default function BiogasPlantSafetyCards() {
           {safetyCards.slice(3, 6).map((card) => (
             <div
               key={card.id}
-              className="w-full max-w-xs mx-auto h-48 cursor-pointer perspective-1000"
+              className="w-full max-w-xs mx-auto h-56 cursor-pointer perspective-1000"
               onClick={() => toggleCard(card.id)}
               data-testid={`card-biogas-${card.id}`}
             >
