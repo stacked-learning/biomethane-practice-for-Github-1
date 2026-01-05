@@ -67,53 +67,53 @@ export default function ProductionSafety() {
         </div>
 
         <div className="mt-16 w-full max-w-5xl mx-auto p-4">
-          <h2 className="text-3xl font-bold text-center mb-6 text-gray-900" data-testid="text-ignition-sources-title">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900" data-testid="text-ignition-sources-title">
             Sources of Ignition in Biogas/Biomethane Plants
           </h2>
-          <p className="text-base lg:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-8 text-center" data-testid="text-ignition-sources-description">
-            Potential sources of ignition in biogas plants (TRBS 2153, 2009)
-          </p>
           
           <div className="overflow-x-auto">
             <table className="w-full border-collapse bg-white rounded-xl shadow-lg overflow-hidden" data-testid="table-ignition-sources">
               <thead>
-                <tr className="bg-teal-600 text-white">
+                <tr className="bg-orange-500 text-white">
                   <th className="px-6 py-4 text-left font-bold text-lg">Source of ignition</th>
                   <th className="px-6 py-4 text-left font-bold text-lg">Examples</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                <tr className="border-b border-orange-200 hover:bg-orange-100 transition-colors">
                   <td className="px-6 py-4 text-gray-800 font-medium">Hot surfaces</td>
                   <td className="px-6 py-4 text-gray-600">&gt;500 °C (turbochargers)</td>
                 </tr>
-                <tr className="border-b border-gray-200 bg-gray-50 hover:bg-gray-100 transition-colors">
+                <tr className="border-b border-orange-200 bg-orange-50 hover:bg-orange-100 transition-colors">
                   <td className="px-6 py-4 text-gray-800 font-medium">Naked flames</td>
                   <td className="px-6 py-4 text-gray-600">Fire, flames, embers</td>
                 </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                <tr className="border-b border-orange-200 hover:bg-orange-100 transition-colors">
                   <td className="px-6 py-4 text-gray-800 font-medium">Mechanically generated sparks</td>
                   <td className="px-6 py-4 text-gray-600">Friction, beating, grinding</td>
                 </tr>
-                <tr className="border-b border-gray-200 bg-gray-50 hover:bg-gray-100 transition-colors">
+                <tr className="border-b border-orange-200 bg-orange-50 hover:bg-orange-100 transition-colors">
                   <td className="px-6 py-4 text-gray-800 font-medium">Electrically generated sparks</td>
                   <td className="px-6 py-4 text-gray-600">Switching operations, loose connection, equalising currents</td>
                 </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                <tr className="border-b border-orange-200 hover:bg-orange-100 transition-colors">
                   <td className="px-6 py-4 text-gray-800 font-medium">Exothermic reaction</td>
                   <td className="px-6 py-4 text-gray-600">Spontaneous combustion of dusts</td>
                 </tr>
-                <tr className="border-b border-gray-200 bg-gray-50 hover:bg-gray-100 transition-colors">
+                <tr className="border-b border-orange-200 bg-orange-50 hover:bg-orange-100 transition-colors">
                   <td className="px-6 py-4 text-gray-800 font-medium">Lightning strike</td>
                   <td className="px-6 py-4 text-gray-600">Missing lightning protection</td>
                 </tr>
-                <tr className="hover:bg-gray-50 transition-colors">
+                <tr className="hover:bg-orange-100 transition-colors">
                   <td className="px-6 py-4 text-gray-800 font-medium">Electrostatic discharge</td>
                   <td className="px-6 py-4 text-gray-600">Caused by missing potential equalization</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <p className="text-base text-gray-600 leading-relaxed max-w-4xl mx-auto mt-4 text-center italic" data-testid="text-ignition-sources-description">
+            Potential sources of ignition in biogas plants (TRBS 2153, 2009)
+          </p>
         </div>
       </div>
     </div>
