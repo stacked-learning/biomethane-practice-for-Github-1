@@ -44,6 +44,9 @@ export default function ProductionSafety() {
             Production Method Safety
           </h1>
           <div className="w-24 h-1 bg-orange-400 mx-auto rounded-full"></div>
+          <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
+            The production process of biomethane comes with several inherent risks. Firstly, there are unique biological compounds used throughout the production process, which exposes workers to risks not commonly associated in other natural gas infrastructure. Additionally, many common risks associated with natural gas and hydrogen production are present, due to the nature of biogas and biomethane.
+          </p>
         </div>
 
         <div className="mt-12 w-full max-w-5xl mx-auto p-4">
